@@ -1,0 +1,29 @@
+.main_banner {
+    background: #F9F9F9;
+    border-radius: 5px;
+
+    .banner_desc_container {
+        padding: 45px;
+
+        .banner_heading {
+            font-family: $harriet;
+            font-size: 36px;
+            font-weight: 700;
+            color: $darkGreen;
+            margin-bottom: .5em;
+        }
+    }
+
+    .banner_desc {
+        color: #40473E;
+        font-size: 16px;
+        font-family: 'Harriet';
+        margin: 0 0 25px 0;
+    }
+
+    .featured_image {
+        img {
+            border-radius: 5px;
+        }
+    }
+}

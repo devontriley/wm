@@ -1,0 +1,165 @@
+.wm_to_bookmark_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.65);
+    z-index: 9999;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+
+    .wm_create_folder_actions {
+        width: 100%;
+        float: none;
+        margin: 0;
+        position: static;
+    }
+
+    .wm_create_folder {
+        padding: 0;
+        float: none;
+    }
+
+    &.opened {
+         display: block;
+         opacity: 1;
+         visibility: visible;
+         transition: all 0.25s;
+
+        .wm_to_bookmark_popup_content {
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            opacity: 1;
+            visibility: visible;
+            @media(max-height: 550px) {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+    }
+}
+
+.wm_to_bookmark_popup_content {
+    display: block;
+    background: #fff;
+    color: #424242;
+    width: 350px;
+    max-width: 96%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.05);
+    -webkit-transform: translate(0,-25%);
+    transform: translate(0,-25%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    @media (max-height: 550px){
+        margin: 2.5em auto;
+        top: 0;
+    }
+}
+
+.wm_to_bookmark_header {
+    border-bottom: 1px solid #eee;
+    line-height: 1;
+    position: relative;
+    padding: 1em 15px;
+    padding-right: 53px;
+    font-weight: bold;
+
+    > span {
+        margin-top: -3px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3px;
+    }
+
+    .wm_close {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0.75em;
+    }
+}
+
+.wm_to_bookmark_body {
+    padding: 1em 15px;
+
+    .btn {
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .wm_my_bookmarks {
+        position: relative;
+        min-height: 75px;
+        margin-bottom: 0.5em;
+    }
+
+    .wm_create_folder_toggle {
+        margin-bottom: 0;
+    }
+
+    .js_wm_my_bookmarks {
+        max-height: 14em;
+        overflow: auto;
+    }
+}
+
+.wm_to_bookmark_title_sm {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 1em 0 0.5em;
+}
+
+.wm-popup-folder {
+    .btn-link {
+        margin-bottom: 0.5em;
+        background: #F8F8F8;
+        font-size: 16px;
+        color: #40473E;
+        font-weight: bold;
+        text-align: left;
+        padding: 0.575rem 0.95rem;
+        white-space: normal;
+
+        &.added{
+            background: #00B162;
+            color: #fff;
+        }
+
+        &:hover,
+        &:focus{
+            opacity: 0.85;
+        }
+    }
+
+    .wm_my_bookmarks & {
+        &:last-child {
+            .btn-link {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.wm_folder_bookmark_added {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    background: #01b162;
+    border-radius: 50%;
+    position: relative;
+    top: -0.1em;
+    margin-right: 2px;
+    display: none;
+}

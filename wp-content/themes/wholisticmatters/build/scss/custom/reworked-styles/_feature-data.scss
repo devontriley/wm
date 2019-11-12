@@ -1,0 +1,67 @@
+.feature-data {
+    float: left;
+    margin-left: 15px;
+
+    h2 {
+        font-size: 18px;
+        color: #40473E;
+        font-weight: bold;
+        margin: 0 0 .5em 0;
+
+        a {
+            font-size: 18px;
+            color: #40473e;
+            font-weight: 700;
+            font-family: $aktiv;
+        }
+    }
+
+    p {
+        color: $dark;
+        font-size: 14px;
+        font-family: $aktiv;
+        margin-bottom: 0.4rem;
+    }
+
+    span.datetime {
+        color: #8d8d8d;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    &.fw-feature-data {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .archive_recent_posts & {
+        float: none;
+        width: auto;
+        margin: 0;
+        padding: 1em;
+
+        h2,
+        h2 a {
+            @include font-size(1.5);
+        }
+
+        .wm_svg_dark_bookmark_btn > span {
+            display: inline-block;
+        }
+    }
+
+    .post-type-archive-wm_event &,
+    .post-type-archive-wm_news & {
+        .datetime {
+            opacity: 0.65;
+        }
+    }
+
+    .related-posts & {
+        width: 100%;
+        @media(min-width: 768px) {
+            width: 74.5%;
+        }
+    }
+}

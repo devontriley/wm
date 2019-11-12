@@ -1,0 +1,2138 @@
+@charset "UTF-8";
+/*!
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/*html{
+    font-size: 16px;
+}
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}*/
+/* line 18, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/typography/_typography.scss */
+.fz-small-em {
+  font-size: 0.8em;
+}
+
+/* line 21, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/typography/_typography.scss */
+.fz-26 {
+  font-size: 26px;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*
+Bootstrap 4 navbar with dropdown menus
+=================================================
+A small CSS modification is required for WP. 
+*/
+/* line 9, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.navbar .dropdown-menu li {
+  width: 100%;
+  margin-left: 0 !important;
+}
+
+/* line 18, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.navbar.navbar-light .navbar-nav .nav-link {
+  color: #52565F;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  /* line 31, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+  .navbar .nav-item > .dropdown-menu > .menu-item {
+    text-align: center;
+  }
+}
+
+/* line 41, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.greenlink > .dropdown-item,
+.menulink > .dropdown-item,
+.navlink > .dropdown-item {
+  color: #00B162;
+  font-weight: normal;
+  text-decoration: underline;
+  border-bottom: 0 !important;
+}
+
+/* line 48, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.nav-divider-item {
+  pointer-events: none;
+}
+
+/* line 51, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+ul.divider-submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  /* line 62, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+  .navbar.navbar-light .navbar-nav .nav-link {
+    padding: .5rem 0px;
+  }
+}
+
+/*****/
+/* line 72, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.link-primary, .refrence a, .podcast-metadata a {
+  color: #26b054;
+}
+
+/* line 75, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.link-primary:hover, .refrence a:hover, .podcast-metadata a:hover, .link-primary:focus, .refrence a:focus, .podcast-metadata a:focus {
+  color: #26b054;
+}
+
+/* line 80, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.link-gray, .pmeta_key_topics a {
+  color: #8D8D8D;
+}
+
+/* line 83, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.link-gray:hover, .pmeta_key_topics a:hover, .link-gray:focus, .pmeta_key_topics a:focus {
+  color: #8D8D8D;
+}
+
+/* line 101, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.single-post-links .wm_svg_dark_bookmark_btn > span {
+  display: inline-block;
+}
+
+/* line 109, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.floating-icons a {
+  width: 31px !important;
+  height: 31px !important;
+  line-height: 26px !important;
+  margin-bottom: 10px !important;
+  border: 1px solid #1A4D2C !important;
+  float: none !important;
+}
+
+/* line 117, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.floating-icons a:focus {
+  opacity: 0.8;
+}
+
+/* line 122, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.floating-icons .wm_svg_dark_bookmark_btn {
+  border: none !important;
+  margin-top: 18px;
+  padding: 0;
+}
+
+/* line 127, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.floating-icons .wm_svg_dark_bookmark_btn:hover, .floating-icons .wm_svg_dark_bookmark_btn:focus {
+  background: transparent;
+  opacity: 0.8;
+}
+
+/* line 136, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.popover #wm_single_share {
+  display: block !important;
+}
+
+/* line 141, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.wm_single_share_links a {
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  margin-right: 0.75em;
+}
+
+/* line 149, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.wm_single_share_links a svg path {
+  fill: #adadad;
+}
+
+/* line 154, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.wm_single_share_links a:hover, .wm_single_share_links a:focus {
+  text-decoration: none;
+}
+
+/* line 159, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.wm_single_share_links a:hover svg path, .wm_single_share_links a:focus svg path {
+  fill: #1a4d2c;
+}
+
+/* line 165, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.wm_single_share_links a.js_wm_copy_link {
+  width: auto;
+  white-space: nowrap;
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+/* line 179, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.pagination,
+.wp-prev-next {
+  margin: 1.5em 0;
+}
+
+/* line 183, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.pagination {
+  text-align: center;
+}
+
+/* line 186, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.pagination ul {
+  display: inline-block;
+  background-color: #fff;
+  white-space: nowrap;
+  padding: 0;
+  clear: both;
+  border-radius: 3px;
+}
+
+/* line 195, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.pagination li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  border: 1px solid #dfe0e0;
+  border-right: 0;
+}
+
+/* line 204, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.pagination li:last-child {
+  border-right: 1px solid #dfe0e0;
+}
+
+/* line 209, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.pagination a, .pagination span {
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+  line-height: 1em;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.75em;
+  min-width: 1em;
+  display: block;
+  color: #333333;
+}
+
+/* line 221, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+/* line 227, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.pagination .current {
+  cursor: default;
+  color: #333333;
+  background-color: #dfe0e0;
+  font-weight: 700;
+}
+
+/* line 233, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.pagination .current:hover, .pagination .current:focus {
+  background-color: #dfe0e0;
+  color: #333333;
+}
+
+/* end page_navi */
+/* fallback previous & next links */
+/* line 246, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.wp-prev-next .prev-link {
+  float: left;
+}
+
+/* line 250, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_links.scss */
+.wp-prev-next .next-link {
+  float: right;
+}
+
+/* end .wp-prev-next */
+/* line 3, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+.primary-nav .mob-navbar-header {
+  width: 100px !important;
+  margin-right: 15px;
+  text-align: right;
+  z-index: 99;
+}
+
+/* line 9, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+.primary-nav .mob-navbar-header > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 18, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+.mob-navbar-header .icon-bar:last-child {
+  margin-bottom: 0;
+}
+
+/* line 23, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+.mob-navbar-header .search-head {
+  font-size: 0;
+  line-height: 1;
+  margin-bottom: 1px;
+}
+
+/* line 30, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+.search-box {
+  z-index: 1 !important;
+  top: 64px;
+}
+
+/* line 35, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+.wm_main_nav_toggle {
+  margin: 3px 0 7px 10px;
+  padding: 0;
+}
+
+/* line 40, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+.search-box {
+  height: 100%;
+  overflow: auto;
+  z-index: 1022;
+}
+
+/* line 46, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+.main_nav_header,
+.main_nav_footer,
+.wm_megamenu_toggle {
+  display: none;
+}
+
+/* line 52, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+.wm_nav_secondary_links_xs .wm_nav_secondary_links {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  /* line 62, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav.navbar-expand-md .navbar-nav .dropdown-toggle:after {
+    right: -4px;
+    width: 10px;
+    height: 5px;
+    background-size: contain;
+    top: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 79, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .navbar-brand img {
+    max-width: 150px;
+  }
+  /* line 86, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav.navbar-expand-md .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  /* line 89, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav.navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+  }
+  /* line 97, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .shortLinks ul li {
+    display: inline-block;
+    margin: 0 0 12px 5px;
+  }
+  /* line 101, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .shortLinks ul li.search-head {
+    margin-right: 0;
+  }
+  /* line 104, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .shortLinks ul li.search-head img {
+    width: 16px;
+  }
+  /* line 109, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .shortLinks ul li a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 118, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  html.nav-opened {
+    overflow: hidden;
+  }
+  /* line 122, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  html.nav-opened .wm_main_nav_toggle {
+    opacity: 0;
+  }
+  /* line 127, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  html.nav-opened .main_nav .wm_main_nav_toggle {
+    opacity: 1;
+  }
+  /* line 134, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  html.nav-opened body {
+    overflow: hidden;
+  }
+  /* line 137, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  html.nav-opened body > *:not(header) {
+    transform: translate3d(30%, 0, 0);
+  }
+  /* line 145, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  html body > *:not(header) {
+    transform: translate3d(0, 0, 0);
+    transition: all 0.35s ease;
+  }
+  /* line 154, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  body.logged-in .wm_nav_secondary_links ul li {
+    float: none;
+    width: auto;
+    text-align: center;
+  }
+  /* line 163, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  header.sticky-top {
+    padding: 0;
+    position: relative;
+  }
+  /* line 168, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  header .main_nav {
+    padding-top: 0;
+    height: 100vh;
+    overflow: auto;
+    left: -100%;
+    transition: left 0.25s ease;
+    z-index: 1023;
+  }
+  /* line 176, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  header .main_nav.nav-open {
+    left: 0;
+  }
+  header .main_nav.nav-open .search-head {
+    display: none;
+  }
+  /* line 181, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  header .member_acc_link {
+    color: #00B162;
+    position: relative;
+    top: -1px;
+    margin-left: 8px;
+  }
+  /* line 187, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  header .member_acc_link a {
+    color: inherit;
+  }
+  /* line 193, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .main_nav .wm_main_nav_toggle {
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  /* line 198, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .mob-navbar-header .now .icon-bar:nth-child(1),
+  .mob-navbar-header .now .icon-bar:nth-child(3) {
+    background: #aeaeae;
+  }
+  /* line 202, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .main_nav_header {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.4);
+    margin: 0 -10px;
+  }
+  /* line 215, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .main_nav_footer {
+    display: block;
+    margin: 6.5em -10px -10px;
+  }
+  /* line 219, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .main_nav_footer footer {
+    box-shadow: 0px -8px 8px rgba(0, 0, 0, 0.03);
+  }
+  /* line 223, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_nav_secondary_links {
+    display: none;
+  }
+  /* line 226, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_nav_secondary_links:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  /* line 232, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_nav_secondary_links li.search-head {
+    display: none;
+  }
+  /* line 236, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_nav_secondary_links ul li {
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0 5px;
+  }
+  /* line 242, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_nav_secondary_links ul li:nth-child(2) {
+    padding-left: 0;
+  }
+  /* line 245, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_nav_secondary_links ul li:last-child {
+    padding-right: 0;
+  }
+  /* line 250, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_nav_secondary_links .login_button {
+    background: #fff;
+    display: block;
+    border: 1px solid #01b162;
+    padding: .375rem .75rem;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: .25rem;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans',sans-serif;
+    text-decoration: none;
+  }
+  /* line 270, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_nav_secondary_links .signup_button {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Open Sans',sans-serif;
+  }
+  /* line 277, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_nav_secondary_links_xs {
+    margin: 1em 0 0.75em;
+  }
+  /* line 280, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_nav_secondary_links_xs .wm_nav_secondary_links {
+    display: block;
+  }
+  /* line 286, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+  }
+  /* line 291, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .navbar-brand {
+    margin-left: 15px;
+    margin-right: 0;
+    padding: 0.95rem 0;
+    font-size: 0;
+    line-height: 1;
+    position: relative;
+    z-index: 99;
+  }
+  /* line 300, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .navbar-brand img {
+    max-width: 170px;
+    margin: 0;
+  }
+  /* line 306, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .main_nav {
+    display: block !important;
+  }
+  /* line 309, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .main_nav .navbar-brand {
+    /*margin-left: 5px;*/
+  }
+  /* line 312, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .main_nav .mob-navbar-header {
+    /*margin-right: 5px;*/
+  }
+  /* line 320, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav.navbar .navbar-nav > li > .nav-link {
+    margin-bottom: 0.5em;
+    background: #F8F8F8;
+    color: #40473E;
+    font-weight: bold;
+    text-align: left;
+    padding: 0.575rem 0.95rem;
+    white-space: normal;
+    border-radius: .25rem;
+  }
+  /* line 331, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav.navbar .navbar-nav > li > .nav-link:before {
+    display: none !important;
+  }
+  /* line 336, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav.navbar .navbar-nav > li > .nav-link.dropdown-toggle:after {
+    right: 15px;
+  }
+  /* line 343, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav.navbar .navbar-nav > li.show > .nav-link {
+    background: #0a934a;
+    color: #fff;
+  }
+  /* line 348, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav.navbar .navbar-nav > li.show > .nav-link.dropdown-toggle:after {
+    background-image: url(../images/DropdownArrow_white.svg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  /* line 359, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav.navbar .nav-link {
+    font-size: 14px !important;
+  }
+  /* line 367, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .navbar-nav li.show .dropdown-menu {
+    display: block;
+    width: 100%;
+    top: 0;
+    border: none;
+    z-index: 1;
+    padding: 0 0 0.75rem;
+    min-width: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 379, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .navbar-nav li.show .dropdown-menu:before {
+    display: none !important;
+  }
+  /* line 388, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .menu-item.dropdown .dropdown-menu a {
+    padding: 0.75em 0;
+    display: block;
+    border-bottom: 0;
+  }
+  /* line 393, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .menu-item.dropdown .dropdown-menu a:hover {
+    border-bottom-color: #fff;
+  }
+  /* line 401, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .menu-item.dropdown .dropdown-menu .divider-submenu > li:first-child a {
+    padding-top: 0;
+  }
+  /* line 410, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .dropdown-menu > li {
+    padding: 0 1.75em;
+  }
+  /* line 415, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .divider-block {
+    padding: 10px 1.75em;
+    margin: 0 -1.75em;
+  }
+  /* line 419, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .divider-block a {
+    font-size: 14px;
+  }
+  /* line 422, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .divider-block h4 {
+    margin-bottom: 0.5em;
+  }
+  /* line 428, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .search-form .form-control {
+    background: none;
+  }
+  /* line 432, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .search-box {
+    top: 50px;
+  }
+  /* line 435, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .search-box .close-search {
+    display: none;
+  }
+  /* line 437, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_megamenu_toggle {
+    display: block;
+    color: #40473E;
+    font-weight: bold;
+    text-align: left;
+    padding: 0.8rem 0;
+    white-space: normal;
+    margin: 0 1.2rem;
+    font-size: 14px;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+  }
+  /* line 449, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_megamenu_toggle:after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    background-image: url(../images/DropdownArrow.svg);
+    background-repeat: no-repeat;
+    border: none;
+    width: 13px;
+    height: 7px;
+    right: 0;
+    margin-left: 0.555em;
+  }
+  /* line 463, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .wm_megamenu_toggle.show:after {
+    background-image: url(../images/DropdownArrow_green.svg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  /* line 472, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .dropdown-menu > .wm_megamenu_toggle:not(.show):last-of-type {
+    border-bottom: 0;
+  }
+  /* line 477, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .block-dropdown {
+    padding: 0.5rem 1.2rem;
+  }
+  /* line 480, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .block-dropdown ul {
+    padding: 0 1rem;
+  }
+  /* line 483, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .block-dropdown ul li:first-child {
+    display: none;
+  }
+  /* line 489, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .footer_menu {
+    margin-bottom: 3em;
+  }
+  /* line 492, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .footer-nav {
+    display: block;
+  }
+  /* line 495, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .footer-nav li {
+    padding: 0 1em;
+  }
+  /* line 499, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .footer_logo_icon {
+    margin-bottom: 1em;
+  }
+  /* line 505, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  footer .social_icons ul {
+    display: block;
+  }
+  /* line 508, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  footer .social_icons ul li {
+    padding: 0 0.25em;
+  }
+}
+
+@media (max-width: 310px) {
+  /* line 519, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_navbar.scss */
+  .primary-nav .navbar-brand img {
+    max-width: 150px;
+  }
+}
+
+/* line 2, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_modal {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 999;
+  height: 100%;
+  background: #F7FCF3;
+  background: rgba(255, 255, 255, 0.65);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+
+/* line 17, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_modal.opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 22, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_modal .wm_close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1em;
+  z-index: 1;
+}
+
+/* line 32, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_modal_content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* line 38, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_wrap {
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #fff url(../images/border.png);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+/* line 57, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_wrap:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 64, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_bg {
+  background: #fff url(../images/signup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  bottom: 7px;
+  left: 0px;
+  width: 50%;
+}
+
+/* line 76, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_content {
+  float: right;
+  width: 50%;
+  padding: 1.25em 4em 1.5em 1.7em;
+  line-height: 1.2;
+}
+
+/* line 83, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_content a:not(.btn) {
+  color: #00B162;
+  text-decoration: underline;
+}
+
+/* line 88, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_content p {
+  color: #888;
+  font-family: "Harriet", "Aktiv", serif;
+  line-height: 1.618;
+}
+
+/* line 94, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_content small {
+  font-size: 0.75em;
+  color: #aaa;
+}
+
+/* line 99, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_content small a:not(.btn) {
+  color: inherit;
+}
+
+/* line 106, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.wm_popup_title {
+  font-family: "Harriet", "Aktiv", serif;
+  line-height: 1;
+  font-weight: 600;
+  color: #1A4D2C;
+  margin-bottom: 0.5em;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+/* line 115, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+.login-wrapp img.logo-log {
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+@media (max-height: 550px) {
+  /* line 123, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+  .wm_popup_wrap {
+    margin: 5em auto;
+    position: relative;
+    top: auto;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 134, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+  .LoginScreenPopup .login-wrapp {
+    top: 0;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+  /* line 142, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+  .signUpScreenPopup .form-side {
+    height: auto;
+  }
+  /* line 145, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+  .signUpScreenPopup .form-wrapp {
+    top: 0;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 699px) {
+  /* line 153, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+  .wm_popup_modal_content {
+    position: relative;
+    padding: 0;
+  }
+  /* line 157, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+  .wm_popup_wrap {
+    margin: 1.5em auto 3em;
+    left: 15px;
+    right: 15px;
+    width: auto;
+    position: absolute;
+  }
+  /* line 164, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+  .wm_popup_bg {
+    background-size: 105% auto;
+    position: static;
+    width: 100%;
+    padding-top: 36%;
+  }
+  /* line 170, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_popup.scss */
+  .wm_popup_content {
+    float: none;
+    width: 100%;
+    padding: 1.5em;
+  }
+}
+
+/* line 2, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_trending.scss */
+.wm-wpp-trending {
+  list-style: none;
+  counter-reset: wm-trending-counter;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_trending.scss */
+.wm-wpp-trending li {
+  counter-increment: wm-trending-counter;
+}
+
+/* line 11, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_trending.scss */
+.wm-wpp-trending li .numbers:before {
+  content: "0" counter(wm-trending-counter);
+}
+
+/* line 17, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_trending.scss */
+.wm-wpp-trending .wm-trending-meta a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+/* Wrapper */
+/* line 2, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.sl-wrapper {
+  position: relative;
+}
+
+/* line 5, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.sl-wrapper .sl-button {
+  margin-right: 10px;
+}
+
+/* line 9, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.sl-button {
+  padding: 0;
+  font-size: 1em;
+  line-height: 1;
+  font-weight: normal;
+}
+
+/* Colors */
+/*a.liked {
+	color: #da1b1b;
+}
+a.liked:hover,
+a.liked:active,
+a.liked:focus {
+	color: #666666;
+}*/
+/* line 26, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.sl-count {
+  color: #666666;
+}
+
+/* Icon */
+/* line 31, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.sl-icon {
+  margin: 0.5rem;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* line 36, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.sl-icon svg {
+  /*fill: currentColor;*/
+  width: auto;
+  height: auto;
+}
+
+/* line 42, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.sl-icon svg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Count */
+/* line 52, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.sl-count {
+  font-size: 0.725em;
+  vertical-align: middle;
+}
+
+/* Loader */
+/* line 58, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+#sl-loader {
+  padding: 0 1rem;
+}
+
+/* line 61, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.loader,
+.loader:before,
+.loader:after {
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: .2em;
+  height: .6em;
+}
+
+/* line 70, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+/* line 76, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.loader:before {
+  left: -.375em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+/* line 81, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.loader {
+  text-indent: -9999em;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  font-size: 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+/* line 93, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/modules/_like.scss */
+.loader:after {
+  left: .375em;
+}
+
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 rgba(0, 0, 0, 0.2);
+    height: .6em;
+  }
+  40% {
+    box-shadow: 0 -0.3em rgba(0, 0, 0, 0.2);
+    height: 1em;
+  }
+}
+
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 rgba(0, 0, 0, 0.2);
+    height: .6em;
+  }
+  40% {
+    box-shadow: 0 -0.3em rgba(0, 0, 0, 0.2);
+    height: 1em;
+  }
+}
+
+/* line 2, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 11, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.relative {
+  position: relative;
+}
+
+/* line 15, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 24, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 32, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.cta_filled:hover {
+  border-color: #04a25c;
+}
+
+/* line 35, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.single_premium_icon {
+  position: relative;
+}
+
+/* line 38, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.single_premium_icon .icon-feature {
+  text-align: center;
+}
+
+/* line 41, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.single_premium_icon .icon-feature img {
+  box-shadow: none;
+  width: 1.5em !important;
+  margin: 0 !important;
+  margin-left: 0.25em !important;
+}
+
+/* line 49, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.single_premium_icon .icon-wrapp {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  line-height: 60px;
+}
+
+/* line 57, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.LoginScreenPopup,
+.signUpScreenPopup {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+
+/* line 63, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.LoginScreenPopup.opened,
+.signUpScreenPopup.opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 69, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_popup {
+  /*display: none;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  z-index: 9999;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+/* line 83, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_popup .wm_create_folder_actions {
+  width: 100%;
+  float: none;
+  margin: 0;
+  position: static;
+}
+
+/* line 89, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_popup .wm_create_folder {
+  padding: 0;
+  float: none;
+}
+
+/* line 94, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_popup.opened {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.25s;
+}
+
+/* line 100, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_popup.opened .wm_to_bookmark_popup_content {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 109, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_popup_content {
+  display: block;
+  background: #fff;
+  color: #424242;
+  width: 350px;
+  max-width: 96%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.05);
+  -webkit-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+@media (max-height: 550px) {
+  /* line 131, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .wm_to_bookmark_popup_content {
+    margin: 2.5em auto;
+    top: 0;
+  }
+  /* line 138, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .wm_to_bookmark_popup.opened .wm_to_bookmark_popup_content {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+/* line 146, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_header {
+  border-bottom: 1px solid #eee;
+  line-height: 1;
+  position: relative;
+  padding: 1em 15px;
+  padding-right: 53px;
+  font-weight: bold;
+}
+
+/* line 154, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_header > span {
+  margin-top: -3px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+/* line 161, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_header .wm_close {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.75em;
+}
+
+/* line 169, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_body {
+  padding: 1em 15px;
+}
+
+/* line 172, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_body .btn {
+  width: 100%;
+  text-decoration: none;
+}
+
+/* line 177, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_body .wm_my_bookmarks {
+  position: relative;
+  min-height: 75px;
+  margin-bottom: 0.5em;
+}
+
+/* line 183, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_body .wm_create_folder_toggle {
+  margin-bottom: 0;
+}
+
+/* line 186, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_body .js_wm_my_bookmarks {
+  max-height: 14em;
+  overflow: auto;
+}
+
+/* line 191, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_to_bookmark_title_sm {
+  font-size: 12.8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+}
+
+/* line 198, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm-popup-folder .btn-link {
+  margin-bottom: 0.5em;
+  background: #F8F8F8;
+  font-size: 16px;
+  color: #40473E;
+  font-weight: bold;
+  text-align: left;
+  padding: 0.575rem 0.95rem;
+  white-space: normal;
+}
+
+/* line 208, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm-popup-folder .btn-link.added {
+  background: #00B162;
+  color: #fff;
+}
+
+/* line 213, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm-popup-folder .btn-link:hover, .wm-popup-folder .btn-link:focus {
+  opacity: 0.85;
+}
+
+/* line 220, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_folder_bookmark_added {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  background: #01b162;
+  border-radius: 50%;
+  position: relative;
+  top: -0.1em;
+  margin-right: 2px;
+  display: none;
+}
+
+/* line 235, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_my_bookmarks .wm-popup-folder:last-child .btn-link {
+  margin-bottom: 0;
+}
+
+/* line 244, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.refrence .card-header:after {
+  content: "";
+  background: url(../images/angle-acc.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 10px;
+  top: 50% !important;
+  margin-top: -10px;
+  height: 20px;
+  width: 20px;
+  transform: rotate(0deg);
+}
+
+/* line 259, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.refrence .card-header.collapsed:after {
+  transform: rotate(-180deg);
+}
+
+/* line 264, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.refrence .card-header a {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* line 272, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.data-with-post h2, .data-with-post h3, .data-with-post h4, .data-with-post h5 {
+  color: #40473E;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+/* line 277, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.data-with-post img {
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* line 281, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.data-with-post img:not(.size-large):not(.size-full) {
+  width: auto;
+  margin: 0.5rem;
+}
+
+/* line 287, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.data-with-post p > img {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 294, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.icon-wrapp img {
+  margin: 0 !important;
+}
+
+/* line 297, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.box-feature.video .icon-wrapp img {
+  margin-left: 4px !important;
+}
+
+/* line 300, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.ptitle_404 {
+  padding: 2.5em 1em;
+  color: #11964e;
+  font-weight: bold;
+  background: #f7fcf3;
+  margin: 1em 0;
+  border-radius: 5px;
+}
+
+/* line 308, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.psubtitle_404 {
+  font-family: 'Harriet',serif;
+  font-weight: bold;
+  color: #0a6333;
+}
+
+/* line 313, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.para_404 {
+  font-family: 'Harriet',serif;
+  color: #777;
+}
+
+/* line 317, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.single-featured-image {
+  width: 100%;
+  /* padding-top: 170px; */
+  height: 65vh;
+  min-height: 170px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 328, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.image-side-album {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f7fcf3;
+}
+
+/* line 339, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.owl-carousel .item a {
+  color: inherit;
+}
+
+/* line 344, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+#navbarSupportedContent ul li:last-child a {
+  /*max-width: 178px;*/
+  max-width: 100%;
+}
+
+/* line 350, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.data-banner .detail-data {
+  right: 35px;
+}
+
+/* line 355, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.data-calinary h5 {
+  font-size: 16px;
+  color: #40473E;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* line 367, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.boxed img {
+  max-width: 100%;
+}
+
+/* line 370, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm-archive-tabs {
+  position: relative;
+}
+
+/* line 375, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+}
+
+/* line 379, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.btn-loading:after {
+  content: url("../images/ajax-loader-small.gif");
+  width: 1em;
+  height: auto;
+  display: inline-block;
+  margin: 0px 0 0px 0.5em;
+  line-height: 1;
+  position: relative;
+  top: 2px;
+}
+
+/* line 392, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tabs-me span.rt-reading-time,
+.tabs-me span.rt-reading-time span {
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  margin: inherit;
+  display: initial;
+}
+
+/* line 402, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tabs-me.wm-archive-tabs .tabs_links_lbl {
+  width: 60px;
+  float: left;
+  margin-right: -60px;
+  line-height: 35px;
+}
+
+/* line 408, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tabs-me.wm-archive-tabs .tabs_links_lbl + .tabs-links {
+  width: 100%;
+  padding-left: 65px;
+}
+
+/* line 415, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.archive_recent_posts {
+  margin-bottom: 1.5em;
+}
+
+/* line 418, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.archive_recent_posts .feature-data {
+  float: none;
+  width: auto;
+  margin: 0;
+  padding: 1em;
+}
+
+/* line 424, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.archive_recent_posts .feature-data h2,
+.archive_recent_posts .feature-data h2 a {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+/* line 429, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.archive_recent_posts .feature-data .wm_svg_dark_bookmark_btn > span {
+  display: inline-block;
+}
+
+/* line 438, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.post-type-archive-wm_event .feature-data .datetime,
+.post-type-archive-wm_news .feature-data .datetime {
+  opacity: 0.65;
+}
+
+/* line 443, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.feature-data.fw-feature-data {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 449, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm-archive-tabs .nav-link > b {
+  font-weight: normal;
+}
+
+/* line 456, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.banner-inner.banner-inner-tag .image-banner {
+  padding-top: 250px;
+}
+
+/* line 461, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.banner-inner.banner-inner-fw {
+  padding-top: 3.5rem;
+  padding-bottom: 6rem;
+  margin-bottom: -6rem;
+}
+
+/* line 466, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.banner-inner.banner-inner-fw .data-banner {
+  position: static;
+  /* width: auto; */
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 473, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.banner-inner.banner-inner-fw .data-banner .detail-data {
+  position: static;
+}
+
+/* line 480, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.image-banner img {
+  height: auto;
+}
+
+/* line 484, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.inner-wrapp {
+  max-width: 100%;
+}
+
+/* line 488, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.signUpScreen .inner-wrapp {
+  margin: 0 auto;
+}
+
+/* line 492, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tool-content {
+  margin-top: 2em;
+}
+
+/* line 495, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tool-content p {
+  font-size: 16px;
+  color: #52565F;
+  font-family: 'Harriet';
+  margin-bottom: 5px;
+}
+
+/* line 502, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tool-content ul {
+  list-style: none;
+  padding: 0px;
+}
+
+/* line 506, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tool-content ul li {
+  padding-left: 15px;
+  position: relative;
+  color: #52565F;
+  font-family: 'Harriet';
+}
+
+/* line 512, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tool-content ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0px;
+}
+
+/* line 522, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tool_item.has_thumb .badge {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+/* line 529, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.account {
+  height: auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* line 534, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.partner-logo {
+  padding-bottom: 2rem;
+}
+
+/* line 536, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.partner-logo:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 542, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.partner-block {
+  margin-bottom: 1rem;
+  padding-top: 5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* line 550, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.page-template-page-contact .signUpScreen {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 555, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.page-template-page-contact .signUpScreen.contact-data:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 561, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.page-template-page-contact .signUpScreen.contact-data .form-wrapp {
+  border-bottom: 5px solid #00B162;
+}
+
+/* line 565, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.page-template-page-contact .signUpScreen.contact-data .cbxwpbkmarkloading {
+  background: rgba(255, 255, 255, 0.7);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+/* line 572, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.page-template-page-contact .signUpScreen.contact-data .cbxwpbkmarkloading img {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+}
+
+/* line 580, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.page-template-page-contact .content-side,
+.page-template-page-contact .form-side {
+  position: relative;
+}
+
+/* line 584, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.page-template-page-contact footer {
+  z-index: 1;
+  position: relative;
+}
+
+/* line 592, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+body.search .boxed .search-box {
+  display: block;
+  position: relative;
+  padding: 0;
+  top: 0;
+  box-shadow: none;
+  border: 0;
+}
+
+/* line 600, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+body.search .boxed .search-form {
+  width: 770px;
+  margin: 50px auto 30px;
+  max-width: 100%;
+}
+
+/* line 606, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+body.search .boxed .advance-search {
+  margin-bottom: 2.5em;
+}
+
+/* line 609, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+body.search .boxed .advance-search .search-form {
+  margin: 0 auto 30px;
+}
+
+/* line 614, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+body.search .boxed .short_link_search {
+  text-decoration: underline;
+  color: #52565F;
+}
+
+/* line 618, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+body.search .boxed .short_link_search:hover, body.search .boxed .short_link_search:focus {
+  text-decoration: none;
+}
+
+/* line 626, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.filter-herbal {
+  margin-top: 0;
+}
+
+/* line 629, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_herbs_wrap {
+  position: relative;
+}
+
+/* line 632, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_herbs_wrap .cbxwpbkmarkloading {
+  background: rgba(255, 255, 255, 0.7);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+/* line 639, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_herbs_wrap .cbxwpbkmarkloading img {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+}
+
+/* line 646, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.search_res_info {
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* line 652, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.advance-search .checkbox-btn label {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 662, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_list_styled ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 666, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_list_styled ul li {
+  margin-bottom: 0.5em;
+}
+
+/* line 669, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_list_styled ul li:before {
+  display: inline-block;
+  content: '';
+  -webkit-border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  height: 0.25rem;
+  width: 0.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+  background: #212529;
+}
+
+/* line 685, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_list_styled.event-graph ul li {
+  font-family: 'Harriet';
+  font-size: 16px;
+  color: #52565F;
+}
+
+/* line 690, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_list_styled.event-graph ul li:before {
+  background: #52565F;
+}
+
+/* line 699, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.event-graph .tbl-ingredients {
+  color: #52565F;
+}
+
+/* line 703, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.post_featured_image_wrap {
+  margin-bottom: 1rem;
+}
+
+/* line 708, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tbl-ingredients {
+  font-size: 16px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  table-layout: fixed;
+}
+
+/* line 713, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tbl-ingredients td {
+  padding: 0.5rem 0;
+}
+
+/* line 717, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tbl-ingredients tbody tr {
+  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid transparent;
+}
+
+/* line 720, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.tbl-ingredients tbody tr:hover {
+  border-bottom-color: #e8e8e8;
+}
+
+/* line 727, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_is_premium .site-content {
+  height: 65rem;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* line 732, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_is_premium .site-content * {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* line 739, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_gated_content {
+  position: relative;
+}
+
+/* line 742, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_gated_content:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  height: 8em;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 82%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(82%, white));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 82%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 82%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 82%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 82%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}
+
+/* line 758, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_gated_content .summary {
+  background: #fff;
+}
+
+/* line 762, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_gated_content .cta_filled {
+  line-height: 1;
+}
+
+/* line 767, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.wm_close_search {
+  display: none;
+}
+
+/* line 771, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.search-open .wm_open_search {
+  display: none;
+}
+
+/* line 774, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.search-open .wm_close_search {
+  display: inline-block;
+}
+
+/* line 780, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.is_hcp_user .divider-block {
+  background: none;
+  padding: 0;
+}
+
+/* line 784, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.is_hcp_user .divider-block > .nav-divider-item {
+  display: none;
+}
+
+/* line 788, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.is_hcp_user .divider-block > .divider-submenu a {
+  font-size: 14px;
+}
+
+/* line 794, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.is_hcp_user .menulink.menu-item {
+  display: none;
+}
+
+/* line 803, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.menu-item.dropdown .dropdown-menu a {
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 810, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+footer {
+  position: relative;
+}
+
+/* line 818, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+body.page-member-password-lost > header + .container, body.page-member-password-reset > header + .container, body.page-member-login > header + .container, body.page-member-register > header + .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* line 822, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+body.page-member-password-lost > header + .container > .row, body.page-member-password-reset > header + .container > .row, body.page-member-login > header + .container > .row, body.page-member-register > header + .container > .row {
+  margin: 0;
+}
+
+/* line 825, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+body.page-member-password-lost > header + .container > .row > .col-md-12, body.page-member-password-reset > header + .container > .row > .col-md-12, body.page-member-login > header + .container > .row > .col-md-12, body.page-member-register > header + .container > .row > .col-md-12 {
+  padding: 0;
+}
+
+/* line 833, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.LoginScreen:not(.LoginScreenPopup) {
+  position: relative;
+  height: auto;
+  z-index: 0;
+}
+
+/* line 838, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.LoginScreen:not(.LoginScreenPopup) .header-login {
+  display: none;
+}
+
+/* line 842, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.LoginScreen:not(.LoginScreenPopup) .login-wrapp {
+  max-width: 96%;
+  width: 475px;
+  margin: 0 auto 3em;
+}
+
+/* line 850, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.signUpScreen:not(.signUpScreenPopup) {
+  position: relative;
+  z-index: 0;
+}
+
+/* line 854, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.signUpScreen:not(.signUpScreenPopup) .form-wrapp {
+  margin-top: 0;
+  top: 0;
+}
+
+/* line 859, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.signUpScreen:not(.signUpScreenPopup) .form-side {
+  height: auto;
+  padding: 3em 10px;
+}
+
+/* line 867, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.search-form .form-control {
+  width: calc(100% - 115px);
+}
+
+/* line 871, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.search-form input[type="submit"] {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  width: 105px;
+}
+
+/* line 881, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.article-block.fixed-aside {
+  position: sticky;
+  top: 99px;
+  max-width: 100%;
+}
+
+/* line 889, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.register_legal_info > .btn {
+  float: left;
+  width: 120px;
+  margin-right: -120px;
+}
+
+/* line 895, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.register_legal_info > .legal_info_txt {
+  display: block;
+  padding-left: 165px;
+  font-size: 0.75rem;
+  color: #717171;
+}
+
+/* line 901, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+.register_legal_info > .legal_info_txt a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media all and (min-width: 992px) {
+  /* line 910, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .album-block .image-side-album {
+    margin-right: -194px;
+  }
+  /* line 913, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .album-block .content-side-album {
+    padding-left: 215px;
+  }
+}
+
+@media all and (min-width: 1115px) {
+  /*	.menu-item.dropdown {
+
+		.menu-item{
+			padding: 0 1rem;
+		}
+	}*/
+}
+
+@media all and (max-width: 991px) {
+  /* line 927, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .search-form {
+    padding: 0 20px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  /* line 934, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .signUpScreen .data-wrapp img {
+    max-width: 100%;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 942, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .signUpScreen .content-side {
+    padding-top: 50px;
+  }
+  /* line 946, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .single-featured-image {
+    height: 40vh;
+  }
+  /* line 951, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .data-banner .detail-data {
+    right: 0;
+  }
+  /* line 957, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .banner-inner.banner-inner-tag .image-banner {
+    padding-top: 0;
+  }
+}
+
+@media all and (max-width: 480px) {
+  /* line 966, C:/xampp/htdocs/jamaat/nabeel/wp_beta/wp-content/themes/wholisticmatters/sass/site/_site.scss */
+  .search-form .form-control {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=../css/custom.map */

@@ -1,0 +1,22 @@
+@mixin short-btn {
+    //margin-top: 10px;
+
+    a {
+        font-size: 14px;
+        color: #1A4D2C;
+        text-decoration: none;
+        padding: 0 20px 0 0;
+    }
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
+        font-weight: bold;
+    }
+}

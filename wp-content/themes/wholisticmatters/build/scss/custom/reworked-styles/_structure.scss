@@ -1,0 +1,10 @@
+body {
+    @media(max-width: 767px) {
+        overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.boxed {
+    padding: 40px 0;
+}

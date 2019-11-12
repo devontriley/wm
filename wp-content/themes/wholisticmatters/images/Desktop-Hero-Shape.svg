@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1935px" height="925px" viewBox="0 0 1935 925" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop-Hero-Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="51.7277386%" y1="32.4907896%" x2="83.6206509%" y2="94.9847569%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#C1E3D1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="83.6206509%" y1="94.9847569%" x2="24.4387099%" y2="14.7169717%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#C1E3D0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop-Hero-Shape" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M21.7569201,293.850812 C132.352304,428.490641 456.291845,306.63926 679.790288,614.864588 C767.642525,736.021069 777.327903,775.465419 879.343867,834.424854 C957.497938,879.593305 1056.41616,906.603433 1166.49659,852.298486 C1480.81046,697.240966 1529.6276,398.428 1528.76159,297.109218 C1527.89558,195.790436 1273.17227,-139.553976 861.394307,-281.262622 C824.805116,-293.853573 374.656299,-364.284188 202.995045,-173.341113 C71.3898493,-26.952673 -88.8384638,159.210983 21.7569201,293.850812 Z" id="Fill-1" fill="url(#linearGradient-1)" opacity="0.387366061" transform="translate(756.771195, 289.085519) scale(-1, 1) rotate(-26.000000) translate(-756.771195, -289.085519) "></path>
+        <path d="M1179.31635,561.154431 C1272.80203,675.012056 1340.51971,685.020728 1433.23451,812.937301 C1493.74488,896.423004 1545.78518,895.92643 1616.05168,936.553679 C1669.8826,967.677958 1746.11772,957.179961 1795.0778,922.860639 C1889.50617,856.670767 1876.40271,706.136335 1870.3383,636.462345 C1867.88501,608.277505 1830.11716,238.902434 1546.49296,141.255085 C1521.29108,132.579023 1303.25488,61.0283263 1185.01814,192.601702 C1094.37118,293.473761 1103.14052,468.378001 1179.31635,561.154431 Z" id="Fill-1-Copy" fill="url(#linearGradient-2)" opacity="0.270256696" transform="translate(1497.103416, 534.573292) rotate(157.000000) translate(-1497.103416, -534.573292) "></path>
+    </g>
+</svg>

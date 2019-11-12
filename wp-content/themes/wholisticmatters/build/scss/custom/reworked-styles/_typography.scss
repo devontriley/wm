@@ -1,0 +1,73 @@
+body {
+    color: $dark;
+    font-family: $aktiv;
+    font-weight: 400;
+    position: relative;
+}
+
+h1 {
+    font-family: $aktiv;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 0 1em 0;
+}
+
+h2 {
+    font-family: $aktiv;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 1.5em 0 1em 0;
+}
+
+h3 {
+    font-family: $harriet;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 1em 0;
+}
+
+h4 {
+    font-family: $aktiv;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 1em 0;
+}
+
+h5 {
+    font-family: $aktiv;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 0 1em 0;
+}
+
+p {
+    font-family: $harriet;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+a {
+    &:focus {
+        outline: none;
+    }
+}
+
+ul, ol {
+    font-family: $harriet;
+    list-style: disc;
+    padding: 0px;
+    margin: 1em 0 1em 40px;
+
+    li {
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+}
+
+ol {
+    list-style: decimal;
+}
+
+.short-btn {
+    @include short-btn;
+}

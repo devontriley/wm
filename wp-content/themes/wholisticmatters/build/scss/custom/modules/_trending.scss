@@ -1,0 +1,24 @@
+
+.wm-wpp-trending{
+    list-style: none;
+    counter-reset: wm-trending-counter;
+    margin: 0;
+    padding: 0;
+    
+    li {
+        counter-increment: wm-trending-counter;
+        
+        .numbers:before {
+            content: "0"counter(wm-trending-counter);
+        }
+
+    }
+    .wm-trending-meta{
+        a{
+            color: inherit;
+            font-size: inherit;
+            text-decoration: none;
+            pointer-events: none;
+        }
+    }
+}

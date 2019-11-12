@@ -1,0 +1,215 @@
+.single-featured-image {
+    width: 100%;
+    height: 40vh;
+    min-height: 170px;
+    max-height: 450px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media(min-width: 768px) {
+        height: 65vh;
+    }
+}
+
+/* TODO: This class should maybe change to be more global and clear */
+.data-with-post {
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    /***
+        LIKE/DISLIKE BUTTONS
+        Located at the bottom of article pages
+    */
+    &.status {
+        margin: 30px 0;
+        @media(min-width: 768px) {
+            margin: 50px 0;
+        }
+    }
+
+    p, li {
+        color: #52565F;
+
+        > img{
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    img[class*="wp-image"] {
+        height: auto;
+        width: 100%;
+        box-shadow: 0px 0px 9px 0 rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+
+        &:not(.size-large):not(.size-full){
+            width: auto;
+            margin: 0.5rem;
+        }
+    }
+}
+
+/* TODO: This class should maybe change to be more global and named better */
+.detail-head {
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #8D8D8D;
+
+    h1 {
+        color: $dark;
+    }
+}
+
+.article-tags {
+    margin-bottom: 20px;
+
+    span {
+        font-size: 14px;
+        color: #8D8D8D;
+        display: inline-block;
+        margin-top: 5px;
+
+        a {
+            font-size: 14px;
+            color: #8D8D8D;
+        }
+    }
+}
+
+/***
+    SUMMARY BOX
+    Located at the top of article pages
+ */
+.summary {
+    background: #f8fcf4;
+    padding: 20px 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    @media(min-width: 768px) {
+        padding: 30px;
+    }
+
+    p {
+        font-size: 14px;
+        font-family: $aktiv;
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/***
+    BOOTSTRAP CARD COMPONENT
+    https://getbootstrap.com/docs/4.3/components/card/
+ */
+.card {
+    border-radius: 0;
+    border: none;
+    border-left: 4px solid $green;
+    background: #f9f9f9;
+    padding: map_get($spacers, 4);
+    margin: map_get($spacers, 5) 0;
+
+    .card-body {
+
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Aktiv';
+            color: $primary;
+            text-transform: uppercase;
+        }
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+/***
+    REFERENCE LINK
+    Located at the bottom of article pages
+ */
+.refrence {
+    font-family: $aktiv;
+
+    #accordion {
+        margin: 0;
+    }
+
+    .card {
+        padding: 0;
+        margin: 0;
+        background: none;
+        border: none;
+
+        &:hover {
+            .card-header {
+                background: #f8fcf4;
+            }
+
+            .card-link {
+                color: $green;
+            }
+        }
+
+        .card-header {
+            padding: 10px 20px;
+            border-radius: 0 10px 10px 0;
+            background: #F8F8F8;
+            border: none;
+            border-left: 4px solid $green;
+            cursor: pointer;
+            transition: background ease 300ms;
+
+            .card-link {
+                transition: color ease 300ms;
+            }
+
+            &:after {
+                content: "";
+                background: url(../images/angle-acc.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                right: 10px;
+                top: 50% !important;
+                margin-top: -10px;
+                height: 20px;
+                width: 20px;
+                transform: rotate(0deg);
+            }
+
+            &.collapsed {
+                &:after {
+                    transform: rotate(-180deg);
+                }
+            }
+
+            a {
+                -webkit-user-select: none;
+                user-select: none;
+            }
+        }
+
+        .card-body {
+            padding: 20px;
+
+            p {
+                font-family: $aktiv;
+                font-size: 13px;
+            }
+        }
+    }
+}
