@@ -11,7 +11,6 @@ $wm_s_query = isset($_REQUEST['wm_s_query']) ? htmlspecialchars(json_encode($_RE
 	<form role="search" method="get" class="wp-search-form" action="<?php echo home_url( '/' ); ?>">
 		<input type="hidden" value="<?php echo $wm_s_query; ?>" id="wm_s_query" />
 		<div class="search-form">
-			<a href="#." class="close-search"><img src="<?php bloginfo('template_url'); ?>/images/close-x.png" alt="close"></a>
 			<div class="row">
 				<div class="col-sm-12">
 					<input type="text" name="s" class="form-control" placeholder="<?php _e('Enter search here...'); ?>" value="<?php the_search_query(); ?>">

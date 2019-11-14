@@ -3,22 +3,6 @@ $custom_meta_fields = WMHelper::get_custom_user_meta_fields();
 ?>
 
 <div class="LoginScreen">
-    <div class="header-login">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <a href="<?php echo home_url('/'); ?>"> <img src="<?php bloginfo('template_url'); ?>/images/login-sm-logo.png" alt="login-sm-logo"></a>
-                </div>
-                <div class="col-sm-6">
-<!--                    <a href="#." class="closeModal">
-                        <img src="<?php bloginfo('template_url'); ?>/images/close-x.png" alt="close">
-                    </a>-->
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
     <div class="login-wrapp">
         <a href="<?php echo home_url('/'); ?>"> 
             <img src="<?php bloginfo('template_url'); ?>/images/wm-logo.png" alt="signup-logo" class="logo-log">

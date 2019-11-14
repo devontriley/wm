@@ -105,7 +105,6 @@ function WM_theme_support() {
 
 function theme_scripts() {
 	wp_enqueue_style('style', get_stylesheet_uri(), NULL, microtime());
-	//wp_enqueue_style('style2', get_template_directory_uri()."/css/custom.css", NULL, microtime());
 	
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('popper-js', get_template_directory_uri()."/js/popper.min.js", NULL, '', true);

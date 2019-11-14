@@ -57,19 +57,20 @@ $wm_settings = Wholistic_Matters::get_settings();
 
 <div class="search-overlay"></div>
 
+<?php if(!is_search()){ get_template_part('navbar-search-box'); } ?>
 
 <header id="primaryHeader" class="primaryHeader">
     <div class="primaryHeader__inner">
         <div class="primaryHeader__logo">
             <a href="<?php echo site_url('/'); ?>">
-                <img src="<?php bloginfo('template_url'); ?>/images/wm-logo.svg" alt="Logo" width="250" height="29">
+                <img src="<?php bloginfo('template_url'); ?>/images/wm-logo.svg" alt="Logo">
             </a>
         </div>
 
         <div class="primaryHeader__nav">
             <div class="primaryHeader__mobile-links">
-                <a href="#" class="btn btn-outline-primary">Login</a>
-                <a href="#" class="btn btn-primary">Sign Up</a>
+                <a href="#" class="btn btn-outline-primary login_popup">Login</a>
+                <a href="#" class="btn btn-primary signup_popup">Sign Up</a>
             </div>
             <nav id="primaryNav" role="navigation">
                 <ul class="primaryNav__top-list">
@@ -181,11 +182,14 @@ $wm_settings = Wholistic_Matters::get_settings();
                 </a>
             </div>
             <div class="primaryHeader__utilities-links">
-                <a href="#" class="btn btn-link">Login</a>
-                <a href="#" class="btn btn-primary">Sign Up</a>
+                <a href="#" class="btn btn-link login_popup">Login</a>
+                <a href="#" class="btn btn-primary signup_popup">Sign Up</a>
             </div>
             <div class="primaryHeader__utilities-hamburger">
-                <button type="button" class="wm_main_nav_toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a href="#">
+                    <img src="<?php bloginfo('template_directory') ?>/images/hamburger.svg" class="hamburger" />
+                    <img src="<?php bloginfo('template_directory') ?>/images/nav-x.svg" class="close-nav" />
+                </a>
             </div>
         </div>
     </div>

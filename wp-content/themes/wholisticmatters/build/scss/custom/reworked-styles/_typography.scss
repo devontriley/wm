@@ -71,3 +71,32 @@ ol {
 .short-btn {
     @include short-btn;
 }
+
+.section_heading {
+    font-size: 24px;
+    position: relative;
+    color: #40473E;
+    font-weight: 900;
+    font-family: 'Aktiv';
+    padding: 20px 0;
+}
+
+.section_heading:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #DDDDDD;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.section_heading:after {
+    content: "";
+    width: 58px;
+    height: 6px;
+    background: #DDDDDD;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}

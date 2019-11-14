@@ -28,9 +28,9 @@ get_header(); ?>
                                 <?php the_title( '<h1 class="banner_heading">', '</h1>' ); ?>
                                 <div class="banner_desc"><?php the_content(); ?></div>
                             <?php if(!is_user_logged_in()): ?>
-                                <a class="cta_filled signup_popup" href="<?php echo esc_url(wp_registration_url()); ?>">Sign Up</a> 
+                                <a class="btn btn-primary signup_popup" href="<?php echo esc_url(wp_registration_url()); ?>">Sign Up</a>
                             <?php endif; ?> 
-                            <a class="cta_bordered" href="<?php echo site_url('/about'); ?>">More About Us</a>
+                            <a class="btn btn-outline-primary" href="<?php echo site_url('/about'); ?>">More About Us</a>
                         </div>
                     </div>
                     <div class="col-md-5">

@@ -3,31 +3,46 @@ jQuery(document).ready(function ($) {
 	 * Check if touch device
 	 */
 	function wmIsTouchDevice() {
-		return 'ontouchstart' in window        // works on most browsers 
+		return 'ontouchstart' in window        // works on most browsers
 		|| navigator.maxTouchPoints;       // works on IE10/11 and Surface
 	}
-	
-	
-	
-	$(".wm_main_nav_toggle").click(function (e) {
+
+
+    /***
+	 * Click handler to show/hide mobile navigation
+     */
+	$(".primaryHeader__utilities-hamburger").on('click', function(e)
+	{
 		e.preventDefault();
-		$('.main_nav').toggleClass('nav-open');
-		$('html').toggleClass('nav-opened');
-		$('.wm_main_nav_toggle').toggleClass("now");
+
+		$(this).toggleClass('open');
+		$('.primaryHeader__nav').toggleClass('open');
 	});
-	var wm_hide_main_nav = function(){
-		$('.main_nav').removeClass('nav-open');
-		$('html').removeClass('nav-opened');
-		$('.wm_main_nav_toggle').removeClass("now");
+
+
+    /***
+	 * Mobile navigation accordion
+     */
+    if(window.matchMedia('(max-width: 1099px)').matches)
+	{
+		$('#primaryNav .primaryNav__top-list > li > span').on('click', function(e)
+		{
+			e.preventDefault();
+
+			$('.primaryNav__top-list > li > span').removeClass('active');
+			$('.primaryNav__dropdown').hide();
+
+            $(this).addClass('active');
+			$(this).next('.primaryNav__dropdown').show();
+
+            window.scroll(0, 0);
+		});
 	}
-	
-	$('[data-wm-plugin="collapse"]').on('click', function(e){
-		e.preventDefault();
-		var $self = $(this),
-			$target = $($self.data('target'));
-		$self.toggleClass('show');
-		$target.toggle();
-	});
+
+	var wm_hide_main_nav = function()
+	{
+		$('.primaryHeader__utilities-hamburger, .primaryHeader__nav').removeClass('open');
+	}
 
 	if( wmIsTouchDevice() ){
 		$( 'body' ).addClass( 'is-touch-device' );
@@ -78,177 +93,186 @@ jQuery(document).ready(function ($) {
 
 	// Signup validation start
 
-//	$.validator.setDefaults({
-//		submitHandler: function () {
-//			alert("submitted!");
-//		}
-//	});
+	$(".signupForm").each(function(){
+		$(this).validate({
+			rules: {
+				first_name: "required",
+				last_name: "required",
+				email: "required",
+				password: {
+					required: true,
+					minlength: 8
+				},
+				_wm_hc_professional_type: {
+					required: "#user_role_hcp:checked"
+				},
+			},
+			messages: {
+				first_name: "Please enter your firstname",
+				last_name: "Please enter your lastname",
+				email: "Please enter your email",
+				password: {
+					required: "Please provide a password",
+					minlength: ""
+				},
+			},
+			errorElement: "em",
+			errorPlacement: function (error, element) {
+				// Add the `invalid-feedback` class to the error element
+				error.addClass("invalid-feedback");
 
-		$(".signupForm").each(function(){
-			$(this).validate({
-				rules: {
-					first_name: "required",
-					last_name: "required",
-					email: "required",
-					password: {
-						required: true,
-						minlength: 8
-					},
-					_wm_hc_professional_type: {
-						required: "#user_role_hcp:checked"
-					},
-				},
-				messages: {
-					first_name: "Please enter your firstname",
-					last_name: "Please enter your lastname",
-					email: "Please enter your email",
-					password: {
-						required: "Please provide a password",
-						minlength: ""
-					},
-				},
-				errorElement: "em",
-				errorPlacement: function (error, element) {
-					// Add the `invalid-feedback` class to the error element
-					error.addClass("invalid-feedback");
-
-					if (element.prop("type") === "checkbox") {
-						error.insertAfter(element.next("label"));
-					} else {
-						error.insertAfter(element);
-					}
-				},
-				highlight: function (element, errorClass, validClass) {
-					$(element).addClass("is-invalid").removeClass("is-valid");
-				},
-				unhighlight: function (element, errorClass, validClass) {
-					$(element).addClass("is-valid").removeClass("is-invalid");
-				},
-				submitHandler: function(form) {
-					form.submit();
+				if (element.prop("type") === "checkbox") {
+					error.insertAfter(element.next("label"));
+				} else {
+					error.insertAfter(element);
 				}
-			});
+			},
+			highlight: function (element, errorClass, validClass) {
+				$(element).addClass("is-invalid").removeClass("is-valid");
+			},
+			unhighlight: function (element, errorClass, validClass) {
+				$(element).addClass("is-valid").removeClass("is-invalid");
+			},
+			submitHandler: function(form) {
+				form.submit();
+			}
 		});
-		
-		$(".LoginForm").each(function(){
-			$(this).validate({
-				rules: {
-					log: "required",
-					pwd: {
-						required: true,
-						//minlength: 8
-					},
-				},
-				messages: {
-					log: "Please enter your email",
-					pwd: {
-						required: "Please provide a password",
-						//minlength: "Please use 8 or more characters with a mix of letters, numbers & symbols"
-					},
-				},
-				errorElement: "em",
-				errorPlacement: function (error, element) {
-					// Add the `invalid-feedback` class to the error element
-					error.addClass("invalid-feedback");
+	});
 
-					if (element.prop("type") === "checkbox") {
-						error.insertAfter(element.next("label"));
-					} else {
-						error.insertAfter(element);
-					}
+	$(".LoginForm").each(function(){
+		$(this).validate({
+			rules: {
+				log: "required",
+				pwd: {
+					required: true,
+					//minlength: 8
 				},
-				highlight: function (element, errorClass, validClass) {
-					$(element).addClass("is-invalid").removeClass("is-valid");
+			},
+			messages: {
+				log: "Please enter your email",
+				pwd: {
+					required: "Please provide a password",
+					//minlength: "Please use 8 or more characters with a mix of letters, numbers & symbols"
 				},
-				unhighlight: function (element, errorClass, validClass) {
-					$(element).addClass("is-valid").removeClass("is-invalid");
-				},
-				submitHandler: function(form) {
-					form.submit();
+			},
+			errorElement: "em",
+			errorPlacement: function (error, element) {
+				// Add the `invalid-feedback` class to the error element
+				error.addClass("invalid-feedback");
+
+				if (element.prop("type") === "checkbox") {
+					error.insertAfter(element.next("label"));
+				} else {
+					error.insertAfter(element);
 				}
-			});
+			},
+			highlight: function (element, errorClass, validClass) {
+				$(element).addClass("is-invalid").removeClass("is-valid");
+			},
+			unhighlight: function (element, errorClass, validClass) {
+				$(element).addClass("is-valid").removeClass("is-invalid");
+			},
+			submitHandler: function(form) {
+				form.submit();
+			}
 		});
-		
-		$(".contactForm").each(function(){
-			$(this).validate({
-				rules: {
-					firstName: "required",
-					lastName: "required",
-					email: "required",
-					message: "required",
-					contactName: {
-						required: true,
-						minlength: 6
-					},
-					password: {
-						required: true,
-						minlength: 8
-					},
-					subject: {
-						required: true,
-						minlength: 6
-					},
-				},
-				messages: {
-					firstName: "Please enter your firstname",
-					lastName: "Please enter your lastname",
-					email: "Please enter your email",
-					message: "Please enter your message",
-					contactName: {
-						required: "Please enter your name",
-						minlength: "Please enter minimum 6 characters"
-					},
-					password: {
-						required: "Please provide a password",
-						minlength: "Please use 8 or more characters with a mix of letters, numbers & symbols"
-					},
-					subject: {
-						required: "Please enter subject",
-						minlength: "Please enter minimum 6 characters"
-					},
-				},
-				errorElement: "em",
-				errorPlacement: function (error, element) {
-					// Add the `invalid-feedback` class to the error element
-					error.addClass("invalid-feedback");
+	});
 
-					if (element.prop("type") === "checkbox") {
-						error.insertAfter(element.next("label"));
-					} else {
-						error.insertAfter(element);
-					}
+	$(".contactForm").each(function(){
+		$(this).validate({
+			rules: {
+				firstName: "required",
+				lastName: "required",
+				email: "required",
+				message: "required",
+				contactName: {
+					required: true,
+					minlength: 6
 				},
-				highlight: function (element, errorClass, validClass) {
-					$(element).addClass("is-invalid").removeClass("is-valid");
+				password: {
+					required: true,
+					minlength: 8
 				},
-				unhighlight: function (element, errorClass, validClass) {
-					$(element).addClass("is-valid").removeClass("is-invalid");
+				subject: {
+					required: true,
+					minlength: 6
+				},
+			},
+			messages: {
+				firstName: "Please enter your firstname",
+				lastName: "Please enter your lastname",
+				email: "Please enter your email",
+				message: "Please enter your message",
+				contactName: {
+					required: "Please enter your name",
+					minlength: "Please enter minimum 6 characters"
+				},
+				password: {
+					required: "Please provide a password",
+					minlength: "Please use 8 or more characters with a mix of letters, numbers & symbols"
+				},
+				subject: {
+					required: "Please enter subject",
+					minlength: "Please enter minimum 6 characters"
+				},
+			},
+			errorElement: "em",
+			errorPlacement: function (error, element) {
+				// Add the `invalid-feedback` class to the error element
+				error.addClass("invalid-feedback");
+
+				if (element.prop("type") === "checkbox") {
+					error.insertAfter(element.next("label"));
+				} else {
+					error.insertAfter(element);
 				}
-			});
+			},
+			highlight: function (element, errorClass, validClass) {
+				$(element).addClass("is-invalid").removeClass("is-valid");
+			},
+			unhighlight: function (element, errorClass, validClass) {
+				$(element).addClass("is-valid").removeClass("is-invalid");
+			}
 		});
-		// Password Toggle 
+	});
 
-	$("body").on('click', '.password-show', function () {
+
+    /***
+	 * Click handler to show password
+     */
+	$("body").on('click', '.password-show', function ()
+	{
 		var input = $($(this).attr('data-password-field'));
-		if (input.length > 0) {
-                    if (input.attr("type") === "password") {
-                            input.attr("type", "text");
-                    } else {
-                            input.attr("type", "password");
-                    }
+
+		if (input.length > 0)
+		{
+			if (input.attr("type") === "password")
+			{
+				input.attr("type", "text");
+			}
+			else
+			{
+				input.attr("type", "password");
+			}
 		}
 	});
 
-	$("body").on('click', '.password-show', function () {
-		var input = $("#exampleInputEmail9");
-		if (input.attr("type") === "password") {
-			input.attr("type", "text");
-		} else {
-			input.attr("type", "password");
-		}
-	});
+	// $("body").on('click', '.password-show', function ()
+	// {
+	// 	var input = $("#exampleInputEmail9");
+	//
+	// 	if (input.attr("type") === "password")
+	// 	{
+	// 		input.attr("type", "text");
+	// 	}
+	// 	else
+	// 	{
+	// 		input.attr("type", "password");
+	// 	}
+	// });
 
-	function wmGetParameterByName(name, url) {
+	function wmGetParameterByName(name, url)
+	{
 		if (!url) url = window.location.href;
 		name = name.replace(/[\[\]]/g, '\\$&');
 		var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -258,82 +282,92 @@ jQuery(document).ready(function ($) {
 		return decodeURIComponent(results[2].replace(/\+/g, ' '));
 	}
 
-	$(".closeModal").click(function () {
+    /***
+	 * Click handler to close sign up modal
+     */
+	$(".closeModal").on('click', function(e)
+	{
+		e.preventDefault();
+
 		$(".signUpScreenPopup").removeClass('opened');
 		$(".LoginScreenPopup").removeClass('opened');
 		$("body").removeClass("no-scroll");
 	});
 
-	// Signup open
-	$("body").on('click', '.signup_popup', function (e) {
+    /***
+	 * Click handler to show signup modal
+     */
+	$("body").on('click', '.signup_popup', function(e)
+	{
 		e.preventDefault();
-        wm_hide_main_nav
+
+        wm_hide_main_nav();
+
 		$(".LoginScreenPopup").removeClass('opened');
 		$(".signUpScreenPopup").addClass('opened');
 		$('.premium-signup-modal').hide();
 		$("body").addClass("no-scroll");
 	});
 
-	// Signin open
-	$(".login_popup").click(function (e) {
+    /***
+	 * Click handler to show login modal
+     */
+	$(".login_popup").on('click', function(e)
+	{
 		e.preventDefault();
+
+        var href = $(this).attr('href');
+        var redirect_to = wmGetParameterByName('redirect_to', href);
+
 		wm_hide_main_nav();
+
 		$(".signUpScreenPopup").removeClass('opened');
 		$(".LoginScreenPopup").addClass('opened');
-		var href = $(this).attr('href');
-		var redirect_to = wmGetParameterByName('redirect_to', href);
-		if(redirect_to){
-			$(".LoginScreenPopup").find('input[name="redirect_to"]').val(redirect_to);
-		}
+
+		if(redirect_to) $(".LoginScreenPopup").find('input[name="redirect_to"]').val(redirect_to);
+
 		$("body").addClass("no-scroll");
 	});
+
+    /***
+	 * Click handler to close login modal
+     */
+	$('.LoginScreenPopup').on('click', function(e)
+	{
+		e.preventDefault();
+
+		if(!$(e.target).closest('.login-wrapp').length)
+		{
+			$('.LoginScreenPopup').removeClass('opened');
+			$('body').removeClass('no-scroll');
+		}
+	})
 
 
 	// Search
 
-	$(".wm_open_search").click(function () {
-		$(".sticky-top").addClass("search-open");
-		$(".search-overlay").show();
-		//$(".search-box").show();
+	$(".primaryHeader__utilities-search a").on('click', function()
+	{
+		$(".search-overlay").toggle();
+		$('.search-box').toggle();
+		$('body').toggleClass('search-open');
+		$(this).toggleClass('active');
 	});
 
-	$(".wm_close_search").click(function () {
-		$(".sticky-top").removeClass("search-open");
-		$(".search-overlay").hide();
-		//$(".search-box").hide();
-	});
-	
-
-//	$(".search-head").click(function () {
-//		$(".sticky-top").toggleClass("search-open");
-//	});
-
-	$(".short_link_search").click(function () {
-		$(".sticky-top").toggleClass("advance-open");
+	$(".short_link_search").on('click', function()
+	{
+		$('.advance-search').toggle();
 	});
 
-	$(".close-search,.search-overlay").click(function () {
+	$(".close-search, .search-overlay").on('click', function()
+	{
 		$(".wm_close_search").click();
 	});
-	
-//	$(".search-overlay").click(function () {
-//		$(".search-overlay").hide();
-//		$(".search-box").hide();
-//		//$(".sticky-top").removeClass("advance-open");
-//		$(".sticky-top").removeClass("search-open");
-//	});
 
 
-
-	// Account validation start
-
-//	$.validator.setDefaults({
-//		submitHandler: function () {
-//                    
-//			//alert("submitted!");
-//		}
-//	});
-
+    /***
+	 * Account validation start
+     */
 	$(document).ready(function () {
 		$("#form-login-account").validate({
 			rules: {
@@ -370,11 +404,11 @@ jQuery(document).ready(function ($) {
 		});
 
 	});
-	
-	// Account validation End
+
 	
 	// Floting icons
-	$(window).scroll(function () {
+	$(window).scroll(function ()
+	{
 		var scroll = $(window).scrollTop();
 
 		if (scroll >= 500) {
@@ -397,11 +431,11 @@ jQuery(document).ready(function ($) {
 			$finish.show();
 		}
 	});
+
 	$('.signUpScreen .user_role:checked').trigger('click');
-	// Signup validation End
-	// With button
-	$('.signUpScreen').on('click', '#continue-next', function () {
-		//debugger
+
+	$('.signUpScreen').on('click', '#continue-next', function ()
+	{
 		var formId = $(this).closest('.signUpScreen').hasClass('signUpScreenPopup') ? '#signupFormPopup' : '#signupForm';
 		var $form = $(formId);
 		var validator = $form.validate();
@@ -409,7 +443,6 @@ jQuery(document).ready(function ($) {
 		var i = 0;
 
 		var $inputs = $(this).closest(".inner-wrapp").find("input");
-		//debugger
 		var p = 0;
 		$inputs.each(function () {
 

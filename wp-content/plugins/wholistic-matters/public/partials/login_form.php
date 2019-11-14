@@ -1,30 +1,9 @@
 <?php
 $is_popup = isset($attributes['display']) && in_array(trim(strtolower($attributes['display'])), array('popup','modal'));
 $container_style = '';
-if( $is_popup ){
-	//$container_style = 'style="display: none;"';
-}
 ?>
 
 <div class="LoginScreen <?php if($is_popup): ?>LoginScreenPopup<?php endif ?>" <?php echo $container_style; ?>>
-    <div class="header-login">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <a href="<?php echo home_url('/'); ?>"> <img src="<?php bloginfo('template_url'); ?>/images/login-sm-logo.png" alt="login-sm-logo"></a>
-                </div>
-                <div class="col-sm-6">
-					<?php if($is_popup): ?>
-					<a href="#." class="closeModal">
-						<img src="<?php bloginfo('template_url'); ?>/images/close-x.png" alt="close">
-					</a>
-					<?php endif ?>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
     <div class="login-wrapp">
         <a href="<?php echo home_url('/'); ?>">
             <img src="<?php bloginfo('template_url'); ?>/images/wm-logo.svg" width="415" alt="signup-logo" class="logo-log">

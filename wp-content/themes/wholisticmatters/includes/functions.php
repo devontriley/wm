@@ -251,7 +251,7 @@ function WM_restrict_the_content() {
 				<div class="sm-wrapp summary">
 					<h5 class="wm_gated_content_title"><?php _e('Join Our Community to Read Further'); ?></h5>
 					<div class="wm_gated_content_text"><?php echo wpautop($gated_para); ?></div>
-					<a class="cta_filled signup_popup" href="<?php echo esc_url(wp_registration_url()); ?>">Sign Up</a> 
+					<a class="btn-primary signup_popup" href="<?php echo esc_url(wp_registration_url()); ?>">Sign Up</a>
 				</div>
 			</div>
 			<?php

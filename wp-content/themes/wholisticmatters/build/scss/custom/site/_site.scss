@@ -320,43 +320,7 @@
 		position: relative;
 	}
 }
-body{
-	&.search{
-		.boxed{
-			.search-box{
-				display: block;
-				position: relative;
-				padding: 0;
-				top: 0;
-				box-shadow: none;
-				border: 0;
-			}
-			.search-form {
-				width: 770px;
-				margin: 50px auto 30px;
-				max-width: 100%;
-			}
-			
-			.advance-search{
-				margin-bottom: 2.5em;
-				
-				.search-form {
-					margin: 0 auto 30px;
-				}
-			}
-			
-			.short_link_search {
-				text-decoration: underline;
-				color: #52565F;
-				
-				&:hover,
-				&:focus{
-					text-decoration: none;
-				}
-			}
-		}
-	}
-}
+
 .filter-herbal {
 	margin-top: 0;
 }
@@ -597,20 +561,6 @@ body{
 	}
 }
 
-.search-form {
-	.form-control{
-		width: calc(100% - 115px);
-	}
-	input{
-		&[type="submit"]{
-			position: absolute;
-			right: 15px;
-			top: 0;
-			width: 105px;
-		}
-	}
-}
-
 .article-block{
 	&.fixed-aside{
 		position: sticky;
@@ -649,19 +599,6 @@ body{
 		}
 	}
 }
-@media all and (min-width: 1115px){
-/*	.menu-item.dropdown {
-
-		.menu-item{
-			padding: 0 1rem;
-		}
-	}*/
-}
-@media all and (max-width: 991px){
-	.search-form{
-		padding: 0 20px;
-	}
-}
 @media all and (max-width: 767px){
     .data-banner{
 
@@ -674,14 +611,6 @@ body{
 			.image-banner {
 				padding-top: 0;
 			}
-		}
-	}
-}
-
-@media all and (max-width: 480px){
-	.search-form {
-		.form-control{
-			font-size: 18px;
 		}
 	}
 }
