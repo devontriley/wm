@@ -53,67 +53,140 @@ $wm_settings = Wholistic_Matters::get_settings();
 <body <?php body_class(); ?> data-spy="scroll" data-target=".sidebar-list" data-offset="150">
 
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLWL4F&gtm_auth=WK7bGF4PegQPQj4jljz3-g&gtm_preview=env-2&gtm_cookies_win=x"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLWL4F&gtm_auth=WK7bGF4PegQPQj4jljz3-g&gtm_preview=env-2&gtm_cookies_win=x" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="search-overlay"></div>
 
-    <header class="sticky-top advance-open">
-        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light primary-nav">
-            <a class="navbar-brand" href="<?php echo site_url('/'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/wm-logo.svg" alt="Logo" width="250" height="29"></a>
-            
-            <div class="mob-navbar-header">
-				<?php if(!is_search()): ?>
-				<a href="Javascript:;" class="search-head">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Searchicon.svg" alt="Search" class="wm_open_search">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/close-x.png" alt="Close Search" class="wm_close_search">
-				</a>
-				<?php endif; ?>
-				<?php if( is_user_logged_in() ): ?>
-					<span class="member_acc_link">
-						<a href="<?php echo site_url('/member-account'); ?>" title="<?php esc_attr_e('Goto My Account'); ?>"><i class="fas fa-user-circle fa-lg"></i></a>
-					</span>
-				<?php endif; ?>
-				<button type="button" class="wm_main_nav_toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-			</div>
-            
-            <div class="main_nav navbar-collapse" >
-				<div class="main_nav_header">
-					<a class="navbar-brand" href="<?php echo site_url('/'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Logo"></a>
-					<div class="mob-navbar-header">
-						<?php if(!is_search()): ?>
-						<a href="Javascript:;" class="search-head">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Searchicon.svg" alt="Search" class="wm_open_search">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/close-x.png" alt="Close Search" class="wm_close_search">
-						</a>
-						<?php endif; ?>
-						<?php if( is_user_logged_in() ): ?>
-							<span class="member_acc_link">
-								<a href="<?php echo site_url('/member-account'); ?>" title="<?php esc_attr_e('Goto My Account'); ?>"><i class="fas fa-user-circle fa-lg"></i></a>
-							</span>
-						<?php endif; ?>
-						<button type="button" class="wm_main_nav_toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-					</div>
-				</div>
-				<?php echo '<div class="wm_nav_secondary_links_xs">'; get_template_part('navbar-search'); echo '</div>';  ?>
-                <?php
-                   wp_nav_menu( array(
-                     'theme_location' => 'primary',
-                     'container'      => false,
-                     'menu_class'     => 'nav navbar-nav mr-auto',
-                     'fallback_cb'    => '__return_false',
-                     'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                     'depth'          => 3,
-                     'walker'         => new bootstrap_4_walker_nav_menu()
-                  ) );
-                ?>
-				<?php  get_template_part('navbar-search');  ?>
-				<div class="main_nav_footer">
-					<?php get_template_part('template-parts/common', 'footer'); ?>
-				</div>
+
+<header id="primaryHeader" class="primaryHeader">
+    <div class="primaryHeader__inner">
+        <div class="primaryHeader__logo">
+            <a href="<?php echo site_url('/'); ?>">
+                <img src="<?php bloginfo('template_url'); ?>/images/wm-logo.svg" alt="Logo" width="250" height="29">
+            </a>
+        </div>
+
+        <div class="primaryHeader__nav">
+            <div class="primaryHeader__mobile-links">
+                <a href="#" class="btn btn-outline-primary">Login</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
             </div>
-        </nav>
-        
-		<?php if(!is_search()){ get_template_part('navbar-search-box'); } ?>
-    </header>
+            <nav id="primaryNav" role="navigation">
+                <ul class="primaryNav__top-list">
+                    <li class="hasMega">
+                        <span>Discover</span>
+                        <div class="primaryNav__dropdown mega">
+                            <div class="primaryNav__dropdown-inner">
+                                <div class="primaryNav__dropdown-column">
+                                    <ul>
+                                        <li><h3>Key Topics</h3></li>
+                                        <li><a href="https://wholisticmatters.com/category/cardiometabolic-control/">Cardiometabolic Control</a></li>
+                                        <li><a href="https://wholisticmatters.com/category/digestive-health/">Digestive Health</a></li>
+                                        <li><a href="https://wholisticmatters.com/category/epigenetics-health/">Epigenetics</a></li>
+                                        <li><a href="https://wholisticmatters.com/category/inflammation/">Inflammation</a></li>
+                                        <li><a href="https://wholisticmatters.com/category/lifestyle-health-wellness/">Lifestyle Health &amp; Wellness</a></li>
+                                        <li><a href="/view-all-topics/" class="more">View All Topics</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="primaryNav__dropdown-column">
+                                    <ul>
+                                        <li><h3>Spotlight Topics</h3></li>
+                                        <li><a href="https://wholisticmatters.com/spotlight-topic/detox/">Detoxification</a></li>
+                                        <li><a href="https://wholisticmatters.com/spotlight-topic/hemp-the-endocannabinoid-system/">Hemp &amp; the Endocannabinoid System</a></li>
+                                        <li><a href="https://wholisticmatters.com/spotlight-topic/omega-3-fatty-acids/">Omega-3 Fatty Acids</a></li>
+                                        <li><a href="https://wholisticmatters.com/spotlight-topic/organic-farming-whole-foods/">Organic Farming &amp; Whole Foods</a></li>
+                                        <li><a href="https://wholisticmatters.com/spotlight-topic/subclinical-magnesium-deficiency/">Plant-based Magnesium</a></li>
+                                        <li><a href="/spotlight-topics/" class="more">View All</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="primaryNav__dropdown-column">
+                                    <ul>
+                                        <li><h3>Media Base</h3></li>
+                                        <li><a href="https://wholisticmatters.com/articles/">Articles</a></li>
+                                        <li><a href="https://wholisticmatters.com/videos/">Videos</a></li>
+                                        <li><a href="https://wholisticmatters.com/podcast-episodes/">Podcasts</a></li>
+                                        <li><a href="https://wholisticmatters.com/resources/">Resources</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="primaryNav__dropdown-column">
+                                    <ul>
+                                        <li><h3>Practitioner Specialty</h3></li>
+                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/acupuncture/">Acupuncture</a></li>
+                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/chiropractic/">Chiropractic</a></li>
+                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/functional-medicine/">Functional Medicine</a></li>
+                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/herbalist/">Herbalist</a></li>
+                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/integrative-medicine/">Integrative Medicine</a></li>
+                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/naturopathic/">Naturopathic</a></li>
+                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/nutrition/">Nutrition</a></li>
+                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/veterinary/">Veterinary</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>Interactive Tools</span>
+                        <div class="primaryNav__dropdown">
+                            <ul>
+                                <li><a href="">Vitamin Advisor</a></li>
+                                <li><a href="">Drug-Nutrient Interaction</a></li>
+                                <li><a href="">Herbal Medicinals</a></li>
+                                <li class="forHCP">
+                                    <p>— Free With HCP Account —</p>
+                                    <a href="#">Anatomic / BioDigital Library</a>
+                                    <a href="#">Clinical Practice Support</a>
+                                </li>
+                                <li class="link"><a href="">Learn More & Gain Access</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>Professional Education</span>
+                        <div class="primaryNav__dropdown">
+                            <ul>
+                                <li><a href="">Continuing Ed</a></li>
+                                <li class="forHCP">
+                                    <p>— Free With HCP Account —</p>
+                                    <a href="#">Clinical Practicum</a>
+                                    <a href="#">White Papers</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>Culinary Wellness</span>
+                        <div class="primaryNav__dropdown">
+                            <ul>
+                                <li><a href="">Overview</a></li>
+                                <li><a href="">Recipes</a></li>
+                                <li><a href="">Skill Videos</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="primaryHeader__utilities">
+            <div class="primaryHeader__utilities-search">
+                <a href="#">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Searchicon.svg" alt="Search" class="wm_open_search">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/close-x.png" alt="Close Search" class="wm_close_search">
+                </a>
+            </div>
+            <div class="primaryHeader__utilities-links">
+                <a href="#" class="btn btn-link">Login</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+            <div class="primaryHeader__utilities-hamburger">
+                <button type="button" class="wm_main_nav_toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+        </div>
+    </div>
+</header>
