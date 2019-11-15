@@ -1,0 +1,107 @@
+body.error404 div[class*=col].image img {
+    width: 100%;
+    pointer-events: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    body.error404 div[class*=col].image img {
+        position: fixed;
+        width: auto;
+    }
+}
+
+body.error404 p {
+    font-family: 'Harriet';
+}
+
+a {
+    color: #00B162;
+}
+
+.badge {
+    background: #FDBE3B;
+    color: #fff;
+    padding: 5px 9px;
+    font-size: 10px;
+}
+
+.detail-link {
+    color: #00B162;
+    text-decoration: underline;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0px;
+}
+
+.btn-gray {
+    background: #AEAEAE;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    padding: 0.575rem 0.95rem;
+}
+
+/**
+*** 3 Column Carousel
+ */
+.owl-carousel {
+    .item {
+        margin-top: 15px;
+
+        h2 {
+            font-size: 18px;
+            color: #40473E;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        p {
+            font-size: 14px;
+            color: #52565F;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            height:auto;
+        }
+    }
+
+    .owl-prev {
+        position: absolute;
+        left: 0;
+        top: 35%;
+        background: url(images/back.svg) !important;
+        background-repeat: no-repeat !important;
+        width: 12px;
+        height: 20px;
+        @media(min-width: 992px) {
+            left: -35px;
+        }
+    }
+
+    .owl-next {
+        position: absolute;
+        right: 0;
+        top: 35%;
+        background: url(images/next.svg) !important;
+        background-repeat: no-repeat !important;
+        width: 12px;
+        height: 20px;
+        @media(min-width: 992px) {
+            right: -35px;
+        }
+    }
+
+    .owl-nav {
+        &.disabled {
+            display: block !important;
+        }
+
+        span {
+            display: none;
+        }
+    }
+}

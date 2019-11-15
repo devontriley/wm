@@ -1,0 +1,221 @@
+/**
+*** 50/50 Image/Text
+*** On homepage
+ */
+.culinary-block {
+    border-radius: 5px 5px 0 0px;
+    width: 100%;
+    background: #F7FCF3;
+    overflow: hidden;
+    margin-top: 50px;
+    @media(min-width: 992px) {
+        border-radius: 5px;
+        width: auto;
+    }
+
+    img {
+        border-radius: 5px 0 0 5px;
+        width: 100%;
+        @media(min-width: 992px) {
+            width: auto;
+            float: left;
+        }
+    }
+
+    &.righ-flip img {
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        @media(min-width: 992px) {
+            border-radius: 0px 5px 5px 0px;
+            width: auto;
+            float: right;
+        }
+    }
+
+    .data-calinary {
+        padding: 20px 10px;
+        width: 100%;
+        @media(min-width: 992px) {
+            padding: 70px 100px;
+            float: left;
+            width: 633px;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #1A4D2C;
+            font-weight: bold;
+            font-family: 'Harriet';
+            margin-top: 0;
+            @media(min-width: 992px) {
+                font-size: 36px;
+            }
+
+            small {
+                font-size: 16px;
+                color: #40473E;
+                font-weight: bold;
+                display: block;
+            }
+
+            p {
+                font-size: 16px;
+                color: #40473E;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-family: 'Harriet';
+                @media(min-width: 992px) {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                a.btn-theme {
+                    background: #00B162;
+                    color: #fff;
+                    padding: 5px 32px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &.righ-flip .data-calinary {
+        padding: 20px;
+        float: right;
+        width: 100%;
+        @media(min-width: 992px) {
+            padding: 70px 100px;
+            width: 633px;
+        }
+    }
+
+    &.righ-flip.fix-lg .data-calinary {
+        padding: 20px;
+        float: none;
+        width: 100%;
+        @media(min-width: 992px) {
+            padding: 50px 40px 40px;
+        }
+    }
+
+    .container-lg & .data-calinary {
+        padding: 20px;
+        float: none;
+        width: 100%;
+        @media(min-width: 992px) {
+            padding: 65px 60px 45px 30px;
+            float: right;
+            width: 520px;
+        }
+    }
+
+    .container-lg &.righ-flip .data-calinary {
+        padding: 20px;
+        float: none;
+        width: 100%;
+        @media(min-width: 992px) {
+            padding: 65px 60px 45px 30px;
+            width: 520px;
+            float: left;
+        }
+    }
+}
+
+/**
+*** Create account interstitial
+ */
+.account {
+    background: url(images/account-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin-top: 34px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media(min-width: 992px) {
+        height: 439px;
+        margin-top: 54px;
+        padding-top: 70px;
+    }
+
+    .account-box {
+        width: 96%;
+        margin: 0 auto;
+        background: #fff;
+        -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+        padding: 26px 10px;
+        border-radius: 5px;
+        text-align: center;
+        @media(min-width: 992px) {
+            width: 485px;
+            padding: 35px 68px;
+        }
+
+        h2 {
+            font-size: 21px;
+            color: #1A4D2C;
+            font-weight: bold;
+            font-family: 'Harriet';
+            @media(min-width: 992px) {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 16px;
+                color: #40473E;
+                font-family: 'Harriet';
+            }
+
+            a.btn-theme {
+                background: #00B162;
+                color: #fff;
+                padding: 5px 32px;
+            }
+        }
+    }
+}
+
+/**
+*** Accordion
+ */
+#accordion {
+    margin-top: 30px;
+}
+
+/**
+*** Hero
+ */
+.hero {
+    margin: 20px;
+
+    .inner {
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+
+        .desktop-graphic {
+            position: relative;
+            display: none;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .text-wrapper {
+            text-align: center;
+
+            .mobile-graphic {
+                position: relative;
+                display: block;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.banner-inner {
+    background: #F7FCF3;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.data-banner {
+    width: 57%;
+    float: left;
+    padding: 40px 33px 40px 33px;
+    position: absolute;
+    height: 100%;
+    left: 40px;
+    right: 40px;
+}
+
+.image-banner {
+    width: 40%;
+    float: right;
+}
+
+.image-banner img {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.detail-data {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+}
+
+.detail-data h2,
+.detail-data p.h2 {
+    font-size: 36px;
+    color: #1A4D2C;
+    font-weight: bold;
+    font-family: 'Harriet';
+}
+
+.detail-data p {
+    font-size: 16px;
+    color: #40473E;
+    font-family: 'Harriet';
+}
+
+.badge-banner {
+    background: #00B162;
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    letter-spacing: 1.5px;
+}
+
+.tabs-me {
+    margin-top: 20px;
+}
+
+.tabs-me span {
+    display: inline-block;
+}
+
+.tabs-me span:first-child {
+    font-size: 14px;
+    color: #52565F;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.tabs-me span.tabs-links {
+    width: 92.2%;
+    margin-bottom: 30px;
+}
+
+.tabs-me .nav-tabs {
+    border-bottom: none;
+    background: #F7FCF3;
+    border-radius: 5px;
+}
+
+.tabs-me .nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    font-size: 14px;
+    color: #52565F;
+    padding: .5rem 0.7rem;
+    height: 36px;
+    border: none;
+}
+
+.tabs-me .nav-tabs .nav-item.show .nav-link,
+.tabs-me .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #00B162;
+    border-color: #dee2e6 #dee2e6 #fff;
+    color: #fff !important;
+    border-radius: 5px;
+}
+
+.btn-gray {
+    background: #AEAEAE;
+    color: #fff;
+    font-size: 16px;
+}
+
+.margin-40 {
+    margin-top: 40px;
+}

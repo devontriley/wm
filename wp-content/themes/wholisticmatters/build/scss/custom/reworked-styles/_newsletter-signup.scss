@@ -1,0 +1,134 @@
+@media (max-width: 991px) {
+    .newsletter-signup-block .container {
+        max-width: none !important;
+    }
+}
+
+.newsletter-signup-block .row {
+    background: #F7FCF3;
+}
+
+.newsletter-signup-block img {
+    max-width: 100%;
+}
+
+.newsletter-signup-block .icon {
+    display: none;
+}
+
+.newsletter-signup-block .h1 {
+    font-size: 26px;
+    color: #1A4D2C;
+    font-weight: bold;
+    font-family: 'Harriet';
+}
+
+.newsletter-signup-block p.short {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .newsletter-signup-block .h1 {
+        font-size: 36px;
+    }
+}
+
+.newsletter-signup-block p {
+    font-size: 16px;
+    color: #40473E;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Harriet';
+}
+
+.newsletter-signup-block form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 576px) {
+    .newsletter-signup-block form {
+        display: block;
+    }
+}
+
+.newsletter-signup-block .fields {
+    margin: 0 -10px;
+}
+
+@media (min-width: 768px) {
+    .newsletter-signup-block .fields {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.newsletter-signup-block input[type=text],
+.newsletter-signup-block input[type=email] {
+    flex: 0 0 100%;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    margin: 10px;
+    color: black;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+}
+
+@media (min-width: 768px) {
+    .newsletter-signup-block input[type=text],
+    .newsletter-signup-block input[type=email]{
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    .newsletter-signup-block input.half {
+        flex: 0 0 calc(50% - 20px);
+        width: calc(50% - 20px);
+    }
+}
+
+.newsletter-signup-block input[type=text]:focus,
+.newsletter-signup-block input[type=email]:focus {
+    border: 1px solid #aaa;
+}
+
+.newsletter-signup-block .btn-theme {
+    flex: 0 0 100%;
+    border-radius: 2px;
+    border: 1px solid #00B162;
+    background: #00B162;
+    padding: 0 15px;
+    margin: 10px !important;
+    color: #fff;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+@media (min-width: 576px) {
+    .newsletter-signup-block .btn-theme {
+        margin: 0 0 0 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .newsletter-signup-block .btn-theme {
+        flex: 0 0 calc(100% - 20px);
+        width: calc(100% - 20px);
+    }
+}
+
+.newsletter-signup-block .message p.success {
+    font-size: 18px;
+    font-weight: 700;
+    color: #00B162;
+}
+
+.newsletter-signup-block .message p.error {
+    font-size: 18px;
+    font-weight: 700;
+    color: darkred;
+}

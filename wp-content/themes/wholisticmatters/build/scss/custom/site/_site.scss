@@ -32,27 +32,7 @@
 .cta_filled:hover{
 	border-color: #04a25c;
 }
-.single_premium_icon{
-	position: relative;
-	
-	.icon-feature{
-		text-align: center;
-		
-		img {
-			box-shadow: none;
-			width: 1.5em !important;
-			margin: 0 !important;
-			margin-left: 0.25em !important;
-		}
-	}
-	
-	.icon-wrapp {
-		width: 64px;
-		height: 64px;
-		border-radius: 50%;
-		line-height: 60px;
-	}	
-}
+
 
 .LoginScreenPopup ,
 .signUpScreenPopup {
@@ -262,11 +242,6 @@
 			top: 1rem;
 		}
 	}
-}
-.account {
-    height: auto;
-    padding-top: 70px;
-    padding-bottom: 70px;
 }
 .partner-logo {
     padding-bottom: 2rem;

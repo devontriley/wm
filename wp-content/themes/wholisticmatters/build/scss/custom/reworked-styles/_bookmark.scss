@@ -163,3 +163,138 @@
     margin-right: 2px;
     display: none;
 }
+
+
+/**
+*** My Account Page
+ */
+.bokmark-box {
+    margin-bottom: 40px;
+}
+
+.bokmark-box p {
+    font-size: 16px;
+    color: #52565F;
+    margin-top: 15px;
+}
+
+.search-filter {
+    position: relative;
+}
+
+.search-filter .form-control {
+    background: #F8F8F8;
+    border: none;
+    padding-left: 40px;
+}
+
+.search-ico {
+    position: absolute;
+    left: 12px;
+    top: 7px;
+}
+
+.search-filter .bmd-label-floating {
+    left: 39px;
+}
+
+.wm_my_bookmarks .card {
+    border: none;
+    margin-bottom: 40px;
+}
+
+.wm_my_bookmarks .card-header:first-child {
+    border-radius: 0;
+}
+
+.wm_my_bookmarks .card-header {
+    padding: 0;
+    margin-bottom: 0px;
+    background-color: transparent;
+    border-bottom: 2px solid #DDDDDD;
+    position: relative;
+    cursor: pointer;
+}
+
+.wm_my_bookmarks .card-header.collapsed::after {
+    content: "";
+    background: url(images/angle.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 16px;
+    height: 20px;
+    width: 20px;
+    transform: rotate(-180deg);
+}
+
+.wm_my_bookmarks .card-header::after {
+    content: "";
+    background: url(images/angle.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 16px;
+    height: 20px;
+    width: 20px;
+    transform: rotate(0deg);
+}
+
+.wm_my_bookmarks .card-header ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    position: absolute;
+    right: 24px;
+    top: 6px;
+}
+
+.wm_my_bookmarks .card-header ul li {
+    display: inline-block;
+    padding: 0 2px;
+}
+
+.wm_my_bookmarks .card-header.collapsed ul {
+    top: 16px;
+}
+
+.wm_my_bookmarks .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem 0;
+}
+
+.btn-link {
+    font-weight: 400;
+    background-color: transparent;
+    padding: 0.475rem 0;
+    font-size: 18px;
+    color: #40473E;
+    font-weight: bold;
+}
+
+.btn-link:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.label-border {
+    display: block;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 16px;
+    color: #52565F;
+    font-weight: bold;
+}
+
+.label-border img {
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.margin-10 {
+    margin-top: 10px;
+}

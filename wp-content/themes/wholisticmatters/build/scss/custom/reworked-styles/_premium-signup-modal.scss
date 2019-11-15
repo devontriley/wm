@@ -1,0 +1,122 @@
+.premium-signup-modal .row {
+    background: #fff
+}
+
+@media (max-width:991px) {
+    .premium-signup-modal .container {
+        max-width: none!important
+    }
+}
+
+.premium-signup-modal .h1 {
+    font-size: 26px;
+    color: #1a4d2c;
+    font-weight: 700;
+    font-family: Harriet
+}
+
+.premium-signup-modal p.short {
+    display: none
+}
+
+@media (min-width:576px) {
+    .premium-signup-modal .h1 {
+        font-size: 36px
+    }
+}
+
+.premium-signup-modal p {
+    font-size: 16px;
+    color: #40473e;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Harriet
+}
+
+.premium-signup-modal .btn-theme {
+    flex: 0 0 100%;
+    border-radius: 2px;
+    border: 1px solid #00b162;
+    background: #00b162;
+    padding: 0 15px;
+    margin: 0!important;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    cursor: pointer
+}
+
+body.logged-in .premium-signup-modal .btn-theme {
+    display: none
+}
+
+@media (min-width:576px) {
+    .premium-signup-modal .btn-theme {
+        margin: 0 0 0 10px
+    }
+}
+
+@media (min-width:768px) {
+    .premium-signup-modal .btn-theme {
+        flex: 0 0 calc(100% - 20px);
+        width: calc(100% - 20px)
+    }
+}
+
+.premium-signup-modal {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background: rgba(255, 255, 255, .8)
+}
+
+.premium-signup-modal .inner {
+    position: relative
+}
+
+.premium-signup-modal .close {
+    line-height: 1;
+    opacity: 1;
+    color: #999;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+    float: none
+}
+
+.premium-signup-modal .copy-block {
+    max-width: 500px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    border-bottom: 5px solid #00b162;
+    padding: 0!important
+}
+
+.premium-signup-modal .container {
+    margin: 0!important
+}
+
+.premium-signup-modal .row {
+    background: #fff
+}
+
+.premium-signup-modal div[class*=col] {
+    width: 100%!important;
+    flex: 0 0 100%!important;
+    max-width: none!important
+}
+
+@media (min-width:576px) {
+    .premium-signup-modal h1 {
+        font-size: 28px
+    }
+}

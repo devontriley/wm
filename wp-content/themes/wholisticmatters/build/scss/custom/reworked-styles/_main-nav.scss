@@ -4,8 +4,10 @@
     font-family: $aktiv;
     font-size: 14px;
     color: $textColor;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 2000;
+    background: #fff;
     @media(min-width: 1100px) {
         padding: 0 30px;
     }
@@ -367,10 +369,7 @@
             .primaryHeader__utilities-search {
                 display: inline-block;
                 vertical-align: middle;
-                margin-right: 20px;
-                @media(min-width: 1100px) {
-                    margin-right: 0;
-                }
+                margin-right: 10px;
                 @media(min-width: 1200px) {
                     margin-right: 30px;
                 }
@@ -384,12 +383,25 @@
                         display: block;
                     }
                 }
+
+                img {
+                    vertical-align: bottom;
+                }
             }
 
             .primaryHeader__utilities-links {
                 display: none;
                 @media(min-width: 1100px) {
                     display: inline-block;
+                }
+
+                a {
+                    vertical-align: middle;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $textColor;
+                    }
                 }
 
                 .btn {
@@ -405,6 +417,32 @@
                         background-color: transparent !important;
                         text-decoration: underline;
                     }
+                }
+
+                .login-link {
+                    span {
+                        display: none;
+                        @media(min-width: 1200px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                .logout-link {
+                    margin-left: 10px;
+                }
+            }
+
+            .primaryHeader__utilities-member-link {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+                @media(min-width: 1100px) {
+                    display: none;
+                }
+
+                img {
+                    vertical-align: bottom;
                 }
             }
 

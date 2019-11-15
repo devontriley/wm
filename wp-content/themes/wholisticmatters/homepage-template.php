@@ -178,7 +178,7 @@ get_header(); ?>
                         <div class="data-calinary">
                             <h2>The Color of Food</h2>
                             <p>The Color of Food series is designed to improve understanding of the significance of phytonutrient and nutrient gaps, the GAE connection, the whole food advantage, and the role of specialty crops and the Farm Bill to provide the tools needed to make conscious decisions about our health and the health of the people around us.</p>
-                            <a href="<?php echo bloginfo('url'); ?>/interactive-tools/clinical-practice-support/#Color" class="btn btn-theme">Learn More</a>
+                            <a href="<?php echo bloginfo('url'); ?>/interactive-tools/clinical-practice-support/#Color" class="btn btn-theme btn-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -191,7 +191,7 @@ get_header(); ?>
                         <div class="data-calinary">
                             <h2><?php _e('Podcast Series'); ?></h2>
                             <p><?php echo wpautop($hpage_text_2); ?></p>
-                            <a href="<?php echo $hpage_link_visit; ?>" class="btn btn-theme"><?php _e('Listen Now'); ?></a>
+                            <a href="<?php echo $hpage_link_visit; ?>" class="btn btn-theme btn-primary"><?php _e('Listen Now'); ?></a>
                         </div>
                     </div>
                 </div>
@@ -204,8 +204,8 @@ get_header(); ?>
                         <div class="data-calinary">
                             <h2><?php _e('Culinary Wellness'); ?></h2>
                             <p><?php echo wpautop($hpage_text_1); ?></p>
-                            <a href="<?php echo $hpage_link_recipes; ?>" class="btn btn-theme"><?php _e('Recipes'); ?></a>
-                            <a href="<?php echo $hpage_link_skill; ?>" class="btn btn-theme"><?php _e('Skill Videos'); ?></a>
+                            <a href="<?php echo $hpage_link_recipes; ?>" class="btn btn-theme btn-primary"><?php _e('Recipes'); ?></a>
+                            <a href="<?php echo $hpage_link_skill; ?>" class="btn btn-theme btn-primary"><?php _e('Skill Videos'); ?></a>
                         </div>
                     </div>
                 </div>
@@ -217,7 +217,7 @@ get_header(); ?>
                 <div class="account-box">
                     <h2><?php _e('Create an Account & Gain Full Access'); ?></h2>
                     <p><?php echo wpautop($hpage_text_signup); ?></p>
-                    <a class="btn btn-theme signup_popup" href="<?php echo esc_url(wp_registration_url()); ?>">Sign Up</a>
+                    <a class="btn btn-theme btn-primary signup_popup" href="<?php echo esc_url(wp_registration_url()); ?>">Sign Up</a>
                 </div>
             </div>
         <?php endif; ?>

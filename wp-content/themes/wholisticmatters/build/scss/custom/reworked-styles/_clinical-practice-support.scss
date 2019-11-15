@@ -1,0 +1,177 @@
+.inner-wrapp {
+    width: 760px;
+    margin: 55px auto 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.left-tabs {
+    width: 230px;
+    float: left;
+}
+
+.right-data {
+    width: 480px;
+    float: right;
+}
+
+.left-tabs h3 {
+    font-size: 16px;
+    color: #04a25c;
+    font-weight: bold;
+}
+
+.left-tabs ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.left-tabs ul li {
+    line-height: 30px;
+}
+
+.left-tabs ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.right-data h3 {
+    font-size: 26px;
+    color: #04a25c;
+    font-weight: bold;
+}
+
+.drop ul {
+    padding-left: 15px;
+    list-style: inside;
+    display: none;
+}
+
+.drop.open-child ul {
+    display: block;
+    background: #fafafa;
+    padding: 8px;
+}
+
+.drop.open-child i {
+    transform: rotate(-180deg)
+}
+
+.drop ul li a {
+    font-size: 11px;
+}
+
+.drop ul li {
+    line-height: 24px;
+}
+
+.angle {
+    padding-right: 25px;
+    display: block;
+    position: relative;
+}
+
+.angle i {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 20px;
+}
+
+.right-data p {
+    font-size: 14px;
+    color: #000;
+}
+
+.right-data ul {
+    padding-left: 19px;
+    margin-bottom: 20px;
+}
+
+.right-data ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.right-data ul li a {
+    color: #04a25c;
+}
+
+.right-data p {
+    line-height: 25px;
+}
+
+.right-data p a {
+    color: #04a25c;
+}
+
+.right-data a {
+    color: #04a25c;
+}
+
+.right-data h4 {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+}
+
+.right-data hr {
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+}
+
+.video-frame {
+    margin: 20px 0px;
+}
+
+#Reading {
+    padding-top: 45px;
+}
+
+#Sharing {
+    padding-top: 0;
+}
+
+#Check {
+    padding-top: 0;
+}
+
+#Practical {
+    padding-top: 0;
+}
+
+#Herbal {
+    padding-top: 0;
+}
+
+#Drug {
+    padding-top: 0;
+}
+
+#Vitamin {
+    padding-top: 0;
+}
+
+#Podcasts {
+    padding-top: 0;
+}
+
+.left-tabs ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.left-tabs .drop ul li a {
+    font-size: 11px;
+}
+
+
+
+.nav-item.dropdown .dropdown-menu a:hover {
+    border-bottom: 1px solid #96CA50;
+}

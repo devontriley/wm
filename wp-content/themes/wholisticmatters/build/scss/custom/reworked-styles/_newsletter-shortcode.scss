@@ -1,0 +1,48 @@
+.newsletter-shortcode .newsletter-signup-block {
+    padding: 0 !important;
+}
+
+.newsletter-shortcode .newsletter-signup-block .row {
+    justify-content: center;
+}
+
+.newsletter-shortcode .newsletter-signup-block .image {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+@media (min-width: 768px) {
+    .newsletter-shortcode .newsletter-signup-block .image {
+        padding: 0 0 0 3rem !important;
+    }
+}
+
+.newsletter-shortcode .newsletter-signup-block .content {
+    flex: 0 1 auto !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+@media (min-width: 768px) {
+    .newsletter-shortcode .newsletter-signup-block .content {
+        flex: 1 1 !important;
+        order: 2;
+    }
+}
+
+.newsletter-shortcode .newsletter-signup-block h1 {
+    display: none;
+}
+
+.newsletter-shortcode .newsletter-signup-block h1.short {
+    display: block;
+}
+
+.newsletter-shortcode .gif {
+    display: none;
+}
+
+.newsletter-shortcode .icon {
+    display: inline-block;
+}

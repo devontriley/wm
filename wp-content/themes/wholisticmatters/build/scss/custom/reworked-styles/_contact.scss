@@ -1,0 +1,120 @@
+.contact-data .row {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.contact-data .col-sm-6 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.contact-data .col-sm-12 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.contact-data .form-group p {
+    font-size: 12px;
+    color: #707070;
+    margin-top: 5px;
+}
+
+.contact-data textarea.form-control {
+    height: 140px;
+}
+
+.contact-data .data-wrapp h2 {
+    font-size: 36px;
+    color: #1A4D2C;
+    text-align: center;
+    font-family: 'Harriet';
+    font-weight: bold;
+}
+
+
+.contact-data .social_icons {
+    float: none;
+    text-align: center;
+    margin-top: 25px;
+
+    ul {
+        list-style: none;
+
+        li {
+            display: inline-block;
+
+            &::before {
+                display: none;
+            }
+
+            a {
+                color: #00B162;
+                border: 1px solid #00B162;
+                transition: all ease 0.5s;
+                display: inline-block;
+                width: 37px;
+                height: 37px;
+                line-height: 37px;
+                border-radius: 50%;
+                font-size: 20px;
+                text-align: center;
+
+                &:hover {
+                    color: #fff;
+                    border: 1px solid #00B162;
+                    background: #00B162;
+
+                    img.act {
+                        display: inline-block;
+                    }
+                }
+
+                img {
+                    width: auto;
+                    height: auto;
+                    display: inline-block;
+                    margin: 0 !important;
+
+                    &.act {
+                        display: none;
+                    }
+                }
+            }
+
+            p {
+                font-size: 13px;
+                color: #707070;
+                margin-bottom: 8px;
+                font-family: 'Harriet';
+            }
+        }
+    }
+}
+
+.contact-data {
+    position: relative;
+}
+
+.content-side {
+    position: relative;
+}
+
+.contact-data .form-side {
+    padding-bottom: 6%;
+}
+
+.contact-data .form-wrapp {
+    border-bottom: 5px solid #00B162;
+}
+
+.social_icons li a {
+
+}
+
+.social_icons li a:hover img.act {
+    display: inline-block;
+}
+
+.social_icons li a:hover img.sim {
+    display: none;
+}

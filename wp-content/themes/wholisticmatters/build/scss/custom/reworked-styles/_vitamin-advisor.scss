@@ -1,0 +1,46 @@
+.wrapp-xs {
+    width: 805px;
+    margin: 0 auto;
+}
+
+.list-vitamin {
+    padding-left: 60px;
+    padding-top: 65px;
+}
+
+.list-vitamin p {
+    font-size: 16px;
+    color: #52565F;
+    font-family: 'Harriet';
+    margin-bottom: 5px;
+}
+
+.list-vitamin ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.list-vitamin ul li {
+    font-size: 16px;
+    color: #52565F;
+    padding-left: 15px;
+    position: relative;
+    font-family: 'Harriet';
+}
+
+.list-vitamin ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0px;
+
+}
+
+.iframe-custom {
+    border: 1px solid #40473E;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.iframe-custom img {
+    width: 100%;
+}

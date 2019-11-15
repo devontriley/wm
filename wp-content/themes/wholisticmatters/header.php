@@ -68,10 +68,13 @@ $wm_settings = Wholistic_Matters::get_settings();
         </div>
 
         <div class="primaryHeader__nav">
-            <div class="primaryHeader__mobile-links">
-                <a href="#" class="btn btn-outline-primary login_popup">Login</a>
-                <a href="#" class="btn btn-primary signup_popup">Sign Up</a>
-            </div>
+            <?php if(!is_user_logged_in()) { ?>
+                <div class="primaryHeader__mobile-links">
+                    <a href="#" class="btn btn-outline-primary login_popup">Login</a>
+                    <a href="#" class="btn btn-primary signup_popup">Sign Up</a>
+                </div>
+            <?php } ?>
+
             <nav id="primaryNav" role="navigation">
                 <ul class="primaryNav__top-list">
                     <li class="hasMega">
@@ -81,48 +84,48 @@ $wm_settings = Wholistic_Matters::get_settings();
                                 <div class="primaryNav__dropdown-column">
                                     <ul>
                                         <li><h3>Key Topics</h3></li>
-                                        <li><a href="https://wholisticmatters.com/category/cardiometabolic-control/">Cardiometabolic Control</a></li>
-                                        <li><a href="https://wholisticmatters.com/category/digestive-health/">Digestive Health</a></li>
-                                        <li><a href="https://wholisticmatters.com/category/epigenetics-health/">Epigenetics</a></li>
-                                        <li><a href="https://wholisticmatters.com/category/inflammation/">Inflammation</a></li>
-                                        <li><a href="https://wholisticmatters.com/category/lifestyle-health-wellness/">Lifestyle Health &amp; Wellness</a></li>
-                                        <li><a href="/view-all-topics/" class="more">View All Topics</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/category/cardiometabolic-control/">Cardiometabolic Control</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/category/digestive-health/">Digestive Health</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/category/epigenetics-health/">Epigenetics</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/category/inflammation/">Inflammation</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/category/lifestyle-health-wellness/">Lifestyle Health &amp; Wellness</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/view-all-topics/" class="more">View All Topics</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="primaryNav__dropdown-column">
                                     <ul>
                                         <li><h3>Spotlight Topics</h3></li>
-                                        <li><a href="https://wholisticmatters.com/spotlight-topic/detox/">Detoxification</a></li>
-                                        <li><a href="https://wholisticmatters.com/spotlight-topic/hemp-the-endocannabinoid-system/">Hemp &amp; the Endocannabinoid System</a></li>
-                                        <li><a href="https://wholisticmatters.com/spotlight-topic/omega-3-fatty-acids/">Omega-3 Fatty Acids</a></li>
-                                        <li><a href="https://wholisticmatters.com/spotlight-topic/organic-farming-whole-foods/">Organic Farming &amp; Whole Foods</a></li>
-                                        <li><a href="https://wholisticmatters.com/spotlight-topic/subclinical-magnesium-deficiency/">Plant-based Magnesium</a></li>
-                                        <li><a href="/spotlight-topics/" class="more">View All</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/spotlight-topic/detox/">Detoxification</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/spotlight-topic/hemp-the-endocannabinoid-system/">Hemp &amp; the Endocannabinoid System</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/spotlight-topic/omega-3-fatty-acids/">Omega-3 Fatty Acids</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/spotlight-topic/organic-farming-whole-foods/">Organic Farming &amp; Whole Foods</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/spotlight-topic/subclinical-magnesium-deficiency/">Plant-based Magnesium</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/spotlight-topics/" class="more">View All</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="primaryNav__dropdown-column">
                                     <ul>
                                         <li><h3>Media Base</h3></li>
-                                        <li><a href="https://wholisticmatters.com/articles/">Articles</a></li>
-                                        <li><a href="https://wholisticmatters.com/videos/">Videos</a></li>
-                                        <li><a href="https://wholisticmatters.com/podcast-episodes/">Podcasts</a></li>
-                                        <li><a href="https://wholisticmatters.com/resources/">Resources</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/articles/">Articles</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/videos/">Videos</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/podcast-episodes/">Podcasts</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/resources/">Resources</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="primaryNav__dropdown-column">
                                     <ul>
                                         <li><h3>Practitioner Specialty</h3></li>
-                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/acupuncture/">Acupuncture</a></li>
-                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/chiropractic/">Chiropractic</a></li>
-                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/functional-medicine/">Functional Medicine</a></li>
-                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/herbalist/">Herbalist</a></li>
-                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/integrative-medicine/">Integrative Medicine</a></li>
-                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/naturopathic/">Naturopathic</a></li>
-                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/nutrition/">Nutrition</a></li>
-                                        <li><a href="https://wholisticmatters.com/practitioner-specialty/veterinary/">Veterinary</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/acupuncture/">Acupuncture</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/chiropractic/">Chiropractic</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/functional-medicine/">Functional Medicine</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/herbalist/">Herbalist</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/integrative-medicine/">Integrative Medicine</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/naturopathic/">Naturopathic</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/nutrition/">Nutrition</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/veterinary/">Veterinary</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -133,15 +136,15 @@ $wm_settings = Wholistic_Matters::get_settings();
                         <span>Interactive Tools</span>
                         <div class="primaryNav__dropdown">
                             <ul>
-                                <li><a href="">Vitamin Advisor</a></li>
-                                <li><a href="">Drug-Nutrient Interaction</a></li>
-                                <li><a href="">Herbal Medicinals</a></li>
+                                <li><a href="<?php bloginfo('url'); ?>/interactive-tools/vitamin-advisor">Vitamin Advisor</a></li>
+                                <li><a href="<?php bloginfo('url'); ?>/interactive-tools/drug-nutrient-interaction-tool">Drug-Nutrient Interaction</a></li>
+                                <li><a href="<?php bloginfo('url'); ?>/interactive-tools/herbal-medicinals">Herbal Medicinals</a></li>
                                 <li class="forHCP">
                                     <p>— Free With HCP Account —</p>
-                                    <a href="#">Anatomic / BioDigital Library</a>
-                                    <a href="#">Clinical Practice Support</a>
+                                    <a href="<?php bloginfo('url'); ?>/interactive-tools/anatomic-biodigital-library">Anatomic / BioDigital Library</a>
+                                    <a href="<?php bloginfo('url'); ?>/interactive-tools/clinical-practice-support">Clinical Practice Support</a>
                                 </li>
-                                <li class="link"><a href="">Learn More & Gain Access</a></li>
+                                <li class="link"><a href="<?php bloginfo('url'); ?>/interactive-tools">Learn More & Gain Access</a></li>
                             </ul>
                         </div>
                     </li>
@@ -181,10 +184,28 @@ $wm_settings = Wholistic_Matters::get_settings();
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/close-x.png" alt="Close Search" class="wm_close_search">
                 </a>
             </div>
+
+            <?php if(is_user_logged_in()){ ?>
+                <div class="primaryHeader__utilities-member-link">
+                    <a href="<?php echo site_url('/member-account'); ?>" title="<?php esc_attr_e('Goto My Account'); ?>">
+                        <i class="fas fa-user-circle fa-lg"></i>
+                    </a>
+                </div>
+            <?php } ?>
+
             <div class="primaryHeader__utilities-links">
-                <a href="#" class="btn btn-link login_popup">Login</a>
-                <a href="#" class="btn btn-primary signup_popup">Sign Up</a>
+                <?php if(is_user_logged_in()){ ?>
+                    <?php $current_user = wp_get_current_user(); ?>
+                    <a href="<?php echo site_url('/member-account'); ?>" class="login-link">
+                        <span>Hi <?php echo $current_user->display_name; ?></span>&nbsp;<i class="fas fa-user-circle fa-lg"></i>
+                    </a>
+                    <a href="<?php echo esc_url( wp_logout_url(site_url('/member-account')) ); ?>" class="logout-link"><?php _e('Logout'); ?></a>
+                <?php } else { ?>
+                    <a href="#" class="btn btn-link login_popup">Login</a>
+                    <a href="#" class="btn btn-primary signup_popup">Sign Up</a>
+                <?php } ?>
             </div>
+
             <div class="primaryHeader__utilities-hamburger">
                 <a href="#">
                     <img src="<?php bloginfo('template_directory') ?>/images/hamburger.svg" class="hamburger" />

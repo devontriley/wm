@@ -1,0 +1,41 @@
+.show.full .nav-link::before {
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #0a9349;
+    bottom: 0px;
+    left: 23px;
+    right: 0;
+    max-width: 65px;
+    margin: 0 auto;
+    display:none;
+    transition:all ease 0.5s;
+}
+
+.show.full a {
+    position: relative;
+}
+
+/***
+** Seems to not be used anywhere
+ */
+.single_premium_icon{
+    position: relative;
+
+    .icon-feature{
+        text-align: center;
+
+        img {
+            box-shadow: none;
+            width: 1.5em !important;
+            margin: 0 !important;
+            margin-left: 0.25em !important;
+        }
+    }
+
+    .icon-wrapp {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        line-height: 60px;
+    }
+}
