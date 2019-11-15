@@ -33,30 +33,37 @@
 
 .herbal-box {
     margin-bottom: 20px;
-}
 
-.herbal-box img {
-    border-radius: 5px;
-    margin-bottom: 15px;
-    width: 100%;
-}
+    img {
+        border-radius: 5px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
 
-.herbal-box a img {
-    border-radius: 5px;
-    margin-bottom: 0px;
-    width: auto;
-}
+    h2 {
+        font-size: 18px;
+        @media(min-width: 992px) {
+            font-size: 24px;
+        }
 
-.herbal-box h2 a {
-    margin-top: 0px;
-    font-size: 24px;
-    color: #40473E;
-    font-weight: bold;
-    margin-bottom: 0;
-}
+        a {
+            margin-top: 0px;
+            font-size: 24px;
+            color: #40473E;
+            font-weight: bold;
+            margin-bottom: 0;
 
-.herbal-box p {
-    font-size: 14px;
-    color: #8D8D8D;
-    margin-bottom: 8px;
+            img {
+                border-radius: 5px;
+                margin-bottom: 0px;
+                width: auto;
+            }
+        }
+    }
+
+    p {
+        font-size: 14px;
+        color: #8D8D8D;
+        margin-bottom: 8px;
+    }
 }

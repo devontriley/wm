@@ -7,20 +7,34 @@
 }
 
 .boxed.padding-0 .banner_desc_container {
-    padding: 115px 45px 0;
+    padding: 15px;
+    @media(min-width: 768px) {
+        padding: 55px 15px 0;
+    }
+    @media(min-width: 992px) {
+        padding: 115px 45px 0;
+    }
 }
 
 .boxed.padding-0 .featured_image {
+    display: none;
     text-align: right;
+    @media(min-width: 768px) {
+        display: block;
+    }
 }
 
 .image-big {
+    width: 100%;
+    height: auto;
     position: relative;
     text-align: center;
-    height:500px;
     background-size:cover;
     background-attachment:fixed;
     background-position:center center;
+    @media(min-width: 768px) {
+        height:500px;
+    }
 }
 
 .image-big img {
@@ -38,17 +52,22 @@
     left: 0px;
     right: 0px;
     top: -40px;
-}
 
-.logo-brand img {
-
-    width: 80px;
-    height: 80px;
+    img {
+        width: 80px !important;
+        height: 80px !important;
+    }
 }
 
 .about-big-content {
-    padding: 105px 105px 160px 15px;
+    padding: 20px 10px;
     background: #f7fcf3;
+    @media(min-width: 768px) {
+        padding: 45px 65px 160px 45px;
+    }
+    @media(min-width: 992px) {
+        padding: 105px 105px 160px 15px;
+    }
 }
 
 .about-big-content h2 {
@@ -74,7 +93,10 @@
 
 .data-overlap {
     position: relative;
-    margin-top: -161px;
+    margin-top: 0;
+    @media(min-width: 768px) {
+        margin-top: -161px;
+    }
 }
 
 .image-with-tag {
@@ -85,6 +107,7 @@
     right: 20px;
     top: 20px;
     left: auto;
+    position: absolute;
 }
 
 .righ-flip.fix-lg .data-calinary {
@@ -98,18 +121,31 @@
 }
 
 .margin-ad .about-big-content {
-    padding: 90px 200px 0;
     background: #F8F8F8;
+    padding: 20px 10px;
+    @media(min-width: 768px) {
+        padding: 45px 65px 160px 45px;
+    }
+    @media(min-width: 992px) {
+        padding: 90px 200px 0;
+    }
 }
 
 
 .partner-block {
-    width: 20%;
+    width: 50%;
     float: left;
     font-weight: bold;
     font-size: 37px;
     color: #888;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    @media(min-width: 768px) {
+        width: 33%;
+    }
+    @media(min-width: 992px) {
+        width: 20%;
+        margin-bottom: 50px;
+    }
 }
 
 .partner-logo {

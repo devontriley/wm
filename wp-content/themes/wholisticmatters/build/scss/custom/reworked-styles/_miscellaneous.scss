@@ -18,6 +18,40 @@ a {
     color: #00B162;
 }
 
+.btn {
+    &:hover{
+        background: #02864b !important;
+        color: #fff;
+    }
+
+    &.cta:hover{
+        background: transparent !important;
+    }
+
+    &.reg-btn {
+        background: transparent !important;
+    }
+
+    &.login-btn:hover {
+        background: transparent !important;
+    }
+}
+
+.cta_filled:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #02864b;
+    border: 2px solid #02864b;
+}
+
+.post-block-cta.btn{
+    background: transparent !important;
+}
+
+.no-top{
+    margin-top: 0px;
+}
+
 .badge {
     background: #FDBE3B;
     color: #fff;
@@ -41,6 +75,14 @@ a {
     font-weight: bold;
     text-align: left;
     padding: 0.575rem 0.95rem;
+}
+
+.p_count{
+    display:none;
+}
+
+.p_social_links{
+    display:none !important;
 }
 
 /**

@@ -7,8 +7,11 @@
 }
 
 .modal-dialog {
-    max-width: 375px;
+    max-width: 345px;
     margin: 1.75rem auto;
+    @media(min-width: 768px) {
+        max-width: 375px;
+    }
 }
 
 .modal-header {
@@ -96,12 +99,16 @@
     margin-top: 0.3rem;
 }
 
-.normal-weight label {
-    font-weight: normal;
-}
+.normal-weight {
+    text-align: left !important;
 
-.normal-weight span {
-    font-weight: bold;
+    label {
+        font-weight: normal;
+    }
+
+    span {
+        font-weight: bold;
+    }
 }
 
 .modal-content {
@@ -114,10 +121,10 @@
 }
 
 .Toasts {
+    border-radius: 0px;
+    max-width: 100%;
     background: #00B162;
     text-align: center;
-    max-width: 373px;
-    border-radius: 10px;
     position: fixed;
     left: 0px;
     right: 0px;
@@ -131,15 +138,22 @@
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
     z-index: 999;
+    @media(min-width: 768px) {
+        max-width: 373px;
+        border-radius: 10px;
+    }
 }
 
 .open-toast .Toasts {
-    bottom: 35px;
+    bottom: 0;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -ms-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
+    @media(min-width: 768px) {
+        bottom: 35px;
+    }
 }
 
 .Toasts h4 {

@@ -120,9 +120,14 @@
 }
 
 .closeModal {
-    position: absolute;
-    right: 15px;
-    top: 15px;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    @media(min-width: 768px) {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
 }
 
 .form-wrapp {

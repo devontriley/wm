@@ -1,18 +1,28 @@
 .inner-wrapp {
-    width: 760px;
+    width: 96%;
     margin: 55px auto 0;
     overflow: hidden;
     position: relative;
+    @media(min-width: 992px) {
+        width: 706px;
+    }
 }
 
 .left-tabs {
-    width: 230px;
-    float: left;
+    width: 100%;
+    @media(min-width: 992px) {
+        width: 230px;
+        float: left;
+    }
 }
 
 .right-data {
-    width: 480px;
-    float: right;
+    width: 100%;
+    margin-top: 30px;
+    @media(min-width: 992px) {
+        width: 480px;
+        float: right;
+    }
 }
 
 .left-tabs h3 {

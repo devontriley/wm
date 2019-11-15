@@ -55,42 +55,61 @@ audio {
     transform: rotate(0deg);
 }
 
-.floating-icons a {
-    width: 31px;
-    height: 31px;
-    text-align: center;
-    line-height: 26px;
-    border-radius: 50px;
-    display: block;
-    margin-bottom: 10px;
-    border: 1px solid #1A4D2C;
-}
-
-.floating-icons a:hover {
-    background: #eee;
-}
-
-.floating-icons a.nb {
-    border: none;
-    margin-top: 18px;
-}
-
 .floating-icons {
-    position: absolute;
-    right: -80px;
-    top: 55px;
-}
-
-.floating-icons.fixed {
+    display: none;
     position: fixed;
-    right: 207px;
-    top: 75px;
+    right: 0;
+    top: 225px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 12px 12px 0 12px;
+    border-radius: 10px 0 0 10px;
+    z-index: 99;
+    @media(min-width: 768px) {
+        position: absolute;
+        right: -80px;
+        top: 55px;
+        display: block;
+    }
+
+    &.fixed {
+        right: 0;
+        position: fixed;
+        top: 75px;
+        @media(min-width: 768px) {
+            right: 207px;
+        }
+    }
+
+    a {
+        width: 31px;
+        height: 31px;
+        text-align: center;
+        line-height: 26px;
+        border-radius: 50px;
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #1A4D2C;
+
+        &:hover {
+            background: #eee;
+        }
+
+        &.nb {
+            border: none;
+            margin-top: 18px;
+        }
+    }
 }
 
 .link-purpal {
-    position: absolute;
-    right: -260px;
-    top: 50px;
+    position: relative;
+    right: 0;
+    top: 10px;
+    @media(min-width: 768px) {
+        position: absolute;
+        right: -260px;
+        top: 50px;
+    }
 }
 
 .link-purpal a {

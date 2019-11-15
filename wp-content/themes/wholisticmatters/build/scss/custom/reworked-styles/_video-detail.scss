@@ -1,5 +1,9 @@
 .video-det .floating-icons {
     position: fixed;
-    right: 220px;
+    right: 0;
     top: 122px;
+    @media(min-width: 768px) {
+        right: 220px;
+        top: 122px;
+    }
 }

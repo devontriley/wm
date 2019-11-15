@@ -1,3 +1,52 @@
+@font-face {
+    font-family: 'Harriet';
+    src: url('webfonts/Harriet-v2-Text/Harriet-v2-Text-Regular.woff2') format('woff2'),
+    url('webfonts/Harriet-v2-Text/Harriet-v2-Text-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Harriet';
+    src: url('webfonts/Harriet-v2-Text/Harriet-v2-Text-Regular-Italic.woff2') format('woff2'),
+    url('webfonts/Harriet-v2-Text/Harriet-v2-Text-Regular-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Harriet';
+    src: url('webfonts/Harriet-v2-Text/Harriet-v2-Text-Bold.woff2') format('woff2'),
+    url('webfonts/Harriet-v2-Text/Harriet-v2-Text-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Harriet';
+    src: url('webfonts/Harriet-v2-Display/Harriet-v2-Display-Bold.woff2') format('woff2'),
+    url('webfonts/Harriet-v2-Display/Harriet-v2-Display-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Aktiv';
+    src: url('webfonts/4db9f6c3ad784588a1464fdd4b786b49.woff2') format('woff2'),
+    url('webfonts/4db9f6c3ad784588a1464fdd4b786b49.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aktiv';
+    src: url('webfonts/cea869b718f5c0655454585ecfb6836b.woff2') format('woff2'),
+    url('webfonts/cea869b718f5c0655454585ecfb6836b.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
 body {
     color: $dark;
     font-family: $aktiv;
@@ -66,6 +115,14 @@ ul, ol {
 
 ol {
     list-style: decimal;
+}
+
+.fz-small-em{
+    font-size: 0.8em;
+}
+
+.fz-26{
+    font-size: 26px;
 }
 
 .short-btn {

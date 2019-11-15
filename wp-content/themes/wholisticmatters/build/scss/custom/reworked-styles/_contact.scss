@@ -1,3 +1,7 @@
+.contact-data .inner-wrapp {
+    width: 100%;
+}
+
 .contact-data .row {
     margin-right: -5px;
     margin-left: -5px;
@@ -24,11 +28,14 @@
 }
 
 .contact-data .data-wrapp h2 {
-    font-size: 36px;
+    font-size: 26px;
     color: #1A4D2C;
     text-align: center;
     font-family: 'Harriet';
     font-weight: bold;
+    @media(min-width: 768px) {
+        font-size: 36px;
+    }
 }
 
 
