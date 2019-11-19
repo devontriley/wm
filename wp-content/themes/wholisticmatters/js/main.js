@@ -173,6 +173,7 @@ jQuery(document).ready(function ($) {
 				$(element).addClass("is-valid").removeClass("is-invalid");
 			},
 			submitHandler: function(form) {
+				console.log('submit form');
 				form.submit();
 			}
 		});

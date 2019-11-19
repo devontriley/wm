@@ -201,7 +201,7 @@ $wm_settings = Wholistic_Matters::get_settings();
                     </a>
                     <a href="<?php echo esc_url( wp_logout_url(site_url('/member-account')) ); ?>" class="logout-link"><?php _e('Logout'); ?></a>
                 <?php } else { ?>
-                    <a href="#" class="btn btn-link login_popup">Login</a>
+                    <a href="<?php bloginfo('url'); ?>/wp-admin" class="btn btn-link">Login</a>
                     <a href="#" class="btn btn-primary signup_popup">Sign Up</a>
                 <?php } ?>
             </div>

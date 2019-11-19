@@ -90,9 +90,8 @@ jQuery(document).ready(function () {
 	});
 
 	// Login validation
-
+	console.log('devon');
 	jQuery(document).ready(function () {
-		console.log('testing');
 		jQuery("#LoginForm").validate({
 			rules: {
 				log: "required",
@@ -127,16 +126,9 @@ jQuery(document).ready(function () {
 			},
             submitHandler: function(form) {
                 console.log(form);
-				//form.submit();
+				form.submit();
             }
 		});
-                
-		// jQuery("#LoginForm").validate({
-		// 	submitHandler: function(form) {
-		// 	  form.submit();
-		// 	}
-		// });
-
 	});
 
 	// With button
