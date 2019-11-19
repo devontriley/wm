@@ -58,7 +58,7 @@ License: none (public domain)
         outline: none;
         border: none;
     }
-    
+
     button:active,
     button:focus {
         outline: none;
@@ -91,9 +91,9 @@ License: none (public domain)
     }
 
     /*@media (min-width: 1440px){*/
-        /*.interactive-header {*/
-            /*justify-content: space-between;*/
-        /*}*/
+    /*.interactive-header {*/
+    /*justify-content: space-between;*/
+    /*}*/
     /*}*/
 
     .headerviewing-text {
@@ -119,15 +119,15 @@ License: none (public domain)
     }
 
     /*@media (min-width: 1440px){*/
-        /*.headerviewing-text {*/
-            /*position: relative;*/
-            /*color: #000;*/
-            /*background: transparent;*/
-            /*padding: 0;*/
-            /*width: auto;*/
-            /*left: auto;*/
-            /*top: auto;*/
-        /*}*/
+    /*.headerviewing-text {*/
+    /*position: relative;*/
+    /*color: #000;*/
+    /*background: transparent;*/
+    /*padding: 0;*/
+    /*width: auto;*/
+    /*left: auto;*/
+    /*top: auto;*/
+    /*}*/
     /*}*/
 
     .headerviewing-text span {
@@ -402,15 +402,15 @@ License: none (public domain)
                 <div class="interactive-drawer__models-select">
                     Biological Models
                     <div class="models-inner active" data-system="neuromuscular">
-                        <div class="model-btn active" data-src="https://human.biodigital.com/widget/?m=client/standard_process/nervous_system_anatomy.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9hu">
+                        <div class="model-btn active" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/nervous_system_anatomy.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9hu">
                             Nervous System Anatomy
                         </div>
 
-                        <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/structure_and_function_of_central_nervous_system_v2_tour1b.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/structure_and_function_of_central_nervous_system_v2_tour1b.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                             Structure and Function of the Nervous System (1)
                         </div>
 
-                        <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/structure_and_function_of_central_nervous_system_v2_tour1c.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/structure_and_function_of_central_nervous_system_v2_tour1c.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                             Structure and Function of the Nervous System (2)
                         </div>
 
@@ -429,43 +429,43 @@ License: none (public domain)
                             </div>
 
                             <div class="extras-accordion-inner">
-                                <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/afferent_nerve_signal.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                                <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/afferent_nerve_signal.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                                     Afferent and Efferent Nerve Signals (1)
                                 </div>
 
-                                <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/efferent_nerve_signal.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                                <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/efferent_nerve_signal.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                                     Afferent and Efferent Nerve Signals (2)
                                 </div>
 
-                                <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/brain_gut_connection.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                                <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/brain_gut_connection.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                                     Brain-Gut Connection
                                 </div>
 
-                                <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/central_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                                <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/central_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                                     Central Nervous System
                                 </div>
 
-                                <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/functional_regions_of_the_spinal_cord.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                                <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/functional_regions_of_the_spinal_cord.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                                     Functional Regions of the Spinal Cord
                                 </div>
 
-                                <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/hpa_neuro_immune_axis.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                                <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/hpa_neuro_immune_axis.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                                     HPA Neuro-Immune Axis
                                 </div>
 
-                                <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/neuron_signaling_2.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                                <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/neuron_signaling_2.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                                     Neuron Signaling
                                 </div>
 
-                                <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/neurotransmitters_in_synapse.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                                <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/neurotransmitters_in_synapse.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                                     Neurotransmitters in Synapse
                                 </div>
 
-                                <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/parasympathetic_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                                <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/parasympathetic_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                                     Parasympathetic Nervous System
                                 </div>
 
-                                <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/sympathetic_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                                <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/sympathetic_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                                     Sympathetic Nervous System
                                 </div>
                             </div>
@@ -473,31 +473,31 @@ License: none (public domain)
                     </div>
 
                     <div class="models-inner" data-system="immune">
-                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/default/?m=client/standard_process/cns_inflammation.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/cns_inflammation.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                             Inflammation in the Central Nervous System
                         </div>
 
-                        <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/inflammation_in_the_cns_role_of_microglia.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/inflammation_in_the_cns_role_of_microglia.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                             Inflammation in the Central Nervous System: The Role of Microglia
                         </div>
 
-                        <div class="model-btn" data-src="https://human.biodigital.com/widget/?m=client/standard_process/resolution_pathway_and_nutrition_therapy.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/resolution_pathway_and_nutrition_therapy.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                             Resolution Pathway and Nutrition Therapy: Omega 3 Fatty Acids on the Microglia (1)
                         </div>
 
-                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/default/?m=client/standard_process/epigenetics.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/epigenetics.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                             Resolution Pathway and Nutrition Therapy: Omega 3 Fatty Acids on the Microglia (2)
                         </div>
                     </div>
 
                     <div class="models-inner" data-system="digestive">
-                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/default/?m=client/standard_process/digestive_health_systems_support.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/digestive_health_systems_support.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                             Digestive Health and Systems Support
                         </div>
                     </div>
 
                     <div class="models-inner" data-system="endocrine">
-                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/default/?m=client/standard_process/endocrine_support.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/endocrine_support.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
                             Endocrine Support for Metabolic Systems and Response
                         </div>
                     </div>
@@ -507,12 +507,12 @@ License: none (public domain)
 
         <div class="iframe-wrapper">
             <iframe
-                id="embedded-human"
-                frameBorder="0"
-                width="100%"
-                height="550"
-                allowFullScreen="true"
-                src="https://human.biodigital.com/widget/?m=client/standard_process/nervous_system_anatomy.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9hu">
+                    id="embedded-human"
+                    frameBorder="0"
+                    width="100%"
+                    height="550"
+                    allowFullScreen="true"
+                    src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/nervous_system_anatomy.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9hu">
             </iframe>
         </div>
     </div>

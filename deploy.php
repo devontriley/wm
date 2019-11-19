@@ -22,10 +22,13 @@ echo <<<EOT
 
 EOT;
 
+$test = shell_exec('/usr/bin/whoami');
+var_dump($test);
+
 // Check whether client is allowed to trigger an update
 
 $allowed_ips = array(
-    '73.60.105.150', // Devon laptop
+    '73.60.105.150', // Devon/Zarah laptops
     '207.97.227.', '50.57.128.', '108.171.174.', '50.57.231.', '204.232.175.', '192.30.252.', // GitHub
     '195.37.139.','193.174.' // VZG
 );
