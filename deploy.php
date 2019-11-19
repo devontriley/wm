@@ -17,7 +17,7 @@ echo <<<EOT
 <pre>
   o-o    $TITLE
  /\\"/\   v$VERSION
-(`=*=')
+(`=*=')        DEVON
  ^---^`-.
 
 EOT;
