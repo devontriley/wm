@@ -164,7 +164,7 @@ $wm_settings = Wholistic_Matters::get_settings();
                     </li>
 
                     <li>
-                        <span>Culinary Wellness.</span>
+                        <span>Culinary Wellness</span>
                         <div class="primaryNav__dropdown">
                             <ul>
                                 <li><a href="">Overview</a></li>
