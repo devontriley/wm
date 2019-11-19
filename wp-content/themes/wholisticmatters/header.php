@@ -167,7 +167,7 @@ $wm_settings = Wholistic_Matters::get_settings();
                         <span>Culinary Wellness</span>
                         <div class="primaryNav__dropdown">
                             <ul>
-                                <li><a href="<?php bloginfo('url'); ?>/">Overview</a></li>
+                                <li><a href="<?php bloginfo('url'); ?>/culinary-wellness">Overview</a></li>
                                 <li><a href="<?php bloginfo('url'); ?>/recipes">Recipes</a></li>
                                 <li><a href="<?php bloginfo('url'); ?>/cooking-skills-video">Skill Videos</a></li>
                             </ul>
