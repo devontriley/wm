@@ -103,6 +103,11 @@ function WM_theme_support() {
  *	Load Script Files
  ******************************************************************************/
 
+function remove_block_css(){
+    wp_dequeue_style( 'wp-block-library' );
+}
+add_action( 'wp_enqueue_scripts', 'remove_block_css', 100 );
+
 function theme_scripts() {
 	wp_enqueue_style('style', get_stylesheet_uri(), NULL, microtime());
 	
