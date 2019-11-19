@@ -153,11 +153,11 @@ $wm_settings = Wholistic_Matters::get_settings();
                         <span>Professional Education</span>
                         <div class="primaryNav__dropdown">
                             <ul>
-                                <li><a href="">Continuing Ed</a></li>
+                                <li><a href="<?php bloginfo('url'); ?>/continuing-education">Continuing Ed</a></li>
                                 <li class="forHCP">
                                     <p>— Free With HCP Account —</p>
-                                    <a href="#">Clinical Practicum</a>
-                                    <a href="#">White Papers</a>
+                                    <a href="<?php bloginfo('url'); ?>/clinical-practicum">Clinical Practicum</a>
+                                    <a href="<?php bloginfo('url'); ?>/white-papers">White Papers</a>
                                 </li>
                             </ul>
                         </div>
@@ -167,9 +167,9 @@ $wm_settings = Wholistic_Matters::get_settings();
                         <span>Culinary Wellness</span>
                         <div class="primaryNav__dropdown">
                             <ul>
-                                <li><a href="">Overview</a></li>
-                                <li><a href="">Recipes</a></li>
-                                <li><a href="">Skill Videos</a></li>
+                                <li><a href="<?php bloginfo('url'); ?>/">Overview</a></li>
+                                <li><a href="<?php bloginfo('url'); ?>/recipes">Recipes</a></li>
+                                <li><a href="<?php bloginfo('url'); ?>/cooking-skills-video">Skill Videos</a></li>
                             </ul>
                         </div>
                     </li>
