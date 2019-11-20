@@ -2,9 +2,11 @@
 if(!is_page(array(98, 101, 102, 103, 104, 105, 597, 2428))) {
     get_template_part( 'template-parts/newsletter-signup' );
 }
+
+$pagesWithStickyFooter = array(101/*member-login*/);
 ?>
 
-<footer>
+<footer <?php if(in_array(get_the_ID(), $pagesWithStickyFooter)){ echo 'class="footer-sticky"'; } ?>>
 	<div class="container-fluid">
 		<div class="row align-items-end">
 			<div class="col-md-4">
