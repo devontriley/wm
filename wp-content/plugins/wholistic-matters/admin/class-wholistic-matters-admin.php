@@ -1421,45 +1421,59 @@ class Wholistic_Matters_Admin {
         return $defaults;
     }
     
-    public function wm_after_register( $post, $user_id  ) {
-        if(!is_wp_error($user_id)) {
+    public function wm_after_register( $post, $user_id  )
+    {
+        if(!is_wp_error($user_id))
+        {
 			$email_variables = array();
             $custom_meta_fields = WMHelper::get_custom_user_meta_fields();
-            foreach ($custom_meta_fields as $meta_field_name => $meta_field) {
+
+            // Update user meta data
+            foreach ($custom_meta_fields as $meta_field_name => $meta_field)
+            {
 				$email_variables[$meta_field_name] = '';
 				$email_variables['label'.$meta_field_name] = $meta_field['label'];
-				if('_wm_legal_agreement' == $meta_field_name){
+
+				if('_wm_legal_agreement' == $meta_field_name)
+				{
 					$post[$meta_field_name] = 'yes';
 				}
-                if(!isset($post[$meta_field_name])){
+
+                if(!isset($post[$meta_field_name]))
+                {
                     continue;
                 }
+
 				$meta_val = $post[$meta_field_name];
                 $meta_val = is_array($meta_val) ? implode(',', $meta_val) : sanitize_text_field($meta_val);
+
                 update_user_meta( $user_id, $meta_field_name, $meta_val );
+
 				$email_variables[$meta_field_name] = $meta_val;
             }
 			
-			//**Send Welcome Email**//
+			/*
+			 * Send welcome email
+			 */
+            global $wp_roles;
 			$adminBcc = get_option( 'admin_email' );
 			$site_from = WMHelper::get_email_from_address();
 			$email_variables['email'] = sanitize_user($post['email']);
 			$email_variables['first_name'] = sanitize_text_field($post['first_name']);
 			$email_variables['last_name'] = sanitize_text_field($post['last_name']);
 			$user_role = isset($post['user_role']) && in_array(strtolower($post['user_role']), array('hcp', 'non-hcp')) ? strtolower($post['user_role']) : 'non-hcp';
-			global $wp_roles;
 			$email_variables['user_role_slug'] = $user_role;
 			$email_variables['user_role'] = translate_user_role( $wp_roles->roles[ $user_role ]['name'] );
-			
 			$headers = "From: $site_from\r\n";
-			if(!empty($adminBcc)){
-				//$headers .= "Bcc: $adminBcc\r\n"; //comment this to stop bcc to admin
-			}
-            $headers .= "cc: 'kmarker@standardprocess.com'\r\n"; //comment this to stop cc to kara
-			$headers .= "Content-Type: text/html; charset=utf-8\r\n";
-			$subject = __('Welcome to').' '.get_bloginfo('name');
+            $headers .= "cc: 'kmarker@standardprocess.com'\r\n";
+            $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+            $subject = __('Welcome to').' '.get_bloginfo('name');
+//            if(!empty($adminBcc)){
+//                $headers .= "Bcc: $adminBcc\r\n"; //comment this to stop bcc to admin
+//            }
 			$html_message = WMHelper::get_email_template('register', WMHelper::get_email_variables('register', $email_variables));
-			wp_mail( $email_variables['email'], $subject, $html_message, $headers ); ////send to user & bcc to admin
+
+			wp_mail( $email_variables['email'], $subject, $html_message, $headers );
         }
     }
     
