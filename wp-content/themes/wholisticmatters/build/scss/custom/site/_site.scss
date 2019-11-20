@@ -537,10 +537,12 @@ body{
 }
 
 .article-block{
+	position: sticky;
+	top: 80px;
+
 	&.fixed-aside{
 		position: sticky;
-		top: 99px;
-		max-width: 100%;
+		top: 80px;
 	}
 }
 
