@@ -38,7 +38,7 @@
 
             <p class="copy">
                 <a href="<?php bloginfo('url'); ?>/series/be-the-you-that-nature-intended/">Wholistic Matters Podcast Series</a><br />
-                Our podcast brings what’s current in wholistic health matters straight to you. Join our host John Troup, PhD as we go in-depth on all things wholistic health, with insights from industry leaders across functional medicine, integrative medicine, clinical nutrition, chiropractic, and more.
+                Our podcast brings what’s current in wholistic health matters straight to you. Join us as we go in-depth on all things wholistic health, with insights from industry leaders across functional medicine, integrative medicine, clinical nutrition, chiropractic, and more.
             </p>
 
             <p class="copy">
