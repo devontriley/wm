@@ -1,133 +1,46 @@
-.edu-data {
-    font-family: "Helvetica Neue", "Helvetica", "Open Sans", "Arial", sans-serif !important;
-    font-size: 1.6rem;
-    overflow-x: hidden;
-}
-
-.desktop-shape-1 {
-    position: absolute;
-    left: 50%;
-    top: -10rem;
-    max-width: none;
-    transform: translateX(-50%);
-}
-
-.desktop-shape-2 {
-    position: absolute;
-    left: calc(50% + 12rem);
-    top: -10rem;
-    transform: translateX(-50%);
-    max-width: none;
-    display: none;
-}
-
-.desktop-shape-3 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(-30%, -10%);
-    display: none;
-}
-
-.desktop-shape-4 {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%, -20%);
-    max-width: none;
-    display: none;
-}
-
-.header {
-    color: #26B054;
-    font-size: 30px;
-    font-weight: 700;
-    margin: 20px 0;
-    line-height: 1.2em;
-}
-
-.header:first-child {
-    margin-top: 0;
-}
-
-.subheader {
-    color: #414042;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin: 20px 0 0 0;
-    line-height: 1.2em;
-}
-
-.title {
-    font-weight: 700;
-    font-size: 18px;
-    color: #41463F;
-    margin: 10px 0;
-}
-
-.copy {
-    color: #41463F;
-    font-size: 16px;
-    line-height: 1.7em;
-    margin: 20px 0;
-}
-
-.green {
-    color: #26B054;
-}
-
-.module {
-    position: relative;
-}
-
-.module .inner {
-    position: relative;
-    z-index: 1;
-}
-
-.edu-data .btn {
-    border: none;
-    height: auto;
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-}
-
-.edu-data .btn:hover {
-    background: none;
-}
-
-.edu-data .btn a {
-    background-color: #04B156;
-    padding: 16px 30px;
-    border-radius: 30px;
-    font-size: 13px;
-    color: #fff;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
-    transition: all ease .2s;
-    position: relative;
-    transition: all ease 300ms;
-    letter-spacing: 0;
-    text-transform: capitalize;
-    box-shadow: 0 0 10px rgba(4, 177, 86, .1);
-    font-weight: bold;
-}
-
-.edu-data .btn a:hover {
-    background: #02864b;
-    color: #fff;
-}
-
 .page-template-page-education-new {
     .tabs-me {
         .accordion {
-            .section_heading {
-                cursor: pointer;
+            .tab-pane {
 
-                span:first-child {
-                    font-size: 18px;
+                .section_heading {
+                    cursor: pointer;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    span:first-child {
+                        font-size: 18px;
+                        transition: color ease 300ms;
+                        @media(min-width: 992px) {
+                            font-size: 20px;
+                        }
+                        @media(min-width: 1200px) {
+                            font-size: 24px;
+                        }
+                    }
+
+                    &:hover {
+                        span {
+                            color: $green;
+                        }
+                    }
+                }
+
+                h4 {
+                    margin-top: 1.5em;
+                    margin-bottom: .5em;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    font-family: $aktiv;
+                    color: $textColor;
                 }
             }
         }
@@ -137,7 +50,21 @@
 .course-additional-copy {
     display: none;
 
+    &.full-width-grey {
+        background: #F8F8F8;
+        padding: 50px 20px;
+        @media(min-width: 992px) {
+            padding: 50px;
+        }
+    }
+
     &[data-accordion-parent="tabContent1"] {
         display: block;
+    }
+
+    p {
+        font-family: $aktiv;
+        font-size: 15px;
+        line-height: 1.5em;
     }
 }

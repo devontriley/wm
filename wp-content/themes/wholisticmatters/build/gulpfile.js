@@ -79,7 +79,7 @@ function reload(done) {
 
 function serve(done) {
     server.init({
-        proxy: 'localhost/wm_new',
+        proxy: 'localhost/wm',
         open: false,
         notify: false,
         ghostMode: false,

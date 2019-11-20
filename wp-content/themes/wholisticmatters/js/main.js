@@ -661,8 +661,8 @@ jQuery(document).ready(function ($) {
 	{
 		var target = $(this).attr('aria-controls');
 
-		$('.image-text-module[data-accordion-parent]').hide();
-		$('.image-text-module[data-accordion-parent="'+target+'"]').show();
+		$('.image-text-module[data-accordion-parent]').addClass('d-none');
+		$('.image-text-module[data-accordion-parent="'+target+'"]').removeClass('d-none');
 
 		$('.articles-secton .article-block[data-accordion-parent]').addClass('d-none');
         $('.articles-secton .article-block[data-accordion-parent="'+target+'"]').removeClass('d-none');

@@ -16,9 +16,9 @@ $fa-font-path: "webfonts";
 @import './../node_modules/owl.carousel/src/scss/owl.theme.default.scss';
 
 // Custom Styles
-@import './custom/reworked-styles/_typography.scss';
 @import './custom/reworked-styles/_variables.scss';
 @import './custom/reworked-styles/_mixins.scss';
+@import './custom/reworked-styles/_typography.scss';
 @import './custom/reworked-styles/_structure.scss';
 @import './custom/reworked-styles/_main-nav.scss';
 @import './custom/reworked-styles/_components.scss';
@@ -46,13 +46,13 @@ $fa-font-path: "webfonts";
 @import './custom/reworked-styles/_herbal-medicinals.scss';
 @import './custom/reworked-styles/_vitamin-advisor.scss';
 @import './custom/reworked-styles/_about.scss';
-@import './custom/reworked-styles/_continuing-education.scss';
+@import 'custom/reworked-styles/_continuing-education.scss';
 @import './custom/reworked-styles/_newsletter-signup.scss';
 @import './custom/reworked-styles/_newsletter-shortcode.scss';
 @import './custom/reworked-styles/_newsletter-modal.scss';
 @import './custom/reworked-styles/_premium-signup-modal.scss';
 
-@import "./modules/modules";
-@import "./site/site";
-@import "./_modules.scss";
-@import './_custom-player.scss';
+@import "./custom/modules/modules";
+@import "./custom/site/site";
+@import "./custom/_modules.scss";
+@import './custom/_custom-player.scss';

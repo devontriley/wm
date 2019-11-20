@@ -1,3 +1,8 @@
+@import "./modules/links";
+@import "./modules/popup";
+@import "./modules/trending";
+@import "./modules/like";
+
 .modules-container {
   div[class*=module]:first-child {
     margin-top: 0 !important;

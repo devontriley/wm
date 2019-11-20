@@ -88,7 +88,7 @@
 
         &:first-child {
             font-size: 14px;
-            color: #52565F;
+            color: $dark;
             font-weight: bold;
             margin-right: 10px;
         }
@@ -108,22 +108,21 @@
     border-bottom: none;
     background: #F7FCF3;
     border-radius: 5px;
+    margin: 0;
 }
 
 .tabs-me .nav-tabs .nav-link {
     border: none;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
     font-size: 14px;
     color: #52565F;
     padding: .5rem 0.7rem;
     height: 36px;
     border: none;
+    font-family: $aktiv;
 }
 
 .tabs-me .nav-tabs .nav-item.show .nav-link,
 .tabs-me .nav-tabs .nav-link.active {
-    color: #495057;
     background-color: #00B162;
     border-color: #dee2e6 #dee2e6 #fff;
     color: #fff !important;

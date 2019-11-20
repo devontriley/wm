@@ -203,7 +203,7 @@ html {
             color: #fff;
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 0px;
+            margin: 0;
         }
     }
 
@@ -211,6 +211,16 @@ html {
         background: #fff;
         padding: 30px;
         border-radius: 0 0 5px 5px;
+        border-bottom: 3px solid $green;
+
+        ul {
+            margin-left: 20px;
+        }
+
+        p, li {
+            font-family: $aktiv;
+            font-size: 14px;
+        }
     }
 
     .box-article {

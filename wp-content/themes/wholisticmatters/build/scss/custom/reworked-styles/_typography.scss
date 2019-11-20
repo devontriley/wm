@@ -92,7 +92,7 @@ h5 {
 p {
     font-family: $harriet;
     font-size: 18px;
-    line-height: 1.5em;
+    line-height: 1.7em;
 }
 
 a {
@@ -156,4 +156,11 @@ ol {
     position: absolute;
     bottom: -2px;
     left: 0;
+}
+
+.section_heading_alt {
+    font-size: 20px;
+    @media(min-width: 992px) {
+        font-size: 28px;
+    }
 }

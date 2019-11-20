@@ -70,7 +70,10 @@ $courseCategoryParents = get_terms(array(
                         <?php foreach($courseCategoryParents as $parentKey => $parentVal) {
                             $parentIndex = $parentKey + 1; ?>
 
-                            <div class="tab-pane fade show <?php echo ($parentIndex === 1) ? 'active' : '' ?>" id="tabContent<?php echo $parentIndex ?>" role="tabpanel" aria-labelledby="tab<?php echo $parentIndex ?>">
+                            <div class="tab-pane fade show <?php echo ($parentIndex === 1) ? 'active' : '' ?>"
+                                 id="tabContent<?php echo $parentIndex ?>"
+                                 role="tabpanel"
+                                 aria-labelledby="tab<?php echo $parentIndex ?>">
 
                             <?php
                             $courseCategories = get_terms(array(
@@ -98,14 +101,16 @@ $courseCategoryParents = get_terms(array(
 
                                     if(count($coursePosts->posts) > 0) { ?>
 
-                                            <h2 class="section_heading" data-toggle="collapse" data-target="#tabContent<?php echo $parentIndex ?>Expand<?php echo $courseIndex ?>" aria-expanded="false" aria-controls="tabContent<?php echo $parentIndex ?>Expand<?php echo $courseIndex ?>">
-                                                <span><?php echo $courseVal->name ?></span>
+                                            <h2 class="section_heading"
+                                                data-toggle="collapse"
+                                                data-target="#tabContent<?php echo $parentIndex ?>Expand<?php echo $courseIndex ?>"
+                                                aria-expanded="<?php echo $courseIndex == 1 ? 'true' : 'false'; ?>"
+                                                aria-controls="tabContent<?php echo $parentIndex ?>Expand<?php echo $courseIndex ?>">
+                                                <span><?php echo $courseVal->name ?> (<?php echo count($coursePosts->posts); ?>)</span>
                                                 <span class="arrow">></span>
                                             </h2>
 
-                                            <br />
-
-                                            <div id="tabContent<?php echo $parentIndex ?>Expand<?php echo $courseIndex ?>" class="collapse" data-parent="#myTabContent">
+                                            <div id="tabContent<?php echo $parentIndex ?>Expand<?php echo $courseIndex ?>" class="collapse <?php if($courseIndex == 1){ echo 'show'; } ?>" data-parent="#myTabContent">
 
                                             <?php
                                             if($courseVal -> description) { ?>
@@ -166,10 +171,10 @@ $courseCategoryParents = get_terms(array(
             foreach($infoBoxes as $infoBoxKey => $infoBoxVal) {
                 $infoBoxIndex = $infoBoxKey + 1; ?>
 
-                <div class="image-text-module container" data-accordion-parent="tabContent<?php echo $parentKey + 1 ?>">
+                <div class="image-text-module container <?php if($parentKey !== 0){ echo 'd-none'; }?>" data-accordion-parent="tabContent<?php echo $parentKey + 1 ?>">
                     <div class="row">
                         <div class="copy col-md-12 col-lg-7">
-                            <h2><?php echo $infoBoxVal['header'] ?></h2>
+                            <h3><?php echo $infoBoxVal['header'] ?></h3>
                             <?php echo $infoBoxVal['copy'] ?>
                         </div>
                         <div class="image col-md-12 col-lg-5">
@@ -194,7 +199,7 @@ $courseCategoryParents = get_terms(array(
                 </div>
             </div>
             <div class="copy col-md-12 col-lg-7">
-                <h2>Get Started Today</h2>
+                <h3>Get Started Today</h3>
                 <p>
                     If this is your first time, get started by registering. If you're a returning user, continue by logging in. Once registered, you will need to Search, Request, Register, then Launch, and you’ll be on your way to continuing your education.
                 </p>
