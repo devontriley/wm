@@ -144,7 +144,9 @@ $wm_settings = Wholistic_Matters::get_settings();
                                     <a href="<?php bloginfo('url'); ?>/interactive-tools/anatomic-biodigital-library">Anatomic / BioDigital Library</a>
                                     <a href="<?php bloginfo('url'); ?>/interactive-tools/clinical-practice-support">Clinical Practice Support</a>
                                 </li>
-                                <li class="link"><a href="<?php bloginfo('url'); ?>/interactive-tools">Learn More & Gain Access</a></li>
+                                <?php if(!is_user_logged_in()){?>
+                                    <li class="link"><a href="<?php bloginfo('url'); ?>/interactive-tools">Learn More & Gain Access</a></li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </li>
