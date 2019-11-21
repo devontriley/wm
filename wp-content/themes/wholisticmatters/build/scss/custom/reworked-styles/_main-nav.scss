@@ -309,7 +309,6 @@
                     .primaryNav__dropdown-column {
                         position: relative;
                         flex: 0 0 25%;
-                        max-width: 25%;
                         border-bottom: 1px solid #ddd;
                         padding-bottom: 15px;
                         margin-bottom: 15px;
@@ -317,6 +316,7 @@
                             padding: 0 3.5vw;
                             border: none;
                             margin: 0;
+                            max-width: 25%;
 
                             &:after {
                                 content: '';
