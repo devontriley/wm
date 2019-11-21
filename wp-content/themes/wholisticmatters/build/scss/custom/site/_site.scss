@@ -168,36 +168,8 @@
 		}
 	}
 }
-.banner-inner{
-	&.banner-inner-tag{
-		.image-banner {
-			padding-top: 250px;
-		}
-	}
-	
-	&.banner-inner-fw{
-		padding-top: 3.5rem;
-		padding-bottom: 6rem;
-		margin-bottom: -6rem;
-		
-		.data-banner{
-			position: static;
-			/* width: auto; */
-			float: none;
-			padding-left: 0;
-			padding-right: 0;
-			
-			.detail-data{
-				position: static;
-			}
-		}
-	}
-}
-.image-banner {
-	img {
-		height: auto;
-	}
-}
+
+
 .inner-wrapp {
 	max-width: 100%;
 }

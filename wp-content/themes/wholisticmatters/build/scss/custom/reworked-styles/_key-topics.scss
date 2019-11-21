@@ -4,46 +4,83 @@
     overflow: hidden;
     position: relative;
     margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    @media(min-width: 768px) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .data-banner {
+    flex: 0 0 100%;
     width: 100%;
-    padding: 22px 15px 22px 15px;
+    padding: 20px;
     position: relative;
     height: 100%;
     left: 0;
     right: 0;
+    order: 2;
     @media(min-width: 768px) {
-        width: 57%;
-        float: left;
-        padding: 40px 33px 40px 33px;
-        position: absolute;
-        left: 40px;
-        right: 40px;
+        flex: 0 0 60%;
+        width: 60%;
+        padding: 40px 30px;
+        order: inherit;
+    }
+    @media(min-width: 1100px) {
+        padding: 40px;
     }
 }
+
+//.banner-inner{
+//    &.banner-inner-tag{
+//        .image-banner {
+//            padding-top: 250px;
+//        }
+//    }
+//
+//    &.banner-inner-fw{
+//        padding-top: 3.5rem;
+//        padding-bottom: 6rem;
+//        margin-bottom: -6rem;
+//
+//        .data-banner{
+//            position: static;
+//            /* width: auto; */
+//            float: none;
+//            padding-left: 0;
+//            padding-right: 0;
+//
+//            .detail-data{
+//                position: static;
+//            }
+//        }
+//    }
+//}
 
 .image-banner {
     width: 100%;
+    flex: 0 0 100%;
     @media(min-width: 768px) {
         width: 40%;
-        float: right;
+        flex: 0 0 40%;
+        align-self: stretch;
     }
-}
 
-.image-banner img {
-    width: 100%;
-    border-radius: 0 0px 5px 5px;
-    @media(min-width: 768px) {
-        border-radius: 0 5px 5px 0;
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 0 0px 5px 5px;
+        @media(min-width: 768px) {
+            border-radius: 0 5px 5px 0;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 
 .detail-data {
-    padding: 30px 0px;
-    position: absolute;
-    bottom: 20px;
-    left: 0px;
     @media(min-width: 768px) {
         padding: 0;
     }
@@ -51,16 +88,21 @@
 
 .detail-data h2,
 .detail-data p.h2 {
-    font-size: 36px;
+    font-size: 26px;
     color: #1A4D2C;
     font-weight: bold;
     font-family: 'Harriet';
+    margin: 0 0 .5em 0;
+    @media(min-width: 1100px) {
+        font-size: 36px;
+    }
 }
 
 .detail-data p {
     font-size: 16px;
     color: #40473E;
     font-family: 'Harriet';
+    margin-bottom: 0;
 }
 
 .badge-banner {
@@ -73,11 +115,8 @@
     border-radius: 5px;
     position: relative;
     left: 0;
-    margin-bottom: 15px;
-    @media(min-width: 768px) {
-        position: absolute;
-        letter-spacing: 1.5px;
-    }
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
 }
 
 .tabs-me {

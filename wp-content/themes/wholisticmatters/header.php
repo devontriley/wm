@@ -82,8 +82,8 @@ $wm_settings = Wholistic_Matters::get_settings();
                         <div class="primaryNav__dropdown mega">
                             <div class="primaryNav__dropdown-inner">
                                 <div class="primaryNav__dropdown-column">
+                                    <h3>Key Topics</h3>
                                     <ul>
-                                        <li><h3>Key Topics</h3></li>
                                         <li><a href="<?php bloginfo('url'); ?>/category/cardiometabolic-control/">Cardiometabolic Control</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/category/digestive-health/">Digestive Health</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/category/epigenetics-health/">Epigenetics</a></li>
@@ -94,8 +94,8 @@ $wm_settings = Wholistic_Matters::get_settings();
                                 </div>
 
                                 <div class="primaryNav__dropdown-column">
+                                    <h3>Spotlight Topics</h3>
                                     <ul>
-                                        <li><h3>Spotlight Topics</h3></li>
                                         <li><a href="<?php bloginfo('url'); ?>/spotlight-topic/detox/">Detoxification</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/spotlight-topic/hemp-the-endocannabinoid-system/">Hemp &amp; the Endocannabinoid System</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/spotlight-topic/omega-3-fatty-acids/">Omega-3 Fatty Acids</a></li>
@@ -106,8 +106,8 @@ $wm_settings = Wholistic_Matters::get_settings();
                                 </div>
 
                                 <div class="primaryNav__dropdown-column">
+                                    <h3>Media Base</h3>
                                     <ul>
-                                        <li><h3>Media Base</h3></li>
                                         <li><a href="<?php bloginfo('url'); ?>/articles/">Articles</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/videos/">Videos</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/podcast-episodes/">Podcasts</a></li>
@@ -116,8 +116,8 @@ $wm_settings = Wholistic_Matters::get_settings();
                                 </div>
 
                                 <div class="primaryNav__dropdown-column">
+                                    <h3>Practitioner Specialty</h3>
                                     <ul>
-                                        <li><h3>Practitioner Specialty</h3></li>
                                         <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/acupuncture/">Acupuncture</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/chiropractic/">Chiropractic</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/functional-medicine/">Functional Medicine</a></li>
