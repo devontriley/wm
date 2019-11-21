@@ -276,6 +276,9 @@ class Wholistic_Matters_Public {
         return $ss_result;
     }
 
+    /**
+     * @return string - SS tracking cookie or empty
+     */
     public function get_ss_trackingid() {
         if (isset($_COOKIE['__ss_tk'])) {
             return $_COOKIE['__ss_tk'];
@@ -283,6 +286,12 @@ class Wholistic_Matters_Public {
         return '';
     }
 
+    /**
+     * Returns SS user by email
+     * Returns false if user not found
+     * @param $email
+     * @return bool
+     */
     public function get_ss_user( $email ) {
         $response = json_decode($this->ss_http_request( 'POST', 'getLeads', array('where' => array('emailAddress' => $email)) ));
 
@@ -294,9 +303,16 @@ class Wholistic_Matters_Public {
         return false;
     }
 
-    public function create_ss_user( $user ) {
-        $firstName = $user->data->first_name;
-        $lastName = $user->data->last_name;
+    /**
+     * Create SS user
+     * Returns user ID or false
+     * @param $user
+     * @return bool
+     */
+    public function create_ss_user( $user )
+    {
+        $firstName = $user->first_name;
+        $lastName = $user->last_name;
         $email = $user->data->user_email;
         $ss_trackingid = $this->get_ss_trackingid();
         $ss_params = array(
@@ -320,28 +336,40 @@ class Wholistic_Matters_Public {
         return false;
     }
 
-    public function patch_ss_trackingid( $user_login, $user ) {
-        $email = $user->data->user_email;
+    /**
+     * Fired when user logs in
+     * Create user if none is found and updates SS tracking ID
+     * @param $user_login
+     * @param $user
+     */
+    public function patch_ss_trackingid($user_login, $user, $userID = null)
+    {
+        $user_id = $userID ? $userID : $user->ID;
+        $userObj = $user ? $user : get_user_by('id', $user_id);
+        $user_email = $userObj->data->user_email;
         $ss_trackingid = $this->get_ss_trackingid();
-        $user_id = $this->get_ss_user( $email );
+        // Get SS user id
+        $ss_user_id = $this->get_ss_user($user_email);
 
-        if(!$user_id)
+        // Create new SS user if none is found
+        if(!$ss_user_id)
         {
-            $create_user = $this->create_ss_user( $user );
+            $this->create_ss_user($userObj);
             return;
         }
 
         $params = array(
             'objects' => array(
                 array(
-                    'id' => $user_id,
+                    'id' => $ss_user_id,
                     'trackingID' => $ss_trackingid,
                     'opted_in_5ce59317c4c09' => '1'
                 )
             )
         );
 
-        $update_trackingid = $this->ss_http_request( 'POST', 'updateLeadsV2', $params);
+        // Update existing lead with SS tracking ID
+        $this->ss_http_request( 'POST', 'updateLeadsV2', $params);
 
         return;
     }
@@ -504,29 +532,44 @@ class Wholistic_Matters_Public {
 	 * when accessed through the registration action.
 	 */
 	public function do_register_user() {
-		if ('POST' == $_SERVER['REQUEST_METHOD']) {
+		if ('POST' == $_SERVER['REQUEST_METHOD'])
+		{
 			$redirect_url = $this->get_register_url();
-			if (!get_option('users_can_register')) {
+
+			if(!get_option('users_can_register'))
+			{
 				$redirect_url = add_query_arg('register-errors', 'closed', $redirect_url);
-			} else if (empty($_POST['foobar'])) {
+			}
+
+			else if(empty($_POST['foobar']))
+			{
 				$email = sanitize_user($_POST['email']);
 				$first_name = sanitize_text_field($_POST['first_name']);
 				$last_name = sanitize_text_field($_POST['last_name']);
 				$password = esc_attr($_POST['password']);
 				$user_role = isset($_POST['user_role']) && in_array(strtolower($_POST['user_role']), array('hcp', 'non-hcp')) ? strtolower($_POST['user_role']) : 'non-hcp';
 
-				$result = $this->register_user($email, $password, $first_name, $last_name, $user_role);
+				// Register user
+				$user_id = $this->register_user($email, $password, $first_name, $last_name, $user_role); // returns user id
 
-				if (is_wp_error($result)) {
-					$errors = join(',', $result->get_error_codes());
+				if (is_wp_error($user_id))
+				{
+					$errors = join(',', $user_id->get_error_codes());
 					$redirect_url = add_query_arg('register-errors', $errors, $redirect_url);
-				} else {
-					do_action('wm_after_register', $_POST, $result);
+				}
+
+				else {
+					do_action('wm_after_register', $_POST, $user_id);
 					$redirect_url = $this->get_login_url();
 					$redirect_url = add_query_arg('registered', $email, $redirect_url);
+
+					// Create SS user
+                    $this->patch_ss_trackingid(null, null, $user_id);
 				}
 			}
+
 			wp_redirect($redirect_url);
+
 			exit;
 		}
 	}
@@ -848,17 +891,6 @@ class Wholistic_Matters_Public {
 		);
 
 		$user_id = wp_insert_user($user_data);
-		//wp_new_user_notification( $user_id, null, 'both' );
-		//add default Quick Save bookmark folder 
-		$category_table = W_M_BOOKMARK_CAT_TBL;
-//		$wpdb->query($wpdb->prepare("INSERT INTO $category_table ( cat_name, user_id, privacy ) VALUES ( %s, %d, %d )", array(
-//					__('Quick Save', 'wholistic-matters'),
-//					$user_id,
-//					0
-//		)));
-//		$defaultFolderId = $wpdb->insert_id;
-//		
-//		add_user_meta($user_id, '_wm_quick_save_folder_id', $defaultFolderId, true);
 
 		return $user_id;
 	}
