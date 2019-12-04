@@ -64,11 +64,16 @@ if($post_type_name != 'post'){
 		</a>
 		<?php echo $iconLink; ?>
 	</div>
+
 	<div class="feature-data">
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<p class="h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+
 		<p><?php echo WM_get_post_excerpt( get_the_excerpt(), 150 ); ?></p>
+
 		<span class="datetime"><?php echo $pTypeLabel; ?> <?php if(!empty($post_date)): ?>• <?php echo $post_date; ?> <?php endif; ?><?php if(!empty($read_time)): ?>• <?php echo $read_time; ?><?php endif; ?></span>
-		<?php echo do_shortcode('[wm-bookmark-link]'); ?>
+
+        <?php echo do_shortcode('[wm-bookmark-link]'); ?>
+
 		<?php if($is_premium): ?>
 			<span class="badge"><?php _e('PREMIUM'); ?></span>
             <div class="premium-info">
@@ -80,5 +85,7 @@ if($post_type_name != 'post'){
                 </div>
             </div>
 		<?php endif; ?>
+
 	</div>
+
 </div>

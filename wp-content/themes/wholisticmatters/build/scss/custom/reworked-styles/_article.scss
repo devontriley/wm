@@ -128,7 +128,7 @@
     border-left: 4px solid $green;
     background: #f9f9f9;
     padding: map_get($spacers, 4);
-    margin: map_get($spacers, 5) 0;
+    margin: map_get($spacers, 4) 0;
 
     .card-body {
 
@@ -142,6 +142,10 @@
 
         *:last-child {
             margin-bottom: 0;
+        }
+
+        p {
+            font-size: 16px;
         }
     }
 }

@@ -293,7 +293,7 @@ function podcast_embed($atts, $content = null) {
                         <a href="<?php echo get_permalink($a['id']); ?>" class="stretched-link"></a>
                     </div>
                     <div class="content-side-album podcast-metadata">
-                        <h2 class="entry-title"><?php echo get_the_title($a['id']); ?></h2>
+                        <h3 class="entry-title"><a href="<?php echo get_permalink($a['id']); ?>"><?php echo get_the_title($a['id']); ?></a></h3>
                         <p><?php _e('Series:'); ?> <?php echo $term->name;  ?></p>
                         <p><?php _e('Host:'); ?> <?php echo WMHelper::get_term_meta_text( $term->term_id, 'wm_series_host' ); ?></p>
                         <span><a href="<?php echo $podcast_file; ?>" target="_blank"><?php _e('Download'); ?></a></span> <span>
@@ -356,7 +356,7 @@ function article_embed($atts, $content = null) {
                 <?php echo $iconLink; ?>
             </div>
             <div class="feature-data">
-                <h2><a href="<?php echo get_the_permalink($a['id']); ?>"><?php echo get_the_title($a['id']); ?></a></h2>
+                <h3><a href="<?php echo get_the_permalink($a['id']); ?>"><?php echo get_the_title($a['id']); ?></a></h3>
                 <p><?php echo WM_get_post_excerpt( get_the_excerpt($a['id']), 150 ); ?></p>
                 <span class="datetime"><?php echo $pTypeLabel; ?> <?php if(!empty($post_date)): ?>• <?php echo $post_date; ?> <?php endif; ?><?php if(!empty($read_time)): ?>• <?php echo $read_time; ?><?php endif; ?></span>
                 <?php echo do_shortcode('[wm-bookmark-link]'); ?>

@@ -5,7 +5,7 @@ $data = array(
 );
 ?>
 
-<div class="module-related-content">
+<div class="module-related-content my-5">
     <?php if($data['header']) { ?>
         <h2 class="mb-5"><?php echo $data['header'] ?></h2>
     <?php } ?>

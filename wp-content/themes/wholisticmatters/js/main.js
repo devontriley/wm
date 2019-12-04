@@ -526,28 +526,28 @@ jQuery(document).ready(function ($) {
 	}
 
 	// Hub page sticky sidebar
-	if(window.matchMedia('(min-width: 768px)').matches)
-	{
-		if ($('.hub-sidebar').length) {
-			let sidebar = $('.hub-sidebar');
-			let headerHeight = $('header.sticky-top').outerHeight();
-			let sidebarTopOffset = sidebar.offset().top - headerHeight - 25;
-
-			$(window).on('scroll', function (e) {
-				let scroll = $(window).scrollTop();
-
-				if (scroll >= sidebarTopOffset) {
-					sidebar.addClass("sidebar-fixed");
-					sidebar.css('top', headerHeight + 25 + 'px');
-				}
-
-				if (scroll < sidebarTopOffset) {
-					sidebar.removeClass("sidebar-fixed");
-					sidebar.css('top', 0);
-				}
-			});
-		}
-	}
+	// if(window.matchMedia('(min-width: 768px)').matches)
+	// {
+	// 	if ($('.hub-sidebar').length) {
+	// 		let sidebar = $('.hub-sidebar');
+	// 		let headerHeight = $('header.sticky-top').outerHeight();
+	// 		let sidebarTopOffset = sidebar.offset().top - headerHeight - 25;
+	//
+	// 		$(window).on('scroll', function (e) {
+	// 			let scroll = $(window).scrollTop();
+	//
+	// 			if (scroll >= sidebarTopOffset) {
+	// 				sidebar.addClass("sidebar-fixed");
+	// 				sidebar.css('top', headerHeight + 25 + 'px');
+	// 			}
+	//
+	// 			if (scroll < sidebarTopOffset) {
+	// 				sidebar.removeClass("sidebar-fixed");
+	// 				sidebar.css('top', 0);
+	// 			}
+	// 		});
+	// 	}
+	// }
 
 	// Newsletter Modal
     const newsletterForms = $('.newsletter-signup-form');

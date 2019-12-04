@@ -7,7 +7,7 @@ $data = array(
 );
 ?>
 
-<div id="module-row-<?php echo $data['row_index'] ?>" class="module-accordion my-5 border-bottom">
+<div id="module-row-<?php echo $data['row_index'] ?>" class="module-accordion my-5">
     <?php if($data['header']) { ?>
         <h2><?php echo $data['header']; ?></h2>
     <?php } ?>

@@ -19,6 +19,8 @@ get_header(); ?>
             <div class="row my-4 my-md-5">
                 <div class="hub-sidebar sidebar col-md-3">
 
+                    <p class="sidebar-header">Page Navigation</p>
+
                     <?php
                     if(have_rows('modules')) :
                         $counter = 0;
@@ -27,7 +29,7 @@ get_header(); ?>
                         $sidebarTitle = get_sub_field('sidebar_title');
                         ?>
 
-                        <a class="list-group-item list-group-item-action" href="#module-<?php echo $counter ?>"><?php echo $sidebarTitle ?></a>
+                        <a class="list-group-item list-group-item-action <?php if($counter == 0){ echo 'active'; }?>" href="#module-<?php echo $counter ?>"><?php echo $sidebarTitle ?></a>
 
                     <?php
                         $counter++;
@@ -36,7 +38,7 @@ get_header(); ?>
                     endif; ?>
 
                     <div class="sidebar-subscribe">
-                        <img class="mb-4" src="<?php bloginfo('template_directory'); ?>/images/newsletter/WM-EncasedPullaway.svg" alt="WM" width="50" />
+                        <img class="mb-3" src="<?php bloginfo('template_directory'); ?>/images/newsletter/WM-EncasedPullaway.svg" alt="WM" width="50" />
 
                         <p class="sidebar-copy mb-3">Receive clinically guides nutrition insights you can trust.</p>
 
