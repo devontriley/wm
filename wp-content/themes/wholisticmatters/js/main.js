@@ -715,7 +715,7 @@ jQuery(document).ready(function ($) {
 	var headerHeight = $('.interactive-header').outerHeight();
 	var viewingHeight = $('.headerviewing-text').outerHeight();
 	var correctHeight = height - (headerHeight + viewingHeight);
-	$('iframe').css('height', correctHeight);
+	$('.interactive-body iframe').css('height', correctHeight);
 
 	$('.interactive-header').css('margin-bottom', viewingHeight);
 
