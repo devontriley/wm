@@ -16,7 +16,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="row my-4 my-md-5">
+            <div class="row my-4 mx-0 my-md-5">
                 <div class="hub-sidebar sidebar col-md-3">
 
                     <p class="sidebar-header">Page Navigation</p>
