@@ -8,6 +8,7 @@
     height: 100%;
     width: 100%;
     z-index: 999999;
+    overflow: auto;
     @media(min-width: 992px) {
         display: flex;
         flex-wrap: nowrap;
