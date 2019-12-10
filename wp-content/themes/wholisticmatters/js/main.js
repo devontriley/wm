@@ -525,30 +525,6 @@ jQuery(document).ready(function ($) {
 		});
 	}
 
-	// Hub page sticky sidebar
-	// if(window.matchMedia('(min-width: 768px)').matches)
-	// {
-	// 	if ($('.hub-sidebar').length) {
-	// 		let sidebar = $('.hub-sidebar');
-	// 		let headerHeight = $('header.sticky-top').outerHeight();
-	// 		let sidebarTopOffset = sidebar.offset().top - headerHeight - 25;
-	//
-	// 		$(window).on('scroll', function (e) {
-	// 			let scroll = $(window).scrollTop();
-	//
-	// 			if (scroll >= sidebarTopOffset) {
-	// 				sidebar.addClass("sidebar-fixed");
-	// 				sidebar.css('top', headerHeight + 25 + 'px');
-	// 			}
-	//
-	// 			if (scroll < sidebarTopOffset) {
-	// 				sidebar.removeClass("sidebar-fixed");
-	// 				sidebar.css('top', 0);
-	// 			}
-	// 		});
-	// 	}
-	// }
-
 	// Newsletter Modal
     const newsletterForms = $('.newsletter-signup-form');
 
@@ -697,24 +673,57 @@ jQuery(document).ready(function ($) {
     /**
 	 * HUB sidebar anchor scroll
      */
+
+    let sidebar = $('.hub-sidebar');
+    let headerHeight = $('#primaryHeader').outerHeight();
+    let modulesContainer = $('.modules-container');
+    let accordionControl = $('.sidebar-header');
+    let mobileCollapse = $('.sidebar-mobile-collapse');
+
     $('.hub-sidebar a').on('click', function(e)
     {
     	e.preventDefault();
 
-        let sidebar = $('.hub-sidebar');
-        let headerHeight = $('header.sticky-top').outerHeight();
         let targetElement = $($(this).attr('href'));
+        let scrollDistance = targetElement.offset().top - (headerHeight + 20);
+
+        if(window.matchMedia('(max-width: 991px').matches)
+		{
+            mobileCollapse.slideUp(0);
+            accordionControl.removeClass('active');
+            scrollDistance = targetElement.offset().top - (headerHeight + accordionControl.outerHeight() + 20);
+		}
+
+		console.log(headerHeight);
+		console.log(targetElement.offset().top);
 
         $('html, body').animate({
-            scrollTop: targetElement.offset().top - headerHeight - 20
+            scrollTop: scrollDistance
         }, 100, 'linear');
     });
 
+    /**
+	 * HUB mobile accordion
+     */
+    if(window.matchMedia('(max-width: 991px').matches)
+	{
+		accordionControl.on('click', function(e)
+		{
+			e.preventDefault();
+
+			mobileCollapse.slideToggle();
+			accordionControl.toggleClass('active');
+		});
+	}
+
+    /**
+	 * Biodigital Tools
+     */
 	// once everything is loaded, adjust iframe to be full screen
 	var height = $(window).height();
-	var headerHeight = $('.interactive-header').outerHeight();
+	var interactiveHeaderHeight = $('.interactive-header').outerHeight();
 	var viewingHeight = $('.headerviewing-text').outerHeight();
-	var correctHeight = height - (headerHeight + viewingHeight);
+	var correctHeight = height - (interactiveHeaderHeight + viewingHeight);
 	$('.interactive-body iframe').css('height', correctHeight);
 
 	$('.interactive-header').css('margin-bottom', viewingHeight);
@@ -722,7 +731,6 @@ jQuery(document).ready(function ($) {
 	// drawer in and out on click
 	$('.drawer-toggle').on('click', function(e)
 	{
-		console.log(e);
 		if(!$('.interactive-drawer').hasClass('active')) {
 			$('.interactive-drawer').addClass('active');
 		}

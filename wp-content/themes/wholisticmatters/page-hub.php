@@ -21,28 +21,30 @@ get_header(); ?>
 
                     <p class="sidebar-header">Page Navigation</p>
 
-                    <?php
-                    if(have_rows('modules')) :
-                        $counter = 0;
-                        echo '<div id="sidebar-list" class="sidebar-list list-group mb-md-4">';
-                        while(have_rows('modules')) : the_row();
-                        $sidebarTitle = get_sub_field('sidebar_title');
-                        ?>
+                    <div class="sidebar-mobile-collapse">
+                        <?php
+                        if(have_rows('modules')) :
+                            $counter = 0;
+                            echo '<div id="sidebar-list" class="sidebar-list list-group mb-md-4">';
+                            while(have_rows('modules')) : the_row();
+                                $sidebarTitle = get_sub_field('sidebar_title');
+                                ?>
 
-                        <a class="list-group-item list-group-item-action <?php if($counter == 0){ echo 'active'; }?>" href="#module-<?php echo $counter ?>"><?php echo $sidebarTitle ?></a>
+                                <a class="list-group-item list-group-item-action <?php if($counter == 0){ echo 'active'; }?>" href="#module-<?php echo $counter ?>"><?php echo $sidebarTitle ?></a>
 
-                    <?php
-                        $counter++;
-                        endwhile;
-                        echo '</div>';
-                    endif; ?>
+                                <?php
+                                $counter++;
+                            endwhile;
+                            echo '</div>';
+                        endif; ?>
 
-                    <div class="sidebar-subscribe">
-                        <img class="mb-3" src="<?php bloginfo('template_directory'); ?>/images/newsletter/WM-EncasedPullaway.svg" alt="WM" width="50" />
+                        <div class="sidebar-subscribe">
+                            <img class="mb-3" src="<?php bloginfo('template_directory'); ?>/images/newsletter/WM-EncasedPullaway.svg" alt="WM" width="50" />
 
-                        <p class="sidebar-copy mb-3">Receive clinically guides nutrition insights you can trust.</p>
+                            <p class="sidebar-copy mb-3">Receive clinically guides nutrition insights you can trust.</p>
 
-                        <a href="#" class="btn btn-primary newsletter-signup-modal-trigger">Subscribe</a>
+                            <a href="#" class="btn btn-primary newsletter-signup-modal-trigger">Subscribe</a>
+                        </div>
                     </div>
 
                 </div>

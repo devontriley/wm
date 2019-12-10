@@ -47,11 +47,16 @@
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 5px;
     overflow: hidden;
-    position: relative;
-    padding: 0 20px 30px 20px;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 60px;
+    z-index: 1;
+    background: #fff;
     @media(min-width: 992px) {
         position: sticky;
         top: 80px;
+        margin-bottom: 0;
     }
 
     &:after {
@@ -84,6 +89,36 @@
         font-size: 14px;
         font-weight: 700;
         margin: 0 -20px;
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            background: url('images/angle.svg');
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 11px;
+            @media(min-width: 992px) {
+                display: none;
+            }
+        }
+
+        &.active:after {
+            content: '';
+            transform: translateY(-50%) rotate(0deg);
+        }
+    }
+
+    .sidebar-mobile-collapse {
+        display: none;
+        margin-bottom: 30px;
+        @media(min-width: 992px) {
+            display: block;
+        }
     }
 
     .btn {
