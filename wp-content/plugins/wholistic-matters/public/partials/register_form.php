@@ -21,13 +21,25 @@ $user_role = isset($_REQUEST['user_role']) ? $_REQUEST['user_role'] : 'hcp';
     </div>
     <div class="form-side">
 		<?php if($is_popup): ?>
-		<a href="#." class="closeModal">
-			<img src="<?php bloginfo('template_url'); ?>/images/close.png" alt="close">
-		</a>
+            <a href="#." class="closeModal">
+                <img src="<?php bloginfo('template_url'); ?>/images/close.png" alt="close">
+            </a>
 		<?php endif ?>
+
+        <div class="form-image">
+            <picture>
+                <source srcset="<?php bloginfo('template_directory'); ?>/images/signup.jpg" media="(min-width: 992px)" />
+                <img src="<?php bloginfo('template_directory'); ?>/images/signup-mobile.jpg" />
+            </picture>
+        </div>
+
         <div class="form-wrapp">
             <div class="inner-wrapp">
+
+                <img src="<?php bloginfo('template_url'); ?>/images/wm-logo.svg" width="415" alt="signup-logo" class="mobile-logo">
+
                 <h2><?php _e( 'Create Your Account:', 'wholistic-matters' ); ?></h2>
+
 				<?php if ( count( $attributes['errors'] ) > 0 ) : ?>
 					<?php foreach ( $attributes['errors'] as $error ) : ?>
 						<p class="login-error">
@@ -35,6 +47,7 @@ $user_role = isset($_REQUEST['user_role']) ? $_REQUEST['user_role'] : 'hcp';
 						</p>
 					<?php endforeach; ?>
 				<?php endif; ?>
+
                 <form id="signupForm<?php if($is_popup): ?>Popup<?php endif ?>" class="signupForm" action="<?php echo wp_registration_url(); ?>" method="post">
                     <div class="Data-one">
                         <div class="row">
