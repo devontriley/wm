@@ -123,7 +123,8 @@
             }
 
             .mobile-logo {
-                max-width: 350px;
+                max-width: 100%;
+                width: 350px;
                 margin-bottom: 30px;
                 @media(min-width: 992px) {
                     display: none;
