@@ -126,17 +126,6 @@
 			transform: translate(0, 0);
 	}
 }
-
-@media (max-width: 767px){
-	.LoginScreenPopup {
-		.login-wrapp{
-			top: 0;
-			position: relative;
-			margin-top: 0;
-			margin-bottom: 2em;
-		}
-	}
-}
 @media (max-width: 699px){
 	.wm_popup_modal_content {
 		position: relative;
