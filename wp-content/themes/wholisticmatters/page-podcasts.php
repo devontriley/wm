@@ -120,29 +120,29 @@ get_header(); ?>
 
 <?php if(! is_user_logged_in()) { ?>
 <!--     join wm module -->
-    <div class="podcasts-page fiftyfifty">
-        <div class="img-block">
-            <img src="https://wholisticmatters.com/wp-content/uploads/2019/12/Rectangle-515.png"/>
-        </div>
-
-        <div class="text-block">
-            <h2>Join WholisticMatters & Gain Full Access</h2>
-            <p class="copy">
-                Create a free WholisticMatters account for full access to premium articles, holistic nutrition resources
-                and education focused interactive tools to help you integrate holistic nutrition into your practice and
-                your life.
-            </p>
-            <a class="btn signup_popup">
-                Create Your Free Account
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                    <defs>
-                        <style>.a{fill:#fff;fill-rule:evenodd;}</style>
-                    </defs>
-                    <path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/>
-                </svg>
-            </a>
-        </div>
-    </div>
+<!--    <div class="podcasts-page fiftyfifty">-->
+<!--        <div class="img-block">-->
+<!--            <img src="https://wholisticmatters.com/wp-content/uploads/2019/12/Rectangle-515.png"/>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="text-block">-->
+<!--            <h2>Join WholisticMatters & Gain Full Access</h2>-->
+<!--            <p class="copy">-->
+<!--                Create a free WholisticMatters account for full access to premium articles, holistic nutrition resources-->
+<!--                and education focused interactive tools to help you integrate holistic nutrition into your practice and-->
+<!--                your life.-->
+<!--            </p>-->
+<!--            <a class="btn signup_popup">-->
+<!--                Create Your Free Account-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">-->
+<!--                    <defs>-->
+<!--                        <style>.a{fill:#fff;fill-rule:evenodd;}</style>-->
+<!--                    </defs>-->
+<!--                    <path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/>-->
+<!--                </svg>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
 <?php } ?>
 
 <?php get_footer(); ?>
