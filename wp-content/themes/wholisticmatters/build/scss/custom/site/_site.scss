@@ -474,23 +474,7 @@ body{
 		}
 	}
 }
-.LoginScreen{
-	&:not(.LoginScreenPopup) {
-		position: relative;
-		height: auto;
-		z-index: 0;
-		
-		.header-login {
-			display: none;
-		}
-		
-		.login-wrapp {
-			max-width: 96%;
-			width: 475px;
-			margin: 3em auto;
-		}
-	}
-}
+
 .signUpScreen{
 	&:not(.signUpScreenPopup) {
 		position: relative;

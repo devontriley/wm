@@ -3,11 +3,11 @@
     position: fixed;
     left: 0px;
     right: 0px;
-    top: 0px;
+    top: 0;
     bottom: 0px;
-    height: 100%;
+    height: calc(100vh - 60px);
     width: 100%;
-    z-index: 999999;
+    z-index: 2001;
     overflow: auto;
     @media(min-width: 992px) {
         display: flex;
@@ -22,42 +22,114 @@
             overflow: hidden;
         }
     }
-}
 
-.content-side {
-    @media(min-width: 992px) {
-        flex: 0 0 50%;
-        width: 50%;
-    }
+    .content-side {
+        display: none;
+        @media(min-width: 992px) {
+            display: block;
+        }
+        @media(min-width: 992px) {
+            flex: 0 0 50%;
+            width: 50%;
+        }
 
-    .data-wrapp {
-        max-width: 700px;
+        .data-wrapp {
+            max-width: 700px;
 
-        p {
-            font-family: 'Harriet';
-            font-size: 14px;
-            @media(min-width: 768px) {
-                font-size: 16px;
+            p {
+                font-family: 'Harriet';
+                font-size: 14px;
+                @media(min-width: 768px) {
+                    font-size: 16px;
+                }
             }
         }
     }
-}
 
-.form-side {
-    background: url(images/signup.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 30px 20px;
-    @media(min-width: 768px) {
-        padding: 40px;
-    }
-    @media(min-width: 992px) {
-        flex: 0 0 50%;
-        width: 50%;
-        height: 100%;
+    .form-side {
+        @media(min-width: 992px) {
+            flex: 0 0 50%;
+            width: 50%;
+            height: 100%;
+            padding: 0;
+            position: relative;
+        }
+
+        .closeModal {
+            position: fixed;
+            z-index: 3;
+            right: 0;
+            top: 5px;
+            @media(min-width: 768px) {
+                position: absolute;
+                right: 15px;
+            }
+        }
+
+        .form-image {
+            width: calc(100% + 20px);
+            //height: 110px;
+            margin-left: -20px;
+            @media(min-width: 992px) {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                margin: 0;
+            }
+
+            img, picture {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .form-wrapp {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 7vw 20px;
+            background: #fff;
+            @media(min-width: 992px) {
+                position: absolute;
+                width: calc(100% - 40px);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 2;
+                max-width: 500px;
+                padding: 40px;
+                border-radius: 5px;
+                -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            }
+            @media(min-width: 1200px) {
+                width: calc(100% - 80px);
+            }
+
+            .inner-wrapp {
+                width: 100%;
+
+                h2 {
+                    font-size: 18px;
+                    color: #1A4D2C;
+                    font-weight: bold;
+                    margin-top: 0;
+                }
+            }
+
+            .mobile-logo {
+                max-width: 100%;
+                width: 350px;
+                margin-bottom: 30px;
+                @media(min-width: 992px) {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
@@ -118,40 +190,6 @@
             }
         }
     }
-}
-
-.closeModal {
-    position: fixed;
-    right: 0;
-    top: 0px;
-    @media(min-width: 768px) {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-    }
-}
-
-.form-wrapp {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    @media(min-width: 992px) {
-        padding: 40px;
-    }
-    @media(min-width: 1200px) {
-        width: calc(100% - 80px);
-    }
-}
-
-.inner-wrapp h2 {
-    font-size: 18px;
-    color: #1A4D2C;
-    font-weight: bold;
 }
 
 .bmd-label-floating {

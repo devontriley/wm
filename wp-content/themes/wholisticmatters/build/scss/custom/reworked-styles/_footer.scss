@@ -142,8 +142,16 @@ footer .social_icons {
 }
 
 .footer-sticky{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    @media(min-width: 992px) {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    // Hide footer on login page
+
+    body.page-member-login & {
+        display: none;
+    }
 }
