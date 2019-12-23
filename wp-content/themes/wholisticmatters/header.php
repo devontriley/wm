@@ -110,7 +110,7 @@ $wm_settings = Wholistic_Matters::get_settings();
                                     <ul>
                                         <li><a href="<?php bloginfo('url'); ?>/articles/">Articles</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/videos/">Videos</a></li>
-                                        <li><a href="<?php bloginfo('url'); ?>/podcast-episodes/">Podcasts</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/wholistic-matters-podcast-series/">Podcasts</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/resources/">Resources</a></li>
                                     </ul>
                                 </div>
