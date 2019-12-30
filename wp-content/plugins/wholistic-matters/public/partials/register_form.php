@@ -49,6 +49,9 @@ $user_role = isset($_REQUEST['user_role']) ? $_REQUEST['user_role'] : 'hcp';
 				<?php endif; ?>
 
                 <form id="signupForm<?php if($is_popup): ?>Popup<?php endif ?>" class="signupForm" action="<?php echo wp_registration_url(); ?>" method="post">
+
+                    <input id="hunniepot" type="hidden" name="hunniepot" value="" />
+
                     <div class="Data-one">
                         <div class="row">
                             <div class="col-sm-6">

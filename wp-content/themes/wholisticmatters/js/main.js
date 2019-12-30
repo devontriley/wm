@@ -1,4 +1,22 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function ($)
+{
+
+	var ajaxurl = localized_vars.ajaxurl;
+
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    }
+
+    // UNSAFE with unsafe strings; only use on previously-escaped ones!
+    function unescapeHtml(escapedStr) {
+        var div = document.createElement('div');
+        div.innerHTML = escapedStr;
+        var child = div.childNodes[0];
+        return child ? child.nodeValue : '';
+    }
+
 	/**
 	 * Check if touch device
 	 */
@@ -115,7 +133,8 @@ jQuery(document).ready(function ($) {
 
 	// Signup validation start
 
-	$(".signupForm").each(function(){
+	$(".signupForm").each(function()
+	{
 		$(this).validate({
 			rules: {
 				first_name: "required",
@@ -127,7 +146,7 @@ jQuery(document).ready(function ($) {
 				},
 				_wm_hc_professional_type: {
 					required: "#user_role_hcp:checked"
-				},
+				}
 			},
 			messages: {
 				first_name: "Please enter your firstname",
@@ -136,7 +155,7 @@ jQuery(document).ready(function ($) {
 				password: {
 					required: "Please provide a password",
 					minlength: ""
-				},
+				}
 			},
 			errorElement: "em",
 			errorPlacement: function (error, element) {
@@ -576,8 +595,8 @@ jQuery(document).ready(function ($) {
                 let data = {
                     action: 'wm_mc_put_contact',
                     security: wm_bookmark.nonce,
-                    url: 'https://us16.api.mailchimp.com/3.0/lists/b70bf5059b/members/', // wm mc master list
-                    type: 'PUT',
+                    // url: 'https://us16.api.mailchimp.com/3.0/lists/b70bf5059b/members/', // wm mc master list
+                    // type: 'PUT',
                     data: {
                         email_address: null,
                         status_if_new: "subscribed",

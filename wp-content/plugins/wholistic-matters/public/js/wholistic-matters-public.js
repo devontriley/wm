@@ -1181,86 +1181,86 @@
             return child ? child.nodeValue : '';
         }
 
-        var newsletterForms = $('.newsletter-signup-form');
-
-        $.each(newsletterForms, function(key, value){
-        	var form = value;
-            var formMessage = $(form).find('.message');
-            var hideModalCookie = Cookies.get('wm-hide-newsletter-modal');
-
-            // Show modal and set cookie
-            if (typeof hideModalCookie === 'undefined') {
-                var isModal = $(form).parents('.newsletter-modal');
-
-                if (isModal.length) {
-                    var close = isModal.find('.close');
-
-                    close.on('click', function (e) {
-                        e.preventDefault();
-                        isModal.css('display', 'none');
-                        if (typeof hideModalCookie === 'undefined') {
-                            Cookies.set('wm-hide-newsletter-modal', true, {expires: 7});
-                        }
-                    });
-
-                    setTimeout(function () {
-                        isModal.css('display', 'flex');
-                    }, 3000);
-                }
-            }
-
-            $(form).validate({
-                invalidHandler: function(e, validator) {
-                    e.preventDefault();
-
-                    formMessage.empty();
-                },
-
-                submitHandler: function(form, e) {
-                    e.preventDefault();
-
-                    var data = {
-                        action: 'wm_mc_put_contact',
-                        security: wm_bookmark.nonce,
-                        url: 'https://us16.api.mailchimp.com/3.0/lists/b70bf5059b/members/', // wm mc master list
-                        type: 'PUT',
-                        data: {
-                            email_address: null,
-                            status_if_new: "subscribed",
-                            status: "subscribed",
-							merge_fields: {}
-                        }
-                    }
-
-                    var email = jQuery(e.target).find('input[name=email]');
-                    var fname = jQuery(e.target).find('input[name=fname]');
-                    var lname = jQuery(e.target).find('input[name=lname]');
-
-                    if(typeof email.val() !== 'undefined') {
-                        data.data.email_address = escapeHtml(email.val());
-                        data.email = email.val();
-                    }
-
-                    if(typeof fname.val() !== 'undefined') data.data.merge_fields.FNAME = escapeHtml(fname.val());
-                    if(typeof lname.val() !== 'undefined') data.data.merge_fields.LNAME = escapeHtml(lname.val());
-
-                    $.post(ajaxurl, data, function (response) {
-                        var json = JSON.parse(JSON.parse(response));
-
-                        formMessage.empty();
-
-                        if(json.status === 400) {
-                            formMessage.html('<p class="error">This user has previously unsubscribed.</p>');
-                            return;
-                        }
-
-                        formMessage.html('<p class="success">You\'ve been subscribed!</p>');
-                        Cookies.set('wm-hide-newsletter-modal', true, { expires: 90 });
-                        hideModalCookie = Cookies.get('wm-hide-newsletter-modal');
-                    });
-                }
-            });
-		});
+        // var newsletterForms = $('.newsletter-signup-form');
+		//
+        // $.each(newsletterForms, function(key, value){
+        // 	var form = value;
+        //     var formMessage = $(form).find('.message');
+        //     var hideModalCookie = Cookies.get('wm-hide-newsletter-modal');
+		//
+        //     // Show modal and set cookie
+        //     if (typeof hideModalCookie === 'undefined') {
+        //         var isModal = $(form).parents('.newsletter-modal');
+		//
+        //         if (isModal.length) {
+        //             var close = isModal.find('.close');
+		//
+        //             close.on('click', function (e) {
+        //                 e.preventDefault();
+        //                 isModal.css('display', 'none');
+        //                 if (typeof hideModalCookie === 'undefined') {
+        //                     Cookies.set('wm-hide-newsletter-modal', true, {expires: 7});
+        //                 }
+        //             });
+		//
+        //             setTimeout(function () {
+        //                 isModal.css('display', 'flex');
+        //             }, 3000);
+        //         }
+        //     }
+		//
+        //     $(form).validate({
+        //         invalidHandler: function(e, validator) {
+        //             e.preventDefault();
+		//
+        //             formMessage.empty();
+        //         },
+		//
+        //         submitHandler: function(form, e) {
+        //             e.preventDefault();
+		//
+        //             var data = {
+        //                 action: 'wm_mc_put_contact',
+        //                 security: wm_bookmark.nonce,
+        //                 url: 'https://us16.api.mailchimp.com/3.0/lists/b70bf5059b/members/', // wm mc master list
+        //                 type: 'PUT',
+        //                 data: {
+        //                     email_address: null,
+        //                     status_if_new: "subscribed",
+        //                     status: "subscribed",
+		// 					merge_fields: {}
+        //                 }
+        //             }
+		//
+        //             var email = jQuery(e.target).find('input[name=email]');
+        //             var fname = jQuery(e.target).find('input[name=fname]');
+        //             var lname = jQuery(e.target).find('input[name=lname]');
+		//
+        //             if(typeof email.val() !== 'undefined') {
+        //                 data.data.email_address = escapeHtml(email.val());
+        //                 data.email = email.val();
+        //             }
+		//
+        //             if(typeof fname.val() !== 'undefined') data.data.merge_fields.FNAME = escapeHtml(fname.val());
+        //             if(typeof lname.val() !== 'undefined') data.data.merge_fields.LNAME = escapeHtml(lname.val());
+		//
+        //             $.post(ajaxurl, data, function (response) {
+        //                 var json = JSON.parse(JSON.parse(response));
+		//
+        //                 formMessage.empty();
+		//
+        //                 if(json.status === 400) {
+        //                     formMessage.html('<p class="error">This user has previously unsubscribed.</p>');
+        //                     return;
+        //                 }
+		//
+        //                 formMessage.html('<p class="success">You\'ve been subscribed!</p>');
+        //                 Cookies.set('wm-hide-newsletter-modal', true, { expires: 90 });
+        //                 hideModalCookie = Cookies.get('wm-hide-newsletter-modal');
+        //             });
+        //         }
+        //     });
+		// });
 
 	});
 

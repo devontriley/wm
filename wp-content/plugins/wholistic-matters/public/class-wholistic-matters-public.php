@@ -548,9 +548,10 @@ class Wholistic_Matters_Public {
 				$last_name = sanitize_text_field($_POST['last_name']);
 				$password = esc_attr($_POST['password']);
 				$user_role = isset($_POST['user_role']) && in_array(strtolower($_POST['user_role']), array('hcp', 'non-hcp')) ? strtolower($_POST['user_role']) : 'non-hcp';
+				$hunniepot = $_POST['hunniepot'];
 
 				// Register user
-				$user_id = $this->register_user($email, $password, $first_name, $last_name, $user_role); // returns user id
+				$user_id = $this->register_user($email, $password, $first_name, $last_name, $user_role, $hunniepot); // returns user id
 
 				if (is_wp_error($user_id))
 				{
@@ -565,6 +566,17 @@ class Wholistic_Matters_Public {
 
 					// Create SS user
                     $this->patch_ss_trackingid(null, null, $user_id);
+
+                    // Add user to Mailchimp newsletter list
+                    $this->mc_put_contact(array(
+                        "email_address" => $email,
+                        "status_if_new" => "subscribed",
+                        "status" => "subscribed",
+                        "merge_fields" => array(
+                            "FNAME" => $first_name,
+                            "LNAME" => $last_name
+                        )
+                    ), false);
 				}
 			}
 
@@ -859,7 +871,7 @@ class Wholistic_Matters_Public {
 	 *
 	 * @return int|WP_Error         The id of the user that was created, or error if failed.
 	 */
-	private function register_user($email, $password, $first_name, $last_name, $user_role) {
+	private function register_user($email, $password, $first_name, $last_name, $user_role, $hunniepot) {
 		global $wpdb;
 		$errors = new WP_Error();
 
@@ -879,6 +891,11 @@ class Wholistic_Matters_Public {
 		if ( is_wp_error($pass_validation) ) {
 			return $pass_validation;
 		}
+
+		if($hunniepot !== '')
+        {
+            return $errors;
+        }
 
 		$user_data = array(
 			'user_login' => $email,
@@ -943,6 +960,9 @@ class Wholistic_Matters_Public {
 						"The password you entered wasn't quite right. <a href='%s'>Did you forget your password</a>?", 'wholistic-matters'
 				);
 				return sprintf($err, wp_lostpassword_url());
+
+            case 'hunniepot':
+                return __("The hunniepot was filled");
 
 			// Registration errors
 
@@ -2884,17 +2904,27 @@ class Wholistic_Matters_Public {
      *
      */
 
-    public function mc_put_contact() {
-        check_ajax_referer('wm-bookmark-nonce', 'security');
+    public function mc_put_contact($data = null, $ajax = true)
+    {
+        if($ajax)
+        {
+            check_ajax_referer('wm-bookmark-nonce', 'security');
 
-        $apiKey = getenv('MC_API_KEY');
+            $data = $_POST['data'];
+            $email = $_POST['email'];
+        }
+        else
+        {
+            $email = $data['email_address'];
+        }
+
+        $method = 'PUT';
+        $url = 'https://us16.api.mailchimp.com/3.0/lists/3fb54e83d5/members/' . md5($email);
+        //$apiKey = getenv('MC_API_KEY');
+        $apiKey = '8f60a263dd1e159171b7869fbdbce05f-us16';
         $userpwstr = "devon:" . $apiKey;
 
-        $data = $_POST['data'];
         $data_string = json_encode($data);
-        $method = $_POST['type'];
-        $email = $_POST['email'];
-        $url = $_POST['url'] . md5($email);
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
@@ -2911,9 +2941,12 @@ class Wholistic_Matters_Public {
         $result = curl_exec($ch);
         curl_close($ch);
 
-        echo json_encode($result);
+        if($ajax)
+        {
+            echo json_encode($result);
 
-        die();
+            die();
+        }
     }
 
 }

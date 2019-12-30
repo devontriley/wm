@@ -118,6 +118,12 @@ function theme_scripts() {
 	wp_enqueue_script('owl-js', get_template_directory_uri()."/js/owl.carousel.js", NULL, '', true);
     wp_enqueue_script('js-cookie', get_template_directory_uri()."/js/js.cookie.js", NULL, '', true);
 	wp_enqueue_script('main-js', get_template_directory_uri()."/build/js/index.min.js", NULL, '', true);
+
+    $js_translation = array(
+        'ajaxurl' => admin_url('admin-ajax.php')
+    );
+
+    wp_localize_script('main-js', 'localized_vars', $js_translation);
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
