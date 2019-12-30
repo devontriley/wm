@@ -2920,8 +2920,7 @@ class Wholistic_Matters_Public {
 
         $method = 'PUT';
         $url = 'https://us16.api.mailchimp.com/3.0/lists/3fb54e83d5/members/' . md5($email);
-        //$apiKey = getenv('MC_API_KEY');
-        $apiKey = '8f60a263dd1e159171b7869fbdbce05f-us16';
+        $apiKey = getenv('MC_API_KEY');
         $userpwstr = "devon:" . $apiKey;
 
         $data_string = json_encode($data);
