@@ -578,7 +578,18 @@ jQuery(document).ready(function ($)
             closeModal = isModal.find('.close');
             noThanks = isModal.find('.no-thanks');
 
-			(closeModal, noThanks).on('click', function (e) {
+			(closeModal).on('click', function (e) {
+                e.preventDefault();
+
+                isModal.css('display', 'none');
+                console.log('close');
+
+                if (typeof hideModalCookie === 'undefined') {
+                    Cookies.set('wm-hide-newsletter-modal', true, {expires: 7});
+                }
+            });
+
+            (noThanks).on('click', function (e) {
                 e.preventDefault();
 
                 isModal.css('display', 'none');
