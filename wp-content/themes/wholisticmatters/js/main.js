@@ -572,14 +572,28 @@ jQuery(document).ready(function ($)
         let hideModalCookie = Cookies.get('wm-hide-newsletter-modal');
         let isModal = $(form).parents('.newsletter-modal');
         let closeModal;
+        let noThanks;
 
         if (isModal.length) {
             closeModal = isModal.find('.close');
+            noThanks = isModal.find('.no-thanks');
 
-            closeModal.on('click', function (e) {
+			(closeModal).on('click', function (e) {
                 e.preventDefault();
 
                 isModal.css('display', 'none');
+                console.log('close');
+
+                if (typeof hideModalCookie === 'undefined') {
+                    Cookies.set('wm-hide-newsletter-modal', true, {expires: 7});
+                }
+            });
+
+            (noThanks).on('click', function (e) {
+                e.preventDefault();
+
+                isModal.css('display', 'none');
+                console.log('close');
 
                 if (typeof hideModalCookie === 'undefined') {
                     Cookies.set('wm-hide-newsletter-modal', true, {expires: 7});
