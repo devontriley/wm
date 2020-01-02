@@ -582,6 +582,7 @@ jQuery(document).ready(function ($)
                 e.preventDefault();
 
                 isModal.css('display', 'none');
+                console.log('close');
 
                 if (typeof hideModalCookie === 'undefined') {
                     Cookies.set('wm-hide-newsletter-modal', true, {expires: 7});
