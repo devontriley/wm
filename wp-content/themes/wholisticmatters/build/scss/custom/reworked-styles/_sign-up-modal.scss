@@ -16,6 +16,11 @@
         align-items: center;
     }
 
+    &:not(.signUpScreenPopup) {
+        position: relative;
+        z-index: 0;
+    }
+
     &.signUpSreenPopup {
         overflow-y: scroll;
         @media(min-width: 992px) {
