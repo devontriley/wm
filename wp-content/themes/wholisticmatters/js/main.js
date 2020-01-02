@@ -128,14 +128,15 @@ jQuery(document).ready(function ($)
 		}
 	})
 
-	
 
-
-	// Signup validation start
+    /**
+	 * User registration validation
+     */
 
 	$(".signupForm").each(function()
 	{
 		$(this).validate({
+			ignore: '.ignore',
 			rules: {
 				first_name: "required",
 				last_name: "required",
@@ -146,7 +147,16 @@ jQuery(document).ready(function ($)
 				},
 				_wm_hc_professional_type: {
 					required: "#user_role_hcp:checked"
-				}
+				},
+                hiddenRecaptcha:
+				{
+                    required: function ()
+					{
+                        if(grecaptcha.getResponse() == '') return true;
+
+                        return false;
+                    }
+                }
 			},
 			messages: {
 				first_name: "Please enter your firstname",
@@ -179,6 +189,10 @@ jQuery(document).ready(function ($)
 			}
 		});
 	});
+
+    /**
+	 * User login validation
+     */
 
 	$(".LoginForm").each(function(){
 		$(this).validate({
@@ -476,6 +490,11 @@ jQuery(document).ready(function ($)
 
 	$('.signUpScreen .user_role:checked').trigger('click');
 
+
+    /**
+	 * User registration modal
+     */
+
 	$('.signUpScreen').on('click', '#continue-next', function ()
 	{
 		var formId = $(this).closest('.signUpScreen').hasClass('signUpScreenPopup') ? '#signupFormPopup' : '#signupForm';
@@ -497,7 +516,6 @@ jQuery(document).ready(function ($)
 			$form.find("#continue-data").show();
 			$form.find("#continue").hide();
 		}
-
 	});
 	
 	// Toggle accordion

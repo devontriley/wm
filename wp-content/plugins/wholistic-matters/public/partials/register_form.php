@@ -107,7 +107,11 @@ $user_role = isset($_REQUEST['user_role']) ? $_REQUEST['user_role'] : 'hcp';
                             </div>
                         </div>
                     </div>
-                    
+
+                    <div class="g-recaptcha" data-sitekey="6LdYwcsUAAAAAEDkzWNY55E8cBKAhRb-MVQliGqa"></div>
+
+                    <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+
                     <div id="continue-data" style="display:none;">
                         <?php
                         $hcp_type_field = $custom_meta_fields['_wm_hc_professional_type'];
@@ -179,6 +183,7 @@ $user_role = isset($_REQUEST['user_role']) ? $_REQUEST['user_role'] : 'hcp';
                             </div>
                         </div>
                     </div>
+
                     <div class="row" id="finish">
                         <div class="col-sm-12">
                             <fieldset class="form-group register_legal_info">
@@ -187,6 +192,7 @@ $user_role = isset($_REQUEST['user_role']) ? $_REQUEST['user_role'] : 'hcp';
                             </fieldset>
                         </div>
                     </div>
+
                     <div class="row" id="continue" style="display:none;">
                         <div class="col-sm-12">
                             <fieldset class="form-group register_legal_info">
