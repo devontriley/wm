@@ -49,6 +49,7 @@ for ($i = 0; $i <= $totalSeasons; $i++) {
 							<li style="padding-left:0;"><?php _e('Find Us On:'); ?></li>
 							<li><a target="_BLANK" rel="noreferrer noopener" href="<?php echo esc_attr($spotify); ?>"><?php _e('Spotify'); ?></a></li>
 							<li><a target="_BLANK" rel="noreferrer noopener" href="<?php echo esc_attr($apple); ?>"><?php _e('Apple Music'); ?></a></li>
+                            <li><a target="_BLANK" rel="noreferrer noopener" href="https://play.google.com/music/m/Iexe42hoohnnqiqijbwdkwd6ldm?t=WholisticMatters_Podcast_Series"><?php _e('Google Play'); ?></a></li>
 						</ul>
 					</span>
 				</div>
