@@ -776,8 +776,8 @@ jQuery(document).ready(function ($)
 		{
 			e.preventDefault();
 
-			mobileCollapse.slideToggle();
-			accordionControl.toggleClass('active');
+			mobileCollapse.stop().slideToggle();
+			accordionControl.stop().toggleClass('active');
 		});
 	}
 
