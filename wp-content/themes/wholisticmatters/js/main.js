@@ -747,7 +747,7 @@ jQuery(document).ready(function ($)
     let accordionControl = $('.sidebar-header');
     let mobileCollapse = $('.sidebar-mobile-collapse');
 
-    $('.hub-sidebar a').on('click', function(e)
+    $('.sidebar-list a').on('click', function(e)
     {
     	e.preventDefault();
 
@@ -760,9 +760,6 @@ jQuery(document).ready(function ($)
             accordionControl.removeClass('active');
             scrollDistance = targetElement.offset().top - (headerHeight + accordionControl.outerHeight() + 20);
 		}
-
-		console.log(headerHeight);
-		console.log(targetElement.offset().top);
 
         $('html, body').animate({
             scrollTop: scrollDistance
