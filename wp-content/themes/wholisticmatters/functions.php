@@ -111,6 +111,12 @@ add_action( 'wp_enqueue_scripts', 'remove_block_css', 100 );
 function theme_scripts() {
 	wp_enqueue_style('style', get_stylesheet_uri(), NULL, microtime());
 	wp_enqueue_script('main-js', get_template_directory_uri()."/build/js/index.min.js", NULL, '', true);
+
+    $js_translation = array(
+        'ajaxurl' => admin_url('admin-ajax.php')
+    );
+
+    wp_localize_script('main-js', 'localized_vars', $js_translation);
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 

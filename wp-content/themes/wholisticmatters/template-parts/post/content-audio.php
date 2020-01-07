@@ -19,7 +19,7 @@ $itunes = WMHelper::get_term_meta_url( $term->term_id, 'wm_series_itunes' );
 
 $series_thumb = ''; //default/fallback  image
 if ( $term->term_image ) {
-    $series_thumb_data = wp_get_attachment_image_src( $term->term_image, 'wm-topic' );
+    $series_thumb_data = wp_get_attachment_image_src( $term->term_image, 'full' );
 	$series_thumb = isset($series_thumb_data[0]) ? $series_thumb_data[0] : $series_thumb;
 }
 
@@ -47,9 +47,9 @@ if($is_premium && !is_user_logged_in()){
 					<span><a href="<?php echo $podcast_file; ?>" target="_blank"><?php _e('Download'); ?></a></span> <span>
 						<ul>
 							<li><?php _e('Find Us On:'); ?></li>
-							<li><a href="<?php echo esc_attr($spotify); ?>"><?php _e('Spotify'); ?></a></li>
-							<li><a href="<?php echo esc_attr($apple); ?>"><?php _e('Apple Music'); ?></a></li>
-							<li><a href="<?php echo esc_attr($itunes); ?>"><?php _e('iTunes'); ?></a></li>
+							<li><a target="_BLANK" rel="noreferrer noopener" href="https://open.spotify.com/show/3l2qY0hjwTgJyNS7zDn0NT"><?php _e('Spotify'); ?></a></li>
+							<li><a target="_BLANK" rel="noreferrer noopener" href="https://podcasts.apple.com/us/podcast/wholistic-matters-podcast-series/id1312406856"><?php _e('Apple Music'); ?></a></li>
+							<li><a target="_BLANK" rel="noreferrer noopener" href="https://play.google.com/music/m/Iexe42hoohnnqiqijbwdkwd6ldm?t=WholisticMatters_Podcast_Series"><?php _e('Google Play'); ?></a></li>
 						</ul>
 					</span>
 				</div>

@@ -11,8 +11,12 @@ $wm_settings = Wholistic_Matters::get_settings();
 
 	<?php wp_head(); ?>
 
+    <!-- Google Recaptcha -->
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Google Tag Manager -->
+
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -110,7 +114,7 @@ $wm_settings = Wholistic_Matters::get_settings();
                                     <ul>
                                         <li><a href="<?php bloginfo('url'); ?>/articles/">Articles</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/videos/">Videos</a></li>
-                                        <li><a href="<?php bloginfo('url'); ?>/podcast-episodes/">Podcasts</a></li>
+                                        <li><a href="<?php bloginfo('url'); ?>/wholistic-matters-podcast-series/">Podcasts</a></li>
                                         <li><a href="<?php bloginfo('url'); ?>/resources/">Resources</a></li>
                                     </ul>
                                 </div>

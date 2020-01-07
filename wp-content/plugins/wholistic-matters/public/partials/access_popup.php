@@ -10,8 +10,7 @@
 				<p><?php _e('Once your account is created, you\'ll be able to save and organize what matters to you!', 'wholistic-matters'); ?></p>
 				<p><a href="<?php echo esc_url(wp_registration_url()); ?>" class="btn btn-theme-fix signup_popup"><?php echo __('Sign Up', 'wholistic-matters'); ?></a></p>
 				<p class="fz-small-em">
-					<?php $login_url_txt = sprintf( '%s <a href="%s" class="login_popup">%s</a>', __('Already have an Account?', 'wholistic-matters'), esc_url( wp_login_url( WMHelper::get_current_url() ) ), __( 'Log In Here', 'wholistic-matters' ) ); ?>
-                    <?php echo $login_url_txt; ?>
+                    Already have an Account? <a href="<?php bloginfo('url'); ?>/member-login">Login Here</a>
 				</p>
 				<br>
 				<small>

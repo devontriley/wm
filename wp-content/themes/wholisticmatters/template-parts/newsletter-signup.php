@@ -11,6 +11,7 @@
                         <input type="text" name="lname" placeholder="Last Name" class="half" required />
                         <input type="email" name="email" placeholder="Enter your email address" required />
                         <input type="submit" value="Subscribe to Newsletter" class="btn btn-theme" />
+                        <div class="btn btn-theme no-thanks">No Thanks</div>
                     </div>
                     <div class="message"></div>
                 </form>

@@ -16,6 +16,11 @@
         align-items: center;
     }
 
+    &:not(.signUpScreenPopup) {
+        position: relative;
+        z-index: 0;
+    }
+
     &.signUpSreenPopup {
         overflow-y: scroll;
         @media(min-width: 992px) {
@@ -64,6 +69,15 @@
                 position: absolute;
                 right: 15px;
             }
+        }
+
+        .g-recaptcha:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: $border-color;
+            margin: 5px 0 20px 0;
         }
 
         .form-image {

@@ -108,6 +108,11 @@
     cursor: pointer;
 }
 
+.newsletter-signup-block .btn-theme.no-thanks {
+    padding: .375rem .74rem;
+    display: none;
+}
+
 @media (min-width: 576px) {
     .newsletter-signup-block .btn-theme {
         margin: 0 0 0 10px;
@@ -118,6 +123,11 @@
     .newsletter-signup-block .btn-theme {
         flex: 0 0 calc(100% - 20px);
         width: calc(100% - 20px);
+    }
+
+    .newsletter-signup-block .btn-theme.no-thanks {
+        flex: 0 0 100%;
+        width: 100%;
     }
 }
 

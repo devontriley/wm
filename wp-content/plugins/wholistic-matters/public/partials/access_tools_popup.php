@@ -9,10 +9,9 @@
 				<h3 class="wm_popup_title"><?php _e('Are you a Healthcare Professional? Sign Up For Free Access!', 'wholistic-matters'); ?></h3>
 				<p><?php _e('We\'ll verify your credentials and get you access to our great interactive tools.', 'wholistic-matters'); ?></p>
 				<p><a href="<?php echo esc_url(wp_registration_url()); ?>" class="btn btn-theme-fix signup_popup"><?php echo __('Sign Up', 'wholistic-matters'); ?></a></p>
-				<p class="fz-small-em">
-					<?php $login_url_txt = sprintf( '%s <a href="%s" class="login_popup">%s</a>', __('Already have an Account?', 'wholistic-matters'), esc_url( wp_login_url( WMHelper::get_current_url() ) ), __( 'Log In Here', 'wholistic-matters' ) ); ?>
-                    <?php echo $login_url_txt; ?>
-				</p>
+                <p class="fz-small-em">
+                    Already have an Account? <a href="<?php bloginfo('url'); ?>/member-login">Login Here</a>
+                </p>
 				<br>
 				<small>
 					<?php _e('Click \'Sign Up\' above to accept Wholistic Matters\'s ', 'wholistic-matters'); ?>

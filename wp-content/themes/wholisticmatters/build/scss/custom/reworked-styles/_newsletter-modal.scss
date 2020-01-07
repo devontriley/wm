@@ -49,9 +49,13 @@
         }
 
         div[class*=col] {
-            width: 100% !important;
+            width: calc(100% - 15px)!important;
             flex: 0 0 auto !important;
             max-width: none !important;
+
+            @media (min-width: 768px){
+                width: 100% !important;
+            }
         }
 
         h1 {
@@ -63,6 +67,10 @@
         input {
             width: 100%;
             flex: 0 0 auto;
+        }
+
+        .btn-theme.no-thanks {
+            display: block !important;
         }
     }
 }

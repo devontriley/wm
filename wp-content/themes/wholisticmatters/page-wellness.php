@@ -82,38 +82,38 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="culinary-block righ-flip">
-					<img src="<?php echo !empty($chef_about_img) ? $chef_about_img : get_template_directory_uri().'/images/cultivvate.png'; ?>" alt="<?php echo $chef_name; ?>">
-					<div class="data-calinary">
-						<h2><?php _e('About Our Chef'); ?></h2>
-						<h5><?php echo $chef_name; ?></h5>
-						<p><?php echo wpautop($chef_about); ?></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="culinary-block righ-flip">
-                    <div class="data-calinary">
-                        <h2><?php _e('About Our Chef'); ?></h2>
-                        <h5>
-                            Chef Megan Lambert, M.S., R.D.<br />
-                            JWU College of Culinary Arts – Senior Instructor
-                        </h5>
-                        <p>A senior instructor and Registered Dietitian at Johnson & Wales University College of Culinary Arts in Charlotte, North Carolina, Chef Megan Lambert has a strong interest in teaching children about healthy food and how to grow their own gardens, as well as contributing to the local food system in Charlotte as an educator, writer, and food entrepreneur. Chef Lambert’s credentials include a master’s degree in Nutrition Science from East Carolina University, bachelor’s degrees in nutrition, and in hotel, restaurant, and institutional management from the Pennsylvania State University.</p>
-                    </div>
-                    <img src="<?php bloginfo('template_directory'); ?>/images/chef_lambert.jpg ?>" alt="Chef Megan Lambert, M.S., R.D.">
-                </div>
-            </div>
-        </div>
-    </div>
+<!--	<div class="container">-->
+<!--		<div class="row">-->
+<!--			<div class="col-md-12">-->
+<!--				<div class="culinary-block righ-flip">-->
+<!--					<img src="--><?php //echo !empty($chef_about_img) ? $chef_about_img : get_template_directory_uri().'/images/cultivvate.png'; ?><!--" alt="--><?php //echo $chef_name; ?><!--">-->
+<!--					<div class="data-calinary">-->
+<!--						<h2>--><?php //_e('About Our Chef'); ?><!--</h2>-->
+<!--						<h5>--><?php //echo $chef_name; ?><!--</h5>-->
+<!--						<p>--><?php //echo wpautop($chef_about); ?><!--</p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!---->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <div class="culinary-block righ-flip">-->
+<!--                    <div class="data-calinary">-->
+<!--                        <h2>--><?php //_e('About Our Chef'); ?><!--</h2>-->
+<!--                        <h5>-->
+<!--                            Chef Megan Lambert, M.S., R.D.<br />-->
+<!--                            JWU College of Culinary Arts – Senior Instructor-->
+<!--                        </h5>-->
+<!--                        <p>A senior instructor and Registered Dietitian at Johnson & Wales University College of Culinary Arts in Charlotte, North Carolina, Chef Megan Lambert has a strong interest in teaching children about healthy food and how to grow their own gardens, as well as contributing to the local food system in Charlotte as an educator, writer, and food entrepreneur. Chef Lambert’s credentials include a master’s degree in Nutrition Science from East Carolina University, bachelor’s degrees in nutrition, and in hotel, restaurant, and institutional management from the Pennsylvania State University.</p>-->
+<!--                    </div>-->
+<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/images/chef_lambert.jpg ?>" alt="Chef Megan Lambert, M.S., R.D.">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
 </div>   
 <?php get_footer(); ?>

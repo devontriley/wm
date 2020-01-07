@@ -475,23 +475,6 @@ body{
 	}
 }
 
-.signUpScreen{
-	&:not(.signUpScreenPopup) {
-		position: relative;
-		z-index: 0;
-		
-		.form-wrapp {
-			margin-top: 0;
-			top: 0;
-		}
-		
-		.form-side {
-			height: auto;
-			padding: 3em 10px;
-		}
-	}
-}
-
 .article-block{
 	position: sticky;
 	top: 80px;
