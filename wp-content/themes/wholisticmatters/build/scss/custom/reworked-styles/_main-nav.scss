@@ -37,6 +37,7 @@
         .primaryHeader__nav {
             flex: 0 0 auto;
             position: absolute;
+            z-index: 10;
             left: 0;
             top: 60px;
             width: 100%;
