@@ -3,6 +3,7 @@ jQuery(document).ready(function ($)
 	var ajaxurl = localized_vars.ajaxurl;
 
 	Stickyfill.add($('.hub-sidebar'));
+    Stickyfill.add($('.primaryHeader'));
 
     function escapeHtml(str) {
         var div = document.createElement('div');
