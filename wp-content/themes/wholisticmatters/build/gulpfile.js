@@ -50,6 +50,7 @@ function scripts()
 {
     return gulp.src([
         paths.modules.src+'/jquery/dist/jquery.js',
+        paths.modules.src+'/stickyfilljs/src/stickyfill.js',
         //paths.scripts.js+'/popper.min.js',
         paths.modules.src+'/bootstrap/dist/js/bootstrap.bundle.js',
         paths.modules.src+'/jquery-validation/dist/jquery.validate.js',
