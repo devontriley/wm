@@ -700,7 +700,7 @@ jQuery(document).ready(function ($)
     {
 		e.preventDefault();
 
-		if(window.matchMedia('(max-width: 768px').matches)
+		if(window.matchMedia('(max-width: 768px)').matches)
         {
             $('.premium-signup-modal').css('display', 'flex');
         }
@@ -755,7 +755,7 @@ jQuery(document).ready(function ($)
         let targetElement = $($(this).attr('href'));
         let scrollDistance = targetElement.offset().top - (headerHeight + 20);
 
-        if(window.matchMedia('(max-width: 991px').matches)
+        if(window.matchMedia('(max-width: 991px)').matches)
 		{
             mobileCollapse.slideUp(0);
             accordionControl.removeClass('active');
@@ -770,7 +770,7 @@ jQuery(document).ready(function ($)
     /**
 	 * HUB mobile accordion
      */
-    if(window.matchMedia('(max-width: 991px').matches)
+    if(window.matchMedia('(max-width: 991px)').matches)
 	{
 		accordionControl.on('click', function(e)
 		{
