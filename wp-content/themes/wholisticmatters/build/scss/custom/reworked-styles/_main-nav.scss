@@ -4,6 +4,7 @@
     font-family: $aktiv;
     font-size: 14px;
     color: $textColor;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 2000;
@@ -37,6 +38,7 @@
         .primaryHeader__nav {
             flex: 0 0 auto;
             position: absolute;
+            z-index: 10;
             left: 0;
             top: 60px;
             width: 100%;

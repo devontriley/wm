@@ -1,7 +1,9 @@
 jQuery(document).ready(function ($)
 {
-
 	var ajaxurl = localized_vars.ajaxurl;
+
+	Stickyfill.add($('.hub-sidebar'));
+    Stickyfill.add($('.primaryHeader'));
 
     function escapeHtml(str) {
         var div = document.createElement('div');
@@ -24,6 +26,22 @@ jQuery(document).ready(function ($)
 		return 'ontouchstart' in window        // works on most browsers
 		|| navigator.maxTouchPoints;       // works on IE10/11 and Surface
 	}
+
+
+    // Use the browser's built-in functionality to quickly and safely escape the string
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    }
+
+    // UNSAFE with unsafe strings; only use on previously-escaped ones!
+    function unescapeHtml(escapedStr) {
+        var div = document.createElement('div');
+        div.innerHTML = escapedStr;
+        var child = div.childNodes[0];
+        return child ? child.nodeValue : '';
+    }
 
 
     /***
@@ -683,7 +701,7 @@ jQuery(document).ready(function ($)
     {
 		e.preventDefault();
 
-		if(window.matchMedia('(max-width: 768px').matches)
+		if(window.matchMedia('(max-width: 768px)').matches)
         {
             $('.premium-signup-modal').css('display', 'flex');
         }
@@ -731,22 +749,19 @@ jQuery(document).ready(function ($)
     let accordionControl = $('.sidebar-header');
     let mobileCollapse = $('.sidebar-mobile-collapse');
 
-    $('.hub-sidebar a').on('click', function(e)
+    $('.sidebar-list a').on('click', function(e)
     {
     	e.preventDefault();
 
         let targetElement = $($(this).attr('href'));
         let scrollDistance = targetElement.offset().top - (headerHeight + 20);
 
-        if(window.matchMedia('(max-width: 991px').matches)
+        if(window.matchMedia('(max-width: 991px)').matches)
 		{
             mobileCollapse.slideUp(0);
             accordionControl.removeClass('active');
             scrollDistance = targetElement.offset().top - (headerHeight + accordionControl.outerHeight() + 20);
 		}
-
-		console.log(headerHeight);
-		console.log(targetElement.offset().top);
 
         $('html, body').animate({
             scrollTop: scrollDistance
@@ -756,14 +771,14 @@ jQuery(document).ready(function ($)
     /**
 	 * HUB mobile accordion
      */
-    if(window.matchMedia('(max-width: 991px').matches)
+    if(window.matchMedia('(max-width: 991px)').matches)
 	{
 		accordionControl.on('click', function(e)
 		{
 			e.preventDefault();
 
-			mobileCollapse.slideToggle();
-			accordionControl.toggleClass('active');
+			mobileCollapse.stop().slideToggle();
+			accordionControl.stop().toggleClass('active');
 		});
 	}
 
