@@ -21,7 +21,7 @@ if ( $tax_term->term_image ) {
             <div class="data-banner">
                 <div class="badge-banner"><?php echo strtoupper($tax_label); ?></div>
                 <div class="detail-data">
-                    <?php the_archive_title('<h2>','</h2>'); ?>
+                    <?php the_archive_title('<h1>','</h1>'); ?>
                     <?php the_archive_description(); ?>
                 </div>
             </div>

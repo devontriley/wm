@@ -12,7 +12,7 @@ get_header(); ?>
 				   <div class="data-banner">
 						<div class="badge-banner"><?php _e('INTERACTIVE TOOL'); ?></div>
 					   <div class="detail-data">
-						   <?php the_title('<h2>','</h2>'); ?>
+						   <?php the_title('<h1>','</h1>'); ?>
 						  <?php the_excerpt(); ?>
 					   </div>
 				   </div>

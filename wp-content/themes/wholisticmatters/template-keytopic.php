@@ -9,7 +9,7 @@ get_header(); ?>
                 <div class="data-banner">
                     <div class="badge-banner">KEY TOPIC</div>
                     <div class="detail-data">
-                        <h2>Cardio Metabolic Control</h2>
+                        <h1>Cardio Metabolic Control</h1>
                         <p>Clinical insights on the advantages of whole food in a nutritional therapy regimen for
                             cardiovascular health and metabolic systems support.</p>
                     </div>
