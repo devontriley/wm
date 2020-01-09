@@ -497,8 +497,13 @@ License: none (public domain)
                             Resolution Pathway and Nutrition Therapy: Omega 3 Fatty Acids on the Microglia (2)
                         </div>
 
-                        <!-- Celiac Disease -->
-                        <!-- Rheumatoid Arthritis (RA) -->
+                        <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/celiac_disease.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh2v">
+                            Celiac Disease
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/rheumatoid_arthritis.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh2D">
+                            Rheumatoid Arthritis (RA)
+                        </div>
                     </div>
 
                     <div class="models-inner" data-system="digestive">
