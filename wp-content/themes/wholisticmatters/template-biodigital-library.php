@@ -514,8 +514,12 @@ License: none (public domain)
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/metabolic_regulation_of_diet_ghrelin_orexin_leptin_axis.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qgx7">
                             Metabolic Regulation of Diet: Ghrelin, Orexin, and Leptin Axis
                         </div>
-                        <!-- Probiotics in the Gut -->
-                        <!-- Prebiotics in the Gut  -->
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/viewer/?be=3HNM&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qgy0">
+                            Probiotics in the Gut
+                        </div>
+
+                        <!-- Prebiotics in the Gut -->
                         <!-- Irritable Bowel Syndrome (IBS) -->
                         <!-- Crohn's Disease  -->
                     </div>
@@ -525,7 +529,9 @@ License: none (public domain)
                             Endocrine Support for Metabolic Systems and Response
                         </div>
 
-                        <!-- Adrenal Gland and Hormone Release -->
+                        <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/adrenal_gland_and_hormone_release.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh0t">
+                            Adrenal Gland and Hormone Release
+                        </div>
                     </div>
                 </div>
             </div>
