@@ -140,7 +140,7 @@ get_header(); ?>
 
 	
 				<div class="about-data-big margin-ad">
-					<div class="about-big-content">
+					<div class="about-big-content partners">
 						<h2><?php _e('Our Partners'); ?></h2>
 						<p><?php echo wpautop($ap_textarea); ?></p>
 						<div class="partner-logo">
