@@ -418,8 +418,9 @@ License: none (public domain)
                             Musculoskeletal Injury and Joint Inflammation in Ankle
                         </div>
 
-                        <!-- Musculoskeletal Injury and Joint Inflammation in Ankle -->
-                        <!-- Bone After Acute Trauma -->
+                        <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/inflammatory_response_in_bone_matrix.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh5j">
+                            Bone After Acute Trauma
+                        </div>
 
                         <div class="extras-accordion">
                             <div id="extras-acc">
