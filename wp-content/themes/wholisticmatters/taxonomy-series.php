@@ -41,7 +41,7 @@ for ($i = 0; $i <= $totalSeasons; $i++) {
 				<div class="image-side-album" style="<?php echo 'background-image:url(\''. $series_cover .'\');'?>">
 				</div>
 				<div class="content-side-album podcast-metadata">
-                    <h2 class="entry-title">Season <?php echo($seasonNumber); ?>: <?php the_archive_title(); ?></h2>
+                    <h1 class="entry-title">Season <?php echo($seasonNumber); ?>: <?php the_archive_title(); ?></h1>
 					<p class="p_author"><?php _e('By:'); ?> <?php echo WMHelper::get_term_meta_text( $tax_term->term_id, 'wm_series_host' ); ?></p>
 					<p class="p_count"><?php echo $tax_term->count; ?> <?php _e('Episodes'); ?></p>
 					<span class="p_social_links">

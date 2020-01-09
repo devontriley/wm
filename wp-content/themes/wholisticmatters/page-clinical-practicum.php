@@ -8,7 +8,7 @@
                 <div class="data-banner">
                     <!--<div class="badge-banner"></div>-->
                     <div class="detail-data">
-                        <h2>Clinical Practicum</h2>
+                        <h1>Clinical Practicum</h1>
                         <p>The Clinical Practicum series is designed to provide clinical case studies to health care practitioners to support and prepare for the practical application of clinical nutrition insights.</p>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ get_header(); ?>
                 <div class="data-banner">
                     <div class="badge-banner">Clinically Driven, Evidence Based</div>
                     <div class="detail-data">
-                        <p class="h2"><?php the_title(); ?></p>
+                        <h1><?php the_title(); ?></h1>
                     </div>
                 </div>
                 <div class="image-banner">

@@ -8,7 +8,7 @@
                 <div class="data-banner">
                     <!--<div class="badge-banner"></div>-->
                     <div class="detail-data">
-                        <h2>White Papers</h2>
+                        <h1>White Papers</h1>
                         <p>The White Papers series is designed to provide authoritative reports to guide health care practitioners through key issues and insights in clinical nutrition.</p>
                     </div>
                 </div>

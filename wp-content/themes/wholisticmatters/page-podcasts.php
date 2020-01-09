@@ -69,6 +69,7 @@ get_header(); ?>
                 if($seasonName) {?>
                     <div class="season-container">
                         <div class="img-block">
+                            <a class="img-link" href="/series/<?php echo($seasonSlug); ?>/"></a>
                             <img src="<?php echo($coverImage); ?>"/>
                         </div>
 
