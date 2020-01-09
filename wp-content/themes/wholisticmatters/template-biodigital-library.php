@@ -511,7 +511,9 @@ License: none (public domain)
                             Digestive Health and Systems Support
                         </div>
 
-                        <!-- Metabolic Regulation of Diet: Ghrelin, Orexin, and Leptin Axis  -->
+                        <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/metabolic_regulation_of_diet_ghrelin_orexin_leptin_axis.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qgx7">
+                            Metabolic Regulation of Diet: Ghrelin, Orexin, and Leptin Axis
+                        </div>
                         <!-- Probiotics in the Gut -->
                         <!-- Prebiotics in the Gut  -->
                         <!-- Irritable Bowel Syndrome (IBS) -->
