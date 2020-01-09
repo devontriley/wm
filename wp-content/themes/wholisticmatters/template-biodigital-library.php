@@ -519,9 +519,17 @@ License: none (public domain)
                             Probiotics in the Gut
                         </div>
 
-                        <!-- Prebiotics in the Gut -->
-                        <!-- Irritable Bowel Syndrome (IBS) -->
-                        <!-- Crohn's Disease  -->
+                        <div class="model-btn" data-src="https://human.biodigital.com/viewer/?be=3HNQ&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qgy8">
+                            Prebiotics in the Gut
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/viewer/?be=3HNS&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh0B">
+                            Irritable Bowel Syndrome (IBS)
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/viewer/?be=3HNT&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh0f">
+                            Crohn's Disease
+                        </div>
                     </div>
 
                     <div class="models-inner" data-system="endocrine">
