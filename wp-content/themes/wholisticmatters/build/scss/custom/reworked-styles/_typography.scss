@@ -14,22 +14,29 @@
     font-style: italic;
 }
 
+//@font-face {
+//    font-family: 'Harriet';
+//    src: url('webfonts/Harriet-v2-Text/Harriet-v2-Text-Bold.woff2') format('woff2'),
+//    url('webfonts/Harriet-v2-Text/Harriet-v2-Text-Bold.woff') format('woff');
+//    font-weight: 700;
+//    font-style: normal;
+//}
+
 @font-face {
     font-family: 'Harriet';
-    src: url('webfonts/Harriet-v2-Text/Harriet-v2-Text-Bold.woff2') format('woff2'),
-    url('webfonts/Harriet-v2-Text/Harriet-v2-Text-Bold.woff') format('woff');
+    src: url('webfonts/Harriet-v2-Display/Harriet-v2-Display-Bold.woff2') format('woff2'),
+    url('webfonts/Harriet-v2-Display/Harriet-v2-Display-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Harriet';
-    src: url('webfonts/Harriet-v2-Display/Harriet-v2-Display-Bold.woff2') format('woff2'),
-    url('webfonts/Harriet-v2-Display/Harriet-v2-Display-Bold.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
+    src: url('webfonts/Harriet-v2-Display/Harriet-v2-Display-Bold-Italic.woff2') format('woff2'),
+    url('webfonts/Harriet-v2-Display/Harriet-v2-Display-Bold-Italic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
 }
-
 
 @font-face {
     font-family: 'Aktiv';
