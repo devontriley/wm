@@ -64,6 +64,14 @@ $wm_settings = Wholistic_Matters::get_settings();
 <?php if(!is_search()){ get_template_part('navbar-search-box'); } ?>
 
 <header id="primaryHeader" class="primaryHeader">
+
+    <div class="primaryHeader__notice">
+        <img class="icon" src="<?php bloginfo('template_directory'); ?>/images/Wav-icon.svg" />
+        <p>Here is the text for the latest episode of WholisticMatters Podcast Here is the text for the latest episode.</p>
+        <a href="#" class="learn-more"><span class="mobile"></span>LATEST PODCAST EPISODE — LISTEN NOW</a>
+        <a href="#" class="close"><img src="<?php bloginfo('template_directory'); ?>/images/X.svg" /></a>
+    </div>
+
     <div class="primaryHeader__inner">
         <div class="primaryHeader__logo">
             <a href="<?php echo site_url('/'); ?>">

@@ -980,5 +980,15 @@ jQuery(document).ready(function ($)
 		}
 	}
 
+
+    /**
+	 * Header notice bar
+     */
+
+    $('.primaryHeader__notice .close').on('click', function(e)
+	{
+
+	});
+
 });
 
