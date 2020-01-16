@@ -788,197 +788,116 @@ jQuery(document).ready(function ($)
 	// once everything is loaded, adjust iframe to be full screen
 	var height = $(window).height();
 	var interactiveHeaderHeight = $('.interactive-header').outerHeight();
-	var viewingHeight = $('.headerviewing-text').outerHeight();
-	var correctHeight = height - (interactiveHeaderHeight + viewingHeight);
+	var correctHeight = height - interactiveHeaderHeight;
 	$('.interactive-body iframe').css('height', correctHeight);
 
-	$('.interactive-header').css('margin-bottom', viewingHeight);
+	// check to see if a user to logged in and gate the proper content if not
+	var contentBody = $('.biodigital-content-body');
+
+	if(contentBody.hasClass('gated-content')){
+		var modelBtns = $('.model-btn');
+
+		for(var i = 0; i <= modelBtns.length; i++){
+			if(i !== 0){
+				$(modelBtns[i]).addClass('gated');
+			}
+		}
+	}
+
+	//if logged out, create account button will launch modal on click
+    $("body").on('click', '#create-new-account-btn', function(e)
+    {
+        e.preventDefault();
+
+        wm_hide_main_nav();
+
+        $(".LoginScreenPopup").removeClass('opened');
+        $(".signUpScreenPopup").addClass('opened');
+        $('.premium-signup-modal').hide();
+        $("body").addClass("no-scroll");
+    });
 
 	// drawer in and out on click
 	$('.drawer-toggle').on('click', function(e)
 	{
 		if(!$('.interactive-drawer').hasClass('active')) {
 			$('.interactive-drawer').addClass('active');
+		} else {
+            $('.interactive-drawer').removeClass('active');
 		}
-	});
-
-	// drawer close when click x
-	$('.interactive-drawer__close').on('click', function(){
-		$('.interactive-drawer').removeClass('active');
-	});
-
-	//extras btn accordion animation
-	$('#extras-acc').on('click', function(){
-		$('.extras-accordion-inner').slideToggle();
-		$('.extras-arrow').toggleClass('active');
-	});
-
-	// change model children displayed based on system select
-	$('#system-select').on('change', function() {
-		var selectValue = this.value;
-		$('.models-inner').removeClass('active');
-		$('.models-inner').each(function(){
-			var modelsSystem = $(this).data('system');
-			if(modelsSystem == selectValue){
-				$(this).addClass('active');
-
-				//make first option active automatically
-				var modelBtns = $(this).find('.model-btn');
-				$(modelBtns[0]).addClass('active');
-
-				// preload source into iframe
-				var iframeSrc = $(modelBtns[0]).data('src');
-				$('iframe').attr('src', iframeSrc);
-
-				//append correct system to header span
-				$('.viewing-system').text(modelsSystem + ' System');
-
-				// append correct model to header span
-				var modelText = $(modelBtns[0]).text();
-				$('.viewing-model').text(modelText);
-
-				//if on mobile, close the drawer
-				// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-				//     $('.interactive-drawer').removeClass('active');
-				// }
-			}
-		});
+		$('.content-container').toggleClass('active');
 	});
 
 
 	// on model button click
 	$('.model-btn').on('click', function(e){
-		$('.model-btn').removeClass('active');
-		$(e.target).addClass('active');
+        var thisBtn = $(e.target).closest('div[class^="model-btn"]');
 
-		var iframeSrc = $(e.target).data('src');
-		$('iframe').attr('src', iframeSrc);
+        //check to see if the content is gated
+        if($(thisBtn).hasClass('gated')){
+			e.preventDefault();
+			// add modal
+        } else {
+            $('.model-btn').removeClass('active');
 
-		// append correct model to header span
-		var modelText = $(e.target).text();
-		$('.viewing-model').text(modelText);
+            $(thisBtn).addClass('active');
+
+            var iframeSrc = $(thisBtn).data('src');
+            $('iframe').attr('src', iframeSrc);
+
+            // append correct model to header span
+            var modelLabel = $(thisBtn).find('.label');
+            var modelText = $(modelLabel).text();
+
+            $('.viewing-model').text(modelText);
+		}
 	});
 
-	//custom select style
-	class styledSelect {
-		constructor(select) {
-			this.select = $(select); //dont forget to grab the css
-			this.numberOfOptions = this.select.children('option').length;
-			this.selected = this.select.children('option:selected');
-			this.field = this.select.parents('.field');
+	// new systems select
+	$('.system-block').on('click', function(e){
+		var allBlocks = $('.system-block');
+		var thisBlock = $(e.target).closest('div[class^="system-block"]');
+        var selectedValue = $(thisBlock).data('value');
+		
+		//confirm e target is not currently selected
+		if(! $(thisBlock).hasClass('active')){
 
-			if(this.selected.text() == this.select.children('option').first().text()) {
-				this.selected = '';
-			}
+            //highlight the right systems block
+            $(allBlocks).removeClass('active');
+            $(thisBlock).addClass('active');
 
-			this.select.addClass('select-hidden');
-			this.select.wrap('<div class="select"></div>');
-			this.select.after('<div class="select-styled"></div>');
+            //get the corresponding models for this system to show
+            $('.models-inner').removeClass('active');
+            $('.models-inner').each(function(){
+                var modelsSystem = $(this).data('system');
 
-			this.styledSelect = this.select.next('div.select-styled');
+                if(modelsSystem == selectedValue){
+                    $(this).addClass('active');
 
-			this.styledSelect.text(this.select.children('option').eq(0).text());
+                    //check to see if gated
+                    var modelBtns = $(this).find('.model-btn');
 
-			this.list = $('<ul />', {
-				'class': 'select-options'
-			}).insertAfter(this.styledSelect);
+					if(! $(modelBtns[0]).hasClass('gated')){
 
-			var currentOptionValue = this.select.children('option').eq(0).val();
+                        //make first option active automatically
+                        $(modelBtns).removeClass('active');
+                        $(modelBtns[0]).addClass('active');
 
-			for (var i = 0; i < this.numberOfOptions; i++) {
-				$('<li />', {
-					text: this.select.children('option').eq(i).text(),
-					rel: this.select.children('option').eq(i).val()
-				}).appendTo(this.list);
-			}
+                        // preload source into iframe
+                        var iframeSrc = $(modelBtns[0]).data('src');
+                        $('iframe').attr('src', iframeSrc);
 
-			this.listItems = this.list.children('li');
+                        //append correct system to header span
+                        $('.viewing-system').text(modelsSystem + ' System');
 
-
-			if(this.selected !== '') {
-				this.styledSelect.text(this.selected.text());
-				this.select.val(this.selected.text());
-			}
-
-			this.styledSelect.click(function(e) {
-				this.open(e);
-			}.bind(this));
-
-			this.styledSelect.parents('.select').focus(function(e){
-				this.open(e);
-			}.bind(this));
-
-			this.styledSelect.parents('.select').blur(function(e){
-				this.close(e);
-			}.bind(this));
-
-			this.listItems.click(function(e) {
-				this.selectOption(e);
-			}.bind(this));
-
-			$(document).click(function() {
-				this.close();
-			}.bind(this));
+                        // append correct model to header span
+                        var modelLabel = $(modelBtns[0]).find('.label');
+                        var modelText = $(modelLabel).text();
+                        $('.viewing-model').text(modelText);
+					}
+                }
+            });
 		}
-
-		open(e) {
-			e.stopPropagation();
-			$('div.select-styled.active').not(this).each(function(){
-				$(this).removeClass('active').next('ul.select-options').hide();
-			});
-			this.styledSelect.toggleClass('active');
-			this.list.toggle();
-		}
-
-		close() {
-			this.styledSelect.removeClass('active');
-			this.list.hide();
-		}
-
-		selectOption(e, value = '') {
-			value = $(e.target).attr('rel');
-			var fieldID = this.select.attr('id');
-
-			e.stopPropagation();
-			this.styledSelect.text($(e.target).text()).removeClass('active');
-			this.select.val(value);
-			this.list.hide();
-
-			var selectedValue = this.select.val();
-
-			$('.models-inner').removeClass('active');
-			$('.models-inner').each(function(){
-				var modelsSystem = $(this).data('system');
-				console.log(modelsSystem, selectedValue);
-				if(modelsSystem == selectedValue){
-					$(this).addClass('active');
-
-					//make first option active automatically
-					var modelBtns = $(this).find('.model-btn');
-					$(modelBtns[0]).addClass('active');
-
-					// preload source into iframe
-					var iframeSrc = $(modelBtns[0]).data('src');
-					$('iframe').attr('src', iframeSrc);
-
-					//append correct system to header span
-					$('.viewing-system').text(modelsSystem + ' System');
-
-					// append correct model to header span
-					var modelText = $(modelBtns[0]).text();
-					$('.viewing-model').text(modelText);
-				}
-			});
-		}
-	}
-
-	var styledSelects = $('select'); // list parent div as well
-	if(styledSelects.length){
-		var styledSelectsArr = [];
-		for(var i = 0; i < styledSelects.length; i++) {
-			styledSelectsArr[i] = new styledSelect(styledSelects[i]);
-		}
-	}
-
+	});
 });
 
