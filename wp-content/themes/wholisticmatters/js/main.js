@@ -987,7 +987,11 @@ jQuery(document).ready(function ($)
 
     $('.primaryHeader__notice .close').on('click', function(e)
 	{
+		$('body').removeClass('promobar-enabled');
 
+        Cookies.set('wm-hide-promobar', true);
+
+		$(this).parents('.primaryHeader__notice').slideUp();
 	});
 
 });

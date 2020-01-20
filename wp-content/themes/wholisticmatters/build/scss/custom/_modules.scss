@@ -55,8 +55,12 @@
     background: #fff;
     @media(min-width: 992px) {
         position: sticky;
-        top: 80px;
+        top: 100px;
         margin-bottom: 0;
+
+        body.promobar-enabled & {
+            top: 150px;
+        }
     }
 
     &:after {

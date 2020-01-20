@@ -25,6 +25,10 @@
             transform: translateY(-50%);
         }
 
+        body.promobar-enabled & {
+            top: 140px;
+        }
+
         img.logo-log {
             width: 100%;
         }
