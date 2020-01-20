@@ -79,7 +79,7 @@ $wm_settings = Wholistic_Matters::get_settings();
                 <div class="primaryHeader__notice" style="background-color: <?php echo $promobar['promobar_background_color'] ?>">
                     <img class="icon" src="<?php bloginfo('template_directory'); ?>/images/Wav-icon.svg" />
                     <p><?php echo $promobar['promobar_text'] ?></p>
-                    <a href="#" class="learn-more" style="color: <?php echo $promobar['promobar_link_color'] ?>"><?php echo $promobar['promobar_link_text'] ?></a>
+                    <a href="<?php echo $promobar['promobar_link_url'] ?>" class="learn-more" style="color: <?php echo $promobar['promobar_link_color'] ?>"><?php echo $promobar['promobar_link_text'] ?></a>
                     <a href="#" class="close">
                         <svg width="15px" height="15px" viewBox="0 0 14.801 14.801">
                             <defs><style>.a{fill:none;stroke:<?php echo $promobar['promobar_link_color'] ?>;stroke-linecap:round;stroke-width:1.5px;}</style></defs>
