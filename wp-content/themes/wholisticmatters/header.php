@@ -151,19 +151,19 @@ $wm_settings = Wholistic_Matters::get_settings();
                                     </ul>
                                 </div>
 
-                                <div class="primaryNav__dropdown-column">
-                                    <h3>Practitioner Specialty</h3>
-                                    <ul>
-                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/acupuncture/">Acupuncture</a></li>
-                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/chiropractic/">Chiropractic</a></li>
-                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/functional-medicine/">Functional Medicine</a></li>
-                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/herbalist/">Herbalist</a></li>
-                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/integrative-medicine/">Integrative Medicine</a></li>
-                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/naturopathic/">Naturopathic</a></li>
-                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/nutrition/">Nutrition</a></li>
-                                        <li><a href="<?php bloginfo('url'); ?>/practitioner-specialty/veterinary/">Veterinary</a></li>
-                                    </ul>
-                                </div>
+<!--                                <div class="primaryNav__dropdown-column">-->
+<!--                                    <h3>Practitioner Specialty</h3>-->
+<!--                                    <ul>-->
+<!--                                        <li><a href="--><?php //bloginfo('url'); ?><!--/practitioner-specialty/acupuncture/">Acupuncture</a></li>-->
+<!--                                        <li><a href="--><?php //bloginfo('url'); ?><!--/practitioner-specialty/chiropractic/">Chiropractic</a></li>-->
+<!--                                        <li><a href="--><?php //bloginfo('url'); ?><!--/practitioner-specialty/functional-medicine/">Functional Medicine</a></li>-->
+<!--                                        <li><a href="--><?php //bloginfo('url'); ?><!--/practitioner-specialty/herbalist/">Herbalist</a></li>-->
+<!--                                        <li><a href="--><?php //bloginfo('url'); ?><!--/practitioner-specialty/integrative-medicine/">Integrative Medicine</a></li>-->
+<!--                                        <li><a href="--><?php //bloginfo('url'); ?><!--/practitioner-specialty/naturopathic/">Naturopathic</a></li>-->
+<!--                                        <li><a href="--><?php //bloginfo('url'); ?><!--/practitioner-specialty/nutrition/">Nutrition</a></li>-->
+<!--                                        <li><a href="--><?php //bloginfo('url'); ?><!--/practitioner-specialty/veterinary/">Veterinary</a></li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
                             </div>
                         </div>
                     </li>
