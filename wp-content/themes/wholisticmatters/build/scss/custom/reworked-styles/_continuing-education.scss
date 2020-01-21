@@ -26,6 +26,16 @@
                             color: $green;
                         }
                     }
+
+                    &[aria-expanded="true"] {
+                        .arrow {
+                            transform: rotate(90deg);
+                        }
+                    }
+
+                    .arrow {
+                        transition: all ease 300ms;
+                    }
                 }
 
                 h4 {

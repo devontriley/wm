@@ -78,6 +78,12 @@ get_header(); ?>
                 </div>
                 <div class="col-md-12 col-lg-5 articles-secton">
                     <div class="article-block">
+                        <div class="mb-4">
+                            <a href="<?php bloginfo('url'); ?>/series/building-a-healthy-lifestyle-in-2020/">
+                                <img src="<?php bloginfo('template_directory'); ?>/images/slide-podcast-promo.svg" />
+                            </a>
+                        </div>
+
                          <?php if (function_exists('wpp_get_mostpopular')): ?>
                         <div class="head-section">
                             <h2>Trending Articles</h2>

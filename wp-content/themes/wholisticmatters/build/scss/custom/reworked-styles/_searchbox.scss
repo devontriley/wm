@@ -27,6 +27,10 @@ body.search-open{
     z-index: 1024;
     display: none;
 
+    body.promobar-enabled & {
+        top: 110px;
+    }
+
     .advance-search {
         background: #F8F8F8;
         padding: 18px 0 30px 0;

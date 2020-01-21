@@ -104,13 +104,13 @@ $courseCategoryParents = get_terms(array(
                                             <h2 class="section_heading"
                                                 data-toggle="collapse"
                                                 data-target="#tabContent<?php echo $parentIndex ?>Expand<?php echo $courseIndex ?>"
-                                                aria-expanded="<?php echo $courseIndex == 1 ? 'true' : 'false'; ?>"
+                                                aria-expanded="false"
                                                 aria-controls="tabContent<?php echo $parentIndex ?>Expand<?php echo $courseIndex ?>">
                                                 <span><?php echo $courseVal->name ?> (<?php echo count($coursePosts->posts); ?>)</span>
                                                 <span class="arrow">></span>
                                             </h2>
 
-                                            <div id="tabContent<?php echo $parentIndex ?>Expand<?php echo $courseIndex ?>" class="collapse <?php if($courseIndex == 1){ echo 'show'; } ?>" data-parent="#myTabContent">
+                                            <div id="tabContent<?php echo $parentIndex ?>Expand<?php echo $courseIndex ?>" class="collapse" data-parent="#myTabContent">
 
                                             <?php
                                             if($courseVal -> description) { ?>

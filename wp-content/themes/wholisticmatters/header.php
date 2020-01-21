@@ -54,7 +54,9 @@ $wm_settings = Wholistic_Matters::get_settings();
 
 </head>
 
-<body <?php body_class(); ?> data-spy="scroll" data-target=".sidebar-list" data-offset="150">
+<?php $promobar = get_field('promobar', 'option'); ?>
+
+<body <?php body_class( ($promobar['promobar_enabled'] && !isset($_COOKIE['wm-hide-promobar'])) ? 'promobar-enabled' : '' ); ?> data-spy="scroll" data-target=".sidebar-list" data-offset="150">
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLWL4F&gtm_auth=WK7bGF4PegQPQj4jljz3-g&gtm_preview=env-2&gtm_cookies_win=x" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -64,6 +66,36 @@ $wm_settings = Wholistic_Matters::get_settings();
 <?php if(!is_search()){ get_template_part('navbar-search-box'); } ?>
 
 <header id="primaryHeader" class="primaryHeader">
+
+    <?php
+    if(!isset($_COOKIE['wm-hide-promobar']))
+    {
+        if($promobar)
+        {
+            $promobarEnabled = $promobar['promobar_enabled'];
+
+            if($promobarEnabled) { ?>
+
+                <div class="primaryHeader__notice" style="background-color: <?php echo $promobar['promobar_background_color'] ?>">
+                    <img class="icon" src="<?php bloginfo('template_directory'); ?>/images/Wav-icon.svg" />
+                    <p><?php echo $promobar['promobar_text'] ?></p>
+                    <a href="<?php echo $promobar['promobar_link_url'] ?>" class="learn-more" style="color: <?php echo $promobar['promobar_link_color'] ?>"><?php echo $promobar['promobar_link_text'] ?></a>
+                    <a href="#" class="close">
+                        <svg width="15px" height="15px" viewBox="0 0 14.801 14.801">
+                            <defs><style>.a{fill:none;stroke:<?php echo $promobar['promobar_link_color'] ?>;stroke-linecap:round;stroke-width:1.5px;}</style></defs>
+                            <g transform="translate(1.061 1.061)">
+                                <line class="a" x2="12.68" y2="12.68" transform="translate(0 0)"/>
+                                <line class="a" y1="12.68" x2="12.68" transform="translate(0 0)"/>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+
+            <?php }
+        }
+    }
+    ?>
+
     <div class="primaryHeader__inner">
         <div class="primaryHeader__logo">
             <a href="<?php echo site_url('/'); ?>">
