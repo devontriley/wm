@@ -599,6 +599,97 @@ License: none (public domain)
                             <span class="label">Bone After Acute Trauma</span>
                             <span class="gated">View with free account</span>
                         </div>
+
+                        <!-- new ones -->
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/afferent_nerve_signal.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                            <div class="inner">
+                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Afferent-Efferent-Nerve-Signals-Part-1@2x.png">
+                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            </div>
+                            <span class="label">Afferent and Efferent Nerve Signals (1)</span>
+                            <span class="gated">View with free account</span>
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/efferent_nerve_signal.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                            <div class="inner">
+                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Afferent-Efferent-Nerve-Signals-Part-2@2x.png">
+                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            </div>
+                            <span class="label">Afferent and Efferent Nerve Signals (2)</span>
+                            <span class="gated">View with free account</span>
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/brain_gut_connection.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                            <div class="inner">
+                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Brain-Gut-Connection@2x.png">
+                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            </div>
+                            <span class="label">Brain-Gut Connection</span>
+                            <span class="gated">View with free account</span>
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/central_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                            <div class="inner">
+                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Central-Nervous-System@2x.png">
+                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            </div>
+                            <span class="label">Central Nervous System</span>
+                            <span class="gated">View with free account</span>
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/functional_regions_of_the_spinal_cord.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                            <div class="inner">
+                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Functional-Regions-of-the-Spinal-Cord@2x.png">
+                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            </div>
+                            <span class="label">Functional Regions of the Spinal Cord</span>
+                            <span class="gated">View with free account</span>
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/hpa_neuro_immune_axis.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                            <div class="inner">
+                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/HPA-Neuro-Immune-Axis@2x.png">
+                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            </div>
+                            <span class="label">HPA Neuro-Immune Axis</span>
+                            <span class="gated">View with free account</span>
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/neuron_signaling_2.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                            <div class="inner">
+                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Neuron-Signaling@2x.png">
+                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            </div>
+                            <span class="label">Neuron Signaling</span>
+                            <span class="gated">View with free account</span>
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/neurotransmitters_in_synapse.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                            <div class="inner">
+                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Neurotransmitters-in-Synapse@2x.png">
+                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            </div>
+                            <span class="label">Neurotransmitters in Synapse</span>
+                            <span class="gated">View with free account</span>
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/parasympathetic_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                            <div class="inner">
+                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Parasympathetic-Nervous-System@2x.png">
+                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            </div>
+                            <span class="label">Parasympathetic Nervous System</span>
+                            <span class="gated">View with free account</span>
+                        </div>
+
+                        <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/sympathetic_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
+                            <div class="inner">
+                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Sympathetic-Nervous-System@2x.png">
+                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            </div>
+                            <span class="label">Sympathetic Nervous System</span>
+                            <span class="gated">View with free account</span>
+                        </div>
                     </div>
 
                     <div class="models-inner" data-system="immune">
