@@ -51,9 +51,7 @@
         position: relative;
         flex-wrap: wrap;
         border-radius: 0;
-
-        //these will need to change for mobile
-        padding-bottom: 25vh;
+        margin-bottom: 0;
 
         .data-banner {
             margin: 0 auto;
@@ -84,29 +82,25 @@
     }
 
     .bl-ipad {
-        position: absolute;
-        top: 350px;
-        width: calc(100% - 40px);
-        max-width: 1055px;
-        left: 50%;
-        transform: translate(-50%);
+        position: relative;
+        margin: 0 auto;
+        transform: translateY(-47%);
+        width: 75vw;
 
         @media(min-width: 992px){
-            top: 50vh;
-            width: 90vh;
+            width: 65vw;
+            max-width: 1055px;
         }
 
         video {
-            top: 40px;
             position: absolute;
-            left: 50px;
+            width: 86%;
+            left: 7%;
+            top: 7%;
         }
     }
 
     .bl-icon-cols {
-        //needs to change on desktop
-        margin-top: -450px;
-        padding-top: 450px;
 
         h2 {
             text-align: center;
@@ -117,10 +111,6 @@
         .col-container {
             max-width: 1000px;
             margin: 40px auto 0;
-
-            @media(min-width: 992px){
-                margin: 40px auto;
-            }
 
             @media(min-width: 992px){
                 display: flex;
@@ -409,22 +399,22 @@
         }
     }
 
-    .systems-scroller {
-        overflow-x: auto;
-        display: inline-flex;
-        justify-content: space-between;
+    #systems-scroller {
+        position: relative;
+        width: 120vw;
+        left: -10vw;
         margin-top: 50px;
 
-        .scroller-block {
-            width: 200px;
-            margin: 0 10px;
-            transition: all ease 300ms;
+        #scroller-inner {
+            display: inline-flex;
+            justify-content: center;
+            pointer-events: none;
 
-            @media(min-width: 992px){
-                width: 291px;
-                &:hover {
-                    transform: scale(1.05);
-                }
+            .scroller-block {
+                margin: 0 10px;
+                transition: all ease 300ms;
+                flex: 0 0 20%;
+                max-width: 20%;
             }
         }
     }
@@ -463,6 +453,11 @@
 
         .img {
             text-align: center;
+
+            @media(min-width: 992px){
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
 
             svg {
                 height: 300px;

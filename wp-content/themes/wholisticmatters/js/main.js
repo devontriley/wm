@@ -783,6 +783,83 @@ jQuery(document).ready(function ($)
 	}
 
     /**
+     * Biodigital Landing Page
+     */
+
+    //Ipad positioning
+	var isBiodigitalLanding = $('.bl-page');
+	var ipadHeight = $('.bl-ipad').height();
+	var banner = $('.banner-inner');
+	var threeCol = $('.bl-icon-cols');
+
+	// Make sure we are on the right page
+	if(isBiodigitalLanding){
+		//set the amount of padding on the banner to half that of the ipad height
+		$(banner).css({"padding-bottom" : (ipadHeight/2)});
+
+		//set the neg margin for the 3 col div to the same value
+		$(threeCol).css({"margin-top" : (-1 *(ipadHeight/2))});
+
+		//now make sure it stays the right size and position on resize!
+        $(window).on('resize', function(){
+            var updatedIpadHeight = $('.bl-ipad').height();
+
+            //set the amount of padding on the banner to half that of the ipad height
+            $(banner).css({"padding-bottom" : (updatedIpadHeight/2)});
+
+            //set the neg margin for the 3 col div to the same value
+            $(threeCol).css({"margin-top" : (-1 *(updatedIpadHeight/2))});
+        });
+	}
+
+	// Slider move on scroll
+    var latestScrollY = 0,
+        imagesY = document.getElementById('systems-scroller').offsetTop,
+        imagesHeight = document.getElementById('systems-scroller').offsetHeight,
+        viewportHeight = window.innerHeight,
+        viewportWidth = window.innerWidth,
+        imageOffset = viewportWidth * 0.1,
+        imagesContainer = document.getElementById('scroller-inner'),
+        ticking = false;
+
+    function onScroll(e)
+    {
+        requestTick();
+    }
+
+    function requestTick()
+    {
+        if(!ticking)
+        {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update(timestamp)
+    {
+        ticking = false;
+
+        var direction = (window.scrollY - latestScrollY > 0) ? 1 : -1;
+
+        latestScrollY = window.scrollY;
+
+        var topPosition = imagesY - (viewportHeight + latestScrollY),
+            bottomPosition = (imagesY) - (latestScrollY - imagesHeight);
+
+        if(topPosition <= 0 && bottomPosition >= 0)
+        {
+            var total = (bottomPosition - topPosition),
+                percentAnimated = Math.abs(topPosition / total),
+                transformX = 22 - (44 * percentAnimated);
+
+            imagesContainer.style.transform = 'translateX('+ transformX +'vw)';
+        }
+    }
+    window.addEventListener('scroll', onScroll, false);
+
+
+    /**
 	 * Biodigital Tools
      */
 	// once everything is loaded, adjust iframe to be full screen

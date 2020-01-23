@@ -34,8 +34,7 @@ get_header();
 
     <div class="bl-ipad">
         <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Group-747@2x.png"/>
-        <!-- TODO: need to size with js?? -->
-        <video width="595" autoplay loop>
+        <video class="ipad-video" autoplay loop>
             <source src="https://wholisticmatters.com/wp-content/uploads/2020/01/RPReplay_Final15795371971-1.mp4" type="video/mp4">
         </video>
     </div>
@@ -428,7 +427,7 @@ get_header();
             <div class="system-block">
                 <a class="cover-link" href="#"></a>
                 <div class="img">
-                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/bottom-3@2x.png"/>
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/bottom-3.png"/>
                 </div>
 
                 <div class="text">
@@ -491,29 +490,31 @@ get_header();
             <span class="light-green">All access with free account.</span>
         </h2>
 
-        <div class="systems-scroller">
-            <div class="scroller-block">
-                <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Resolution-Pathway-Nutrition-Therapy-Omega-3-Fatty-Acids-on-the-Microglia-Part-2@2x.png"/>
-            </div>
+        <div id="systems-scroller">
+            <div id="scroller-inner">
+                <div class="scroller-block">
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Resolution-Pathway-Nutrition-Therapy-Omega-3-Fatty-Acids-on-the-Microglia-Part-2@2x.png"/>
+                </div>
 
-            <div class="scroller-block">
-                <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/bottom-2@2x.png"/>
-            </div>
+                <div class="scroller-block">
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/bottom-2@2x.png"/>
+                </div>
 
-            <div class="scroller-block">
-                <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/bottom-3@2x.png"/>
-            </div>
+                <div class="scroller-block">
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/bottom-3@2x.png"/>
+                </div>
 
-            <div class="scroller-block">
-                <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Structure-Function-of-the-Nervous-System-Part-1@2x.png"/>
-            </div>
+                <div class="scroller-block">
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Structure-Function-of-the-Nervous-System-Part-1@2x.png"/>
+                </div>
 
-            <div class="scroller-block">
-                <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Nervous-System-Anatomy@2x.png"/>
-            </div>
+                <div class="scroller-block">
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Nervous-System-Anatomy@2x.png"/>
+                </div>
 
-            <div class="scroller-block">
-                <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/bottom-6@2x.png"/>
+                <div class="scroller-block">
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/bottom-6@2x.png"/>
+                </div>
             </div>
         </div>
     </div>
@@ -640,3 +641,4 @@ get_header();
 
 </div>
 
+<?php get_footer(); ?>
