@@ -78,6 +78,12 @@ get_header(); ?>
                 </div>
                 <div class="col-md-12 col-lg-5 articles-secton">
                     <div class="article-block">
+                        <div class="mb-4">
+                            <a href="<?php bloginfo('url'); ?>/series/building-a-healthy-lifestyle-in-2020/">
+                                <img src="<?php bloginfo('template_directory'); ?>/images/slide-podcast-promo.svg" />
+                            </a>
+                        </div>
+
                          <?php if (function_exists('wpp_get_mostpopular')): ?>
                         <div class="head-section">
                             <h2>Trending Articles</h2>
@@ -197,19 +203,19 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="culinary-block">
-                        <img src="<?php echo $wm_settings['cul_wellness_img']; ?>" alt="culinary-image">
-                        <div class="data-calinary">
-                            <h2><?php _e('Culinary Wellness'); ?></h2>
-                            <p><?php echo wpautop($hpage_text_1); ?></p>
-                            <a href="<?php echo $hpage_link_recipes; ?>" class="btn btn-theme btn-primary"><?php _e('Recipes'); ?></a>
-                            <a href="<?php echo $hpage_link_skill; ?>" class="btn btn-theme btn-primary"><?php _e('Skill Videos'); ?></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="row">-->
+<!--                <div class="col-md-12">-->
+<!--                    <div class="culinary-block">-->
+<!--                        <img src="--><?php //echo $wm_settings['cul_wellness_img']; ?><!--" alt="culinary-image">-->
+<!--                        <div class="data-calinary">-->
+<!--                            <h2>--><?php //_e('Culinary Wellness'); ?><!--</h2>-->
+<!--                            <p>--><?php //echo wpautop($hpage_text_1); ?><!--</p>-->
+<!--                            <a href="--><?php //echo $hpage_link_recipes; ?><!--" class="btn btn-theme btn-primary">--><?php //_e('Recipes'); ?><!--</a>-->
+<!--                            <a href="--><?php //echo $hpage_link_skill; ?><!--" class="btn btn-theme btn-primary">--><?php //_e('Skill Videos'); ?><!--</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
 
         <?php if(!is_user_logged_in()): ?>

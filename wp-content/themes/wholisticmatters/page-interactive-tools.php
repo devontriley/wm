@@ -67,7 +67,7 @@ get_header(); ?>
                 <div class="account-box">
                     <h2><?php _e('Create an Account & Gain Full Access'); ?></h2>
                     <p><?php echo wpautop($hpage_text_signup); ?></p>
-                    <a class="btn btn-theme signup_popup" href="<?php echo esc_url(wp_registration_url()); ?>">Sign Up</a>
+                    <a class="btn btn-primary signup_popup" href="<?php echo esc_url(wp_registration_url()); ?>">Sign Up</a>
                 </div>
             </div>
         <?php endif; ?>
