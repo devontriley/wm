@@ -34,7 +34,7 @@ get_header();
 
     <div class="bl-ipad">
         <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Group-747@2x.png"/>
-        <video class="ipad-video" autoplay loop>
+        <video class="ipad-video" autoplay loop playsinline>
             <source src="https://wholisticmatters.com/wp-content/uploads/2020/01/RPReplay_Final15795371971-1.mp4" type="video/mp4">
         </video>
     </div>

@@ -1,3 +1,9 @@
+.page-template-template-biodigital-landing-php {
+    .newsletter-signup-block {
+        display: none;
+    }
+}
+
 .bl-page {
     background: #F7FEF4;
 
@@ -449,6 +455,7 @@
         @media(min-width: 992px){
             display: flex;
             align-items: center;
+            margin-top: 80px;
         }
 
         .img {
@@ -467,7 +474,7 @@
                 }
 
                 @media(min-width: 992px){
-                    height: 400px;
+                    height: 500px;
                 }
             }
         }

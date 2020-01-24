@@ -70,30 +70,13 @@ License: none (public domain)
         position: relative;
         overflow-x: hidden;
         font-family: 'Aktiv', 'Helvetica', sans-serif;
-    }
-
-    .interactive-header {
-        width: 100%;
-        background: #fff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-
-    @media (min-width: 768px){
-        .interactive-header {
-            /*padding: 0 50px;*/
-            justify-content: flex-end;
-        }
+        background: #144D28;
     }
 
     .headerviewing-text {
         text-transform: capitalize;
         display: block;
         width: 100%;
-        position: absolute;
         top: 0;
         background: #144D28;
         color: #fff;
@@ -131,8 +114,24 @@ License: none (public domain)
         }
     }
 
+    .interactive-header {
+        width: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    @media (min-width: 768px){
+        .interactive-header {
+            /*padding: 0 50px;*/
+            justify-content: flex-end;
+        }
+    }
+
     .main-header {
-        margin-top: 38px;
         width: 100%;
         display: flex;
         padding: 10px 0;
@@ -194,7 +193,7 @@ License: none (public domain)
     }
 
     .interactive-drawer {
-        height: calc( 100vh - 102px);
+        height: calc( 100vh - 98px);
         overflow-y: scroll;
         position: absolute;
         box-sizing: border-box;
@@ -208,7 +207,7 @@ License: none (public domain)
     @media (min-width: 768px){
         .interactive-drawer {
             /*width: 400px;*/
-            right: -1500px;
+            right: -100vw;
         }
     }
 
@@ -238,6 +237,12 @@ License: none (public domain)
         margin: 20px 0;
     }
 
+    @media(min-width: 992px){
+        #new-system-select {
+            overflow: visible;
+        }
+    }
+
     #new-system-select .system-block {
         margin: 0 10px;
         cursor: pointer;
@@ -248,8 +253,6 @@ License: none (public domain)
     }
 
     #new-system-select .system-block .inner {
-        background: #063811;
-        border: 2px solid #063811;
         width: 170px;
         height: 116px;
         border-radius: 10px;
@@ -260,21 +263,47 @@ License: none (public domain)
         transition: all ease 300ms;
     }
 
+    #new-system-select .system-block .inner:after {
+        content: "";
+        position: absolute;
+        background: #063811;
+        border: 2px solid #063811;
+        border: 2px solid #063811;
+        border-radius: 10px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: all ease 300ms;
+    }
+
     @media(min-width: 992px){
-        #new-system-select .system-block:hover .inner {
-            margin-left: 5px;
-            box-shadow: -5px 5px 5px 1px rgba(0,0,0,0.5);
+        #new-system-select .system-block:hover .inner:after {
+            top: -5px;
+            box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.5);
         }
 
-        #new-system-select .system-block.active:hover .inner {
-            margin-left: 0;
-            box-shadow: none;
+        #new-system-select .system-block:hover .system-icon {
+            margin-bottom: 5px;
+        }
+
+        #new-system-select .system-block.active:hover .system-icon {
+            margin-bottom: 0;
         }
     }
 
     #new-system-select .system-block.active .inner {
         background: #00B162;
         border: 2px solid #07E36E;
+    }
+
+    #new-system-select .system-block.active .inner:after {
+        display: none;
+    }
+
+    #new-system-select .system-block .system-icon {
+        z-index: 3;
+        transition: all ease 300ms;
     }
 
     #new-system-select .system-block .label {
@@ -301,6 +330,8 @@ License: none (public domain)
         background: #063811;
         font-weight: 700;
         color: #B7E7C7;
+        width: 100%;
+        position: relative;
     }
 
     .models-inner {
@@ -314,10 +345,8 @@ License: none (public domain)
     }
 
     .model-btn {
-        display: flex;
+        display: block;
         position: relative;
-        justify-content: center;
-        flex-wrap: wrap;
         flex: 0 0 50%;
         max-width: 50%;
         border-radius: 5px;
@@ -340,14 +369,14 @@ License: none (public domain)
         }
     }
     
-    .model-btn .inner {
+    .model-btn .img-inner {
         position: relative;
         border-radius: 8px;
         height: 199px;
     }
 
     @media (min-width: 992px){
-        .model-btn .inner {
+        .model-btn .img-inner {
             height: 230px;
         }
     }
@@ -364,7 +393,7 @@ License: none (public domain)
         display: block;
     }
 
-    .model-btn.gated .inner:before {
+    .model-btn.gated .img-inner:before {
         content: "";
         position: absolute;
         width: 100%;
@@ -372,18 +401,20 @@ License: none (public domain)
         background: rgba(6, 56, 17, .5);
     }
 
-    .model-btn.active .inner {
+    .model-btn.active .img-inner {
         color: #fff;
-        border: 2px solid #07E36E;
     }
 
-    .model-btn.active:after {
+    .model-btn.active .img-inner img {
+        border: 2px solid #07E36E;
+        border-radius: 8px;
+    }
+
+    .model-btn.active .text-inner:after {
         content: "Now Viewing";
         color: #07E36E;
-        position: absolute;
         font-size: 10px;
-        bottom: -10px;
-        left: 0;
+        display: block;
     }
 
     .model-btn img {
@@ -392,6 +423,16 @@ License: none (public domain)
     
     @media(min-width: 992px){
         .model-btn img {
+            width: 175px;
+        }
+    }
+
+    .model-btn .text-inner {
+        width: 150px;
+    }
+
+    @media(min-width: 992px){
+        .model-btn .text-inner {
             width: 175px;
         }
     }
@@ -418,17 +459,17 @@ License: none (public domain)
     if( !is_user_logged_in()) echo '<div class="biodigital-content-body gated-content">';
     else echo '<div class="biodigital-content-body">';
  ?>
+    <div class="headerviewing-text">
+        <p>Viewing:
+            <span class="viewing-system">Neuromuscular System</span>
+            >
+            <span class="viewing-model">Nervous System Anatomy</span>
+        </p>
+
+        <?php if( !is_user_logged_in()) echo '<p id="create-new-account-btn">+ Create Free Account</p>'; ?>
+    </div>
+
     <div class="interactive-header">
-        <div class="headerviewing-text">
-            <p>Viewing:
-                <span class="viewing-system">Neuromuscular System</span>
-                >
-                <span class="viewing-model">Nervous System Anatomy</span>
-            </p>
-
-            <?php if( !is_user_logged_in()) echo '<p id="create-new-account-btn">+ Create Free Account</p>'; ?>
-        </div>
-
         <div class="main-header">
             <div class="header-logo">
                 <a href="https://wholisticmatters.com">
@@ -556,271 +597,391 @@ License: none (public domain)
                     Models:
                     <div class="models-inner active" data-system="neuromuscular">
                         <div class="model-btn active" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/nervous_system_anatomy.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9hu">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Nervous-System-Anatomy@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Nervous-System-Anatomy@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <!-- TODO: add text and img inners as well as text inners, change inner to img-inner -->
+                                <div class="text-inner">
+                                    <span class="label">Nervous System Anatomy</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Nervous System Anatomy</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/structure_and_function_of_central_nervous_system_v2_tour1b.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Structure-Function-of-the-Nervous-System-Part-1@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Structure-Function-of-the-Nervous-System-Part-1@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+
+                                <div class="text-inner">
+                                    <span class="label">Structure and Function of the Nervous System (1)</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Structure and Function of the Nervous System (1)</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/structure_and_function_of_central_nervous_system_v2_tour1c.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Structure-Function-of-the-Nervous-System-Part-2@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Structure-Function-of-the-Nervous-System-Part-2@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+
+                                <div class="text-inner">
+                                    <span class="label">Structure and Function of the Nervous System (2)</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Structure and Function of the Nervous System (2)</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/musculoskeletal_injury_and_joint_inflammation_in_ankle.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh4c">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Musculoskeletal-Injury-and-Joint-Inflammation-in-Ankle@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Musculoskeletal-Injury-and-Joint-Inflammation-in-Ankle@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+
+                                <div class="text-inner">
+                                    <span class="label">Musculoskeletal Injury and Joint Inflammation in Ankle</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Musculoskeletal Injury and Joint Inflammation in Ankle</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/inflammatory_response_in_bone_matrix.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh5j">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Bone-After-Acute-Trauma@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Bone-After-Acute-Trauma@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+
+                                <div class="text-inner">
+                                    <span class="label">Bone After Acute Trauma</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Bone After Acute Trauma</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
-                        <!-- new ones -->
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/afferent_nerve_signal.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Afferent-Efferent-Nerve-Signals-Part-1@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Afferent-Efferent-Nerve-Signals-Part-1@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Afferent and Efferent Nerve Signals (1)</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Afferent and Efferent Nerve Signals (1)</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/efferent_nerve_signal.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Afferent-Efferent-Nerve-Signals-Part-2@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Afferent-Efferent-Nerve-Signals-Part-2@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Afferent and Efferent Nerve Signals (2)</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Afferent and Efferent Nerve Signals (2)</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/brain_gut_connection.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Brain-Gut-Connection@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Brain-Gut-Connection@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Brain-Gut Connection</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Brain-Gut Connection</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/central_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Central-Nervous-System@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Central-Nervous-System@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Central Nervous System</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Central Nervous System</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/functional_regions_of_the_spinal_cord.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Functional-Regions-of-the-Spinal-Cord@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Functional-Regions-of-the-Spinal-Cord@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Functional Regions of the Spinal Cord</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Functional Regions of the Spinal Cord</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/hpa_neuro_immune_axis.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/HPA-Neuro-Immune-Axis@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/HPA-Neuro-Immune-Axis@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">HPA Neuro-Immune Axis</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">HPA Neuro-Immune Axis</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/neuron_signaling_2.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Neuron-Signaling@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Neuron-Signaling@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Neuron Signaling</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Neuron Signaling</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/neurotransmitters_in_synapse.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Neurotransmitters-in-Synapse@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Neurotransmitters-in-Synapse@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Neurotransmitters in Synapse</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Neurotransmitters in Synapse</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/parasympathetic_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Parasympathetic-Nervous-System@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Parasympathetic-Nervous-System@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Parasympathetic Nervous System</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Parasympathetic Nervous System</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/sympathetic_nervous_system.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Sympathetic-Nervous-System@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Sympathetic-Nervous-System@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Sympathetic Nervous System</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Sympathetic Nervous System</span>
-                            <span class="gated">View with free account</span>
                         </div>
                     </div>
 
                     <div class="models-inner" data-system="immune">
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/cns_inflammation.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Inflammation-in-the-Central-Nervous-System@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Inflammation-in-the-Central-Nervous-System@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Inflammation in the Central Nervous System</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Inflammation in the Central Nervous System</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/inflammation_in_the_cns_role_of_microglia.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Inflammation-in-the-Central-Nervous-System-The-Role-of-Microglia@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Inflammation-in-the-Central-Nervous-System-The-Role-of-Microglia@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Inflammation in the Central Nervous System: The Role of Microglia</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Inflammation in the Central Nervous System: The Role of Microglia</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/resolution_pathway_and_nutrition_therapy.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Resolution-Pathway-Nutrition-Therapy-Omega-3-Fatty-Acids-on-the-Microglia-Part-1@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Resolution-Pathway-Nutrition-Therapy-Omega-3-Fatty-Acids-on-the-Microglia-Part-1@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Resolution Pathway and Nutrition Therapy: Omega 3 Fatty Acids on the Microglia (1)</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Resolution Pathway and Nutrition Therapy: Omega 3 Fatty Acids on the Microglia (1)</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/epigenetics.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Resolution-Pathway-Nutrition-Therapy-Omega-3-Fatty-Acids-on-the-Microglia-Part-2@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Resolution-Pathway-Nutrition-Therapy-Omega-3-Fatty-Acids-on-the-Microglia-Part-2@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Resolution Pathway and Nutrition Therapy: Omega 3 Fatty Acids on the Microglia (2)</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Resolution Pathway and Nutrition Therapy: Omega 3 Fatty Acids on the Microglia (2)</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/celiac_disease.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh2v">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Celiac-Disease@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Celiac-Disease@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Celiac Disease</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Celiac Disease</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/rheumatoid_arthritis.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh2D">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Rheumatoid-Arthritis-RA@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Rheumatoid-Arthritis-RA@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Rheumatoid Arthritis (RA)</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Rheumatoid Arthritis (RA)</span>
-                            <span class="gated">View with free account</span>
                         </div>
                     </div>
 
                     <div class="models-inner" data-system="digestive">
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/digestive_health_systems_support.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Digestive-Health-and-Systems-Support@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Digestive-Health-and-Systems-Support@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Digestive Health and Systems Support</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Digestive Health and Systems Support</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/metabolic_regulation_of_diet_ghrelin_orexin_leptin_axis.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qgx7">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Metabolic-Regulation-of-Diet-Ghrelin-Orexin-and-Leptin-Axis@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Metabolic-Regulation-of-Diet-Ghrelin-Orexin-and-Leptin-Axis@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Metabolic Regulation of Diet: Ghrelin, Orexin, and Leptin Axis</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Metabolic Regulation of Diet: Ghrelin, Orexin, and Leptin Axis</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?be=3HNM&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qgy0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Probiotics-in-the-Gut@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Probiotics-in-the-Gut@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Probiotics in the Gut</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Probiotics in the Gut</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?be=3HNQ&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qgy8">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Prebiotics-in-the-Gut@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Prebiotics-in-the-Gut@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Prebiotics in the Gut</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Prebiotics in the Gut</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?be=3HNS&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh0B">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Irritable-Bowel-Syndrome-IBS@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Irritable-Bowel-Syndrome-IBS@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Irritable Bowel Syndrome (IBS)</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Irritable Bowel Syndrome (IBS)</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?be=3HNT&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh0f">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Crohn’s-Disease@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Crohn’s-Disease@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Crohn's Disease</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Crohn's Disease</span>
-                            <span class="gated">View with free account</span>
                         </div>
                     </div>
 
                     <div class="models-inner" data-system="endocrine">
                         <div class="model-btn" data-src="https://human.biodigital.com/widgets/standardprocess/?m=client/standard_process/endocrine_support.json&ui-info=true&ui-zoom=true&ui-share=false&uaid=4N9j0">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Endocrine-Support-for-Metabolic-Systems-Response@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Endocrine-Support-for-Metabolic-Systems-Response@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Endocrine Support for Metabolic Systems and Response</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Endocrine Support for Metabolic Systems and Response</span>
-                            <span class="gated">View with free account</span>
                         </div>
 
                         <div class="model-btn" data-src="https://human.biodigital.com/viewer/?m=client/standard_process/adrenal_gland_and_hormone_release.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=true&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=4qh0t">
-                            <div class="inner">
-                                <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Adrenal-Gland-and-Hormone-Release@2x.png">
-                                <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                            <div class="text-img-inner">
+                                <div class="img-inner">
+                                    <img class="model-img" src="https://wholisticmatters.com/wp-content/uploads/2020/01/Adrenal-Gland-and-Hormone-Release@2x.png">
+                                    <svg class="gated-lock" width="14" height="18.667" viewBox="0 0 14 18.667"><path class="a" d="M14.667,7.778V4.667a4.667,4.667,0,0,0-9.333,0V7.778H3V18.667H17V7.778Zm-7.778,0V4.667a3.111,3.111,0,0,1,6.222,0V7.778Z" transform="translate(-3)"/></svg>
+                                </div>
+                                <div class="text-inner">
+                                    <span class="label">Adrenal Gland and Hormone Release</span>
+                                    <span class="gated">View with free account</span>
+                                </div>
                             </div>
-                            <span class="label">Adrenal Gland and Hormone Release</span>
-                            <span class="gated">View with free account</span>
                         </div>
                     </div>
                 </div>

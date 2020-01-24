@@ -812,51 +812,48 @@ jQuery(document).ready(function ($)
         });
 	}
 
-	// Slider move on scroll
-    var latestScrollY = 0,
-        imagesY = document.getElementById('systems-scroller').offsetTop,
-        imagesHeight = document.getElementById('systems-scroller').offsetHeight,
-        viewportHeight = window.innerHeight,
-        viewportWidth = window.innerWidth,
-        imageOffset = viewportWidth * 0.1,
-        imagesContainer = document.getElementById('scroller-inner'),
-        ticking = false;
+	// check for scroller
+	if(document.getElementById('systems-scroller')){
+        var latestScrollY = 0,
+            imagesY = document.getElementById('systems-scroller').offsetTop,
+            imagesHeight = document.getElementById('systems-scroller').offsetHeight,
+            viewportHeight = window.innerHeight,
+            viewportWidth = window.innerWidth,
+            imageOffset = viewportWidth * 0.1,
+            imagesContainer = document.getElementById('scroller-inner'),
+            ticking = false;
 
-    function onScroll(e)
-    {
-        requestTick();
-    }
-
-    function requestTick()
-    {
-        if(!ticking)
-        {
-            requestAnimationFrame(update);
+        function onScroll(e) {
+            requestTick();
         }
-        ticking = true;
-    }
 
-    function update(timestamp)
-    {
-        ticking = false;
-
-        var direction = (window.scrollY - latestScrollY > 0) ? 1 : -1;
-
-        latestScrollY = window.scrollY;
-
-        var topPosition = imagesY - (viewportHeight + latestScrollY),
-            bottomPosition = (imagesY) - (latestScrollY - imagesHeight);
-
-        if(topPosition <= 0 && bottomPosition >= 0)
-        {
-            var total = (bottomPosition - topPosition),
-                percentAnimated = Math.abs(topPosition / total),
-                transformX = 22 - (44 * percentAnimated);
-
-            imagesContainer.style.transform = 'translateX('+ transformX +'vw)';
+        function requestTick() {
+            if(!ticking) {
+                requestAnimationFrame(update);
+            }
+            ticking = true;
         }
-    }
-    window.addEventListener('scroll', onScroll, false);
+
+        function update(timestamp) {
+            ticking = false;
+
+            var direction = (window.scrollY - latestScrollY > 0) ? 1 : -1;
+
+            latestScrollY = window.scrollY;
+
+            var topPosition = imagesY - (viewportHeight + latestScrollY),
+                bottomPosition = (imagesY) - (latestScrollY - imagesHeight);
+
+            if(topPosition <= 0 && bottomPosition >= 0) {
+                var total = (bottomPosition - topPosition),
+                    percentAnimated = Math.abs(topPosition / total),
+                    transformX = 22 - (44 * percentAnimated);
+
+                imagesContainer.style.transform = 'translateX('+ transformX +'vw)';
+            }
+        }
+        window.addEventListener('scroll', onScroll, false);
+	}
 
 
     /**
@@ -927,6 +924,14 @@ jQuery(document).ready(function ($)
             var modelText = $(modelLabel).text();
 
             $('.viewing-model').text(modelText);
+
+            /* we need to make sure that if the currently viewing header changes height,
+            so does the position of the drawer */
+			var currentViewingHeight = $('.headerviewing-text').outerHeight();
+			var fullHeaderHeight = currentViewingHeight + 60;
+			var newDrawerHeight = "calc(100vh - " + fullHeaderHeight + "px)";
+
+			$('.interactive-drawer').css({"height" : newDrawerHeight, "top" : fullHeaderHeight + "px"});
 		}
 	});
 
@@ -971,6 +976,14 @@ jQuery(document).ready(function ($)
                         var modelLabel = $(modelBtns[0]).find('.label');
                         var modelText = $(modelLabel).text();
                         $('.viewing-model').text(modelText);
+
+                        /* we need to make sure that if the currently viewing header changes height,
+            			so does the position of the drawer */
+                        var currentViewingHeight = $('.headerviewing-text').outerHeight();
+                        var fullHeaderHeight = currentViewingHeight + 60;
+                        var newDrawerHeight = "calc(100vh - " + fullHeaderHeight + "px)";
+
+                        $('.interactive-drawer').css({"height" : newDrawerHeight, "top" : fullHeaderHeight + "px"});
 					}
                 }
             });
