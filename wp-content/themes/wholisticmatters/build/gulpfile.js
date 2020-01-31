@@ -52,7 +52,7 @@ function scripts()
         paths.modules.src+'/jquery/dist/jquery.js',
         paths.modules.src+'/stickyfilljs/src/stickyfill.js',
         //paths.scripts.js+'/popper.min.js',
-        paths.modules.src+'/bootstrap/dist/js/bootstrap.bundle.js',
+        //paths.modules.src+'/bootstrap/dist/js/bootstrap.bundle.js',
         paths.modules.src+'/jquery-validation/dist/jquery.validate.js',
         paths.modules.src+'/owl.carousel/dist/owl.carousel.js',
         paths.modules.src+'/js-cookie/src/js.cookie.js',
@@ -90,7 +90,7 @@ function reload(done) {
 
 function serve(done) {
     server.init({
-        proxy: 'localhost/wm',
+        proxy: 'localhost/wm_new',
         open: false,
         notify: false,
         ghostMode: false,

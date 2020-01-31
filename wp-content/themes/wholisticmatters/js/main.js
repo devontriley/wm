@@ -987,6 +987,8 @@ jQuery(document).ready(function ($)
 
     $('.primaryHeader__notice .close').on('click', function(e)
 	{
+		e.preventDefault();
+
 		$('body').removeClass('promobar-enabled');
 
         Cookies.set('wm-hide-promobar', true);

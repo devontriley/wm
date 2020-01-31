@@ -88,6 +88,8 @@ class Wholistic_Matters_Public {
 		// Now, enqueue the WP util script so we can use wp.template
 		wp_enqueue_script('wp-util');
 
+		wp_enqueue_script('bootstrap-bundle', plugin_dir_url(__FILE__) . 'js/bootstrap.bundle.min.js', array('jquery', 'wp-util'), '1.0.0', true);
+
 		$category_template = '
                 <div class="cbxbookmark-mycat-editbox">
                     <input class="cbxbmedit-catname" name="catname" value="##catname##" />                
