@@ -86,6 +86,7 @@ License: none (public domain)
         line-height: 1.5em;
         font-weight: 700;
         font-size: 12px;
+        position: relative;
     }
 
     @media (min-width: 768px){
@@ -221,7 +222,7 @@ License: none (public domain)
     }
 
     .interactive-drawer__systems-select {
-        padding: 15px 20px;
+        padding: 15px 0 15px 20px;
         background: #144D28;
         font-weight: 700;
         color: #B7E7C7;
@@ -230,11 +231,18 @@ License: none (public domain)
         z-index: 8;
     }
 
+    @media(min-width: 992px){
+        .interactive-drawer__systems-select {
+            padding: 15px 20px;
+        }
+    }
+
     /** NEW SELECT FIELD **/
     #new-system-select {
         display: flex;
         overflow-x: scroll;
         margin: 20px 0;
+        overflow-y: hidden;
     }
 
     @media(min-width: 992px){
@@ -446,6 +454,7 @@ License: none (public domain)
         font-size: 9px;
         font-weight: 500;
         color: #07E36E;
+        cursor: default;
     }
 
     .model-btn.gated .gated {

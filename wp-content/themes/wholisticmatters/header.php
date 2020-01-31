@@ -41,16 +41,23 @@ $wm_settings = Wholistic_Matters::get_settings();
         })();
     </script>
 
-    <!-- Bugherd -->
+    <!-- Bugherd for staging only -->
+    <?php
+        $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-    <script type='text/javascript'>
-    (function (d, t) {
-      var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      bh.type = 'text/javascript';
-      bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=idjskgpcxxp7mfmbiwhkfa';
-      s.parentNode.insertBefore(bh, s);
-      })(document, 'script');
-    </script>
+        if (strpos($url,'staging') !== false) {
+            ?>
+            <script type='text/javascript'>
+                (function (d, t) {
+                    var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                    bh.type = 'text/javascript';
+                    bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=idjskgpcxxp7mfmbiwhkfa';
+                    s.parentNode.insertBefore(bh, s);
+                })(document, 'script');
+            </script>
+            <?php
+        }
+    ?>
 
 </head>
 

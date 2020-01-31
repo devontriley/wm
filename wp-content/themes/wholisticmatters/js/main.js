@@ -581,109 +581,109 @@ jQuery(document).ready(function ($)
 	}
 
 	// Newsletter Modal
-    const newsletterForms = $('.newsletter-signup-form');
-
-    $.each(newsletterForms, function(key, value)
-	{
-        let form = value;
-        let formMessage = $(form).find('.message');
-        let hideModalCookie = Cookies.get('wm-hide-newsletter-modal');
-        let isModal = $(form).parents('.newsletter-modal');
-        let closeModal;
-        let noThanks;
-
-        if (isModal.length) {
-            closeModal = isModal.find('.close');
-            noThanks = isModal.find('.no-thanks');
-
-			(closeModal).on('click', function (e) {
-                e.preventDefault();
-
-                isModal.css('display', 'none');
-                console.log('close');
-
-                if (typeof hideModalCookie === 'undefined') {
-                    Cookies.set('wm-hide-newsletter-modal', true, {expires: 7});
-                }
-            });
-
-            (noThanks).on('click', function (e) {
-                e.preventDefault();
-
-                isModal.css('display', 'none');
-                console.log('close');
-
-                if (typeof hideModalCookie === 'undefined') {
-                    Cookies.set('wm-hide-newsletter-modal', true, {expires: 7});
-                }
-            });
-        }
-
-        // Show modal and set cookie
-        if (typeof hideModalCookie === 'undefined') {
-            setTimeout(function () {
-                isModal.css('display', 'flex');
-            }, 3000);
-        }
-
-        $('.newsletter-signup-modal-trigger').on('click', function(e) {
-        	e.preventDefault();
-
-        	isModal.css('display', 'flex');
-		});
-
-        $(form).validate({
-            invalidHandler: function(e, validator) {
-                e.preventDefault();
-
-                formMessage.empty();
-            },
-
-            submitHandler: function(form, e) {
-                e.preventDefault();
-
-                let data = {
-                    action: 'wm_mc_put_contact',
-                    security: wm_bookmark.nonce,
-                    // url: 'https://us16.api.mailchimp.com/3.0/lists/b70bf5059b/members/', // wm mc master list
-                    // type: 'PUT',
-                    data: {
-                        email_address: null,
-                        status_if_new: "subscribed",
-                        status: "subscribed",
-                        merge_fields: {}
-                    }
-                }
-
-                let email = jQuery(e.target).find('input[name=email]');
-                let fname = jQuery(e.target).find('input[name=fname]');
-                let lname = jQuery(e.target).find('input[name=lname]');
-
-                if(typeof email.val() !== 'undefined') {
-                    data.data.email_address = escapeHtml(email.val());
-                    data.email = email.val();
-                }
-
-                if(typeof fname.val() !== 'undefined') data.data.merge_fields.FNAME = escapeHtml(fname.val());
-                if(typeof lname.val() !== 'undefined') data.data.merge_fields.LNAME = escapeHtml(lname.val());
-
-                $.post(ajaxurl, data, function (response) {
-                    let json = JSON.parse(JSON.parse(response));
-
-                    formMessage.empty();
-
-                    if(json.status === 400) {
-                        formMessage.html('<p class="error">This user has previously unsubscribed.</p>');
-                        return;
-                    }
-
-                    formMessage.html('<p class="success">You\'ve been subscribed!</p>');
-                    Cookies.set('wm-hide-newsletter-modal', true, { expires: 90 });
-                    hideModalCookie = Cookies.get('wm-hide-newsletter-modal');
-                });
-            }
-        });
-    });
+    // const newsletterForms = $('.newsletter-signup-form');
+    //
+    // $.each(newsletterForms, function(key, value)
+	// {
+     //    let form = value;
+     //    let formMessage = $(form).find('.message');
+     //    let hideModalCookie = Cookies.get('wm-hide-newsletter-modal');
+     //    let isModal = $(form).parents('.newsletter-modal');
+     //    let closeModal;
+     //    let noThanks;
+    //
+     //    if (isModal.length) {
+     //        closeModal = isModal.find('.close');
+     //        noThanks = isModal.find('.no-thanks');
+    //
+	// 		(closeModal).on('click', function (e) {
+     //            e.preventDefault();
+    //
+     //            isModal.css('display', 'none');
+     //            console.log('close');
+    //
+     //            if (typeof hideModalCookie === 'undefined') {
+     //                Cookies.set('wm-hide-newsletter-modal', true, {expires: 7});
+     //            }
+     //        });
+    //
+     //        (noThanks).on('click', function (e) {
+     //            e.preventDefault();
+    //
+     //            isModal.css('display', 'none');
+     //            console.log('close');
+    //
+     //            if (typeof hideModalCookie === 'undefined') {
+     //                Cookies.set('wm-hide-newsletter-modal', true, {expires: 7});
+     //            }
+     //        });
+     //    }
+    //
+     //    // Show modal and set cookie
+     //    if (typeof hideModalCookie === 'undefined') {
+     //        setTimeout(function () {
+     //            isModal.css('display', 'flex');
+     //        }, 3000);
+     //    }
+    //
+     //    $('.newsletter-signup-modal-trigger').on('click', function(e) {
+     //    	e.preventDefault();
+    //
+     //    	isModal.css('display', 'flex');
+	// 	});
+    //
+     //    $(form).validate({
+     //        invalidHandler: function(e, validator) {
+     //            e.preventDefault();
+    //
+     //            formMessage.empty();
+     //        },
+    //
+     //        submitHandler: function(form, e) {
+     //            e.preventDefault();
+    //
+     //            let data = {
+     //                action: 'wm_mc_put_contact',
+     //                security: wm_bookmark.nonce,
+     //                // url: 'https://us16.api.mailchimp.com/3.0/lists/b70bf5059b/members/', // wm mc master list
+     //                // type: 'PUT',
+     //                data: {
+     //                    email_address: null,
+     //                    status_if_new: "subscribed",
+     //                    status: "subscribed",
+     //                    merge_fields: {}
+     //                }
+     //            }
+    //
+     //            let email = jQuery(e.target).find('input[name=email]');
+     //            let fname = jQuery(e.target).find('input[name=fname]');
+     //            let lname = jQuery(e.target).find('input[name=lname]');
+    //
+     //            if(typeof email.val() !== 'undefined') {
+     //                data.data.email_address = escapeHtml(email.val());
+     //                data.email = email.val();
+     //            }
+    //
+     //            if(typeof fname.val() !== 'undefined') data.data.merge_fields.FNAME = escapeHtml(fname.val());
+     //            if(typeof lname.val() !== 'undefined') data.data.merge_fields.LNAME = escapeHtml(lname.val());
+    //
+     //            $.post(ajaxurl, data, function (response) {
+     //                let json = JSON.parse(JSON.parse(response));
+    //
+     //                formMessage.empty();
+    //
+     //                if(json.status === 400) {
+     //                    formMessage.html('<p class="error">This user has previously unsubscribed.</p>');
+     //                    return;
+     //                }
+    //
+     //                formMessage.html('<p class="success">You\'ve been subscribed!</p>');
+     //                Cookies.set('wm-hide-newsletter-modal', true, { expires: 90 });
+     //                hideModalCookie = Cookies.get('wm-hide-newsletter-modal');
+     //            });
+     //        }
+     //    });
+    // });
 
 
     /**
@@ -782,203 +782,191 @@ jQuery(document).ready(function ($)
 		});
 	}
 
+	/** BIODIGITAL LANDING PAGE **/
+
+	// check for scroller
+	if(document.getElementById('systems-scroller')){
+        var latestScrollY = 0,
+            imagesY = document.getElementById('systems-scroller').offsetTop,
+            imagesHeight = document.getElementById('systems-scroller').offsetHeight,
+            viewportHeight = window.innerHeight,
+            viewportWidth = window.innerWidth,
+            imageOffset = viewportWidth * 0.1,
+            imagesContainer = document.getElementById('scroller-inner'),
+            ticking = false;
+
+        function onScroll(e) {
+            requestTick();
+        }
+
+        function requestTick() {
+            if(!ticking) {
+                requestAnimationFrame(update);
+            }
+            ticking = true;
+        }
+
+        function update(timestamp) {
+            ticking = false;
+
+            var direction = (window.scrollY - latestScrollY > 0) ? 1 : -1;
+
+            latestScrollY = window.scrollY;
+
+            var topPosition = imagesY - (viewportHeight + latestScrollY),
+                bottomPosition = (imagesY) - (latestScrollY - imagesHeight);
+
+            if(topPosition <= 0 && bottomPosition >= 0) {
+                var total = (bottomPosition - topPosition),
+                    percentAnimated = Math.abs(topPosition / total),
+                    transformX = 22 - (44 * percentAnimated);
+
+                imagesContainer.style.transform = 'translateX('+ transformX +'vw)';
+            }
+        }
+        window.addEventListener('scroll', onScroll, false);
+	}
+
+
     /**
 	 * Biodigital Tools
      */
 	// once everything is loaded, adjust iframe to be full screen
 	var height = $(window).height();
 	var interactiveHeaderHeight = $('.interactive-header').outerHeight();
-	var viewingHeight = $('.headerviewing-text').outerHeight();
-	var correctHeight = height - (interactiveHeaderHeight + viewingHeight);
+	var correctHeight = height - interactiveHeaderHeight;
 	$('.interactive-body iframe').css('height', correctHeight);
 
-	$('.interactive-header').css('margin-bottom', viewingHeight);
+	// check to see if a user to logged in and gate the proper content if not
+	var contentBody = $('.biodigital-content-body');
+
+	if(contentBody.hasClass('gated-content')){
+		var modelBtns = $('.model-btn');
+
+		for(var i = 0; i <= modelBtns.length; i++){
+			if(i !== 0){
+				$(modelBtns[i]).addClass('gated');
+			}
+		}
+	}
+
+	//if logged out, create account button will launch modal on click
+    $("body").on('click', '#create-new-account-btn', function(e)
+    {
+        e.preventDefault();
+
+        wm_hide_main_nav();
+
+        $(".LoginScreenPopup").removeClass('opened');
+        $(".signUpScreenPopup").addClass('opened');
+        $('.premium-signup-modal').hide();
+        $("body").addClass("no-scroll");
+    });
 
 	// drawer in and out on click
 	$('.drawer-toggle').on('click', function(e)
 	{
 		if(!$('.interactive-drawer').hasClass('active')) {
 			$('.interactive-drawer').addClass('active');
+		} else {
+            $('.interactive-drawer').removeClass('active');
 		}
-	});
-
-	// drawer close when click x
-	$('.interactive-drawer__close').on('click', function(){
-		$('.interactive-drawer').removeClass('active');
-	});
-
-	//extras btn accordion animation
-	$('#extras-acc').on('click', function(){
-		$('.extras-accordion-inner').slideToggle();
-		$('.extras-arrow').toggleClass('active');
-	});
-
-	// change model children displayed based on system select
-	$('#system-select').on('change', function() {
-		var selectValue = this.value;
-		$('.models-inner').removeClass('active');
-		$('.models-inner').each(function(){
-			var modelsSystem = $(this).data('system');
-			if(modelsSystem == selectValue){
-				$(this).addClass('active');
-
-				//make first option active automatically
-				var modelBtns = $(this).find('.model-btn');
-				$(modelBtns[0]).addClass('active');
-
-				// preload source into iframe
-				var iframeSrc = $(modelBtns[0]).data('src');
-				$('iframe').attr('src', iframeSrc);
-
-				//append correct system to header span
-				$('.viewing-system').text(modelsSystem + ' System');
-
-				// append correct model to header span
-				var modelText = $(modelBtns[0]).text();
-				$('.viewing-model').text(modelText);
-
-				//if on mobile, close the drawer
-				// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-				//     $('.interactive-drawer').removeClass('active');
-				// }
-			}
-		});
+		$('.content-container').toggleClass('active');
 	});
 
 
 	// on model button click
 	$('.model-btn').on('click', function(e){
-		$('.model-btn').removeClass('active');
-		$(e.target).addClass('active');
+        var thisBtn = $(e.target).closest('div[class^="model-btn"]');
 
-		var iframeSrc = $(e.target).data('src');
-		$('iframe').attr('src', iframeSrc);
+        //check to see if the content is gated
+        if($(thisBtn).hasClass('gated')){
+			e.preventDefault();
+			// add modal
+        } else {
+            $('.model-btn').removeClass('active');
 
-		// append correct model to header span
-		var modelText = $(e.target).text();
-		$('.viewing-model').text(modelText);
+            $(thisBtn).addClass('active');
+
+            var iframeSrc = $(thisBtn).data('src');
+            $('iframe').attr('src', iframeSrc);
+
+            // append correct model to header span
+            var modelLabel = $(thisBtn).find('.label');
+            var modelText = $(modelLabel).text();
+
+            $('.viewing-model').text(modelText);
+
+            /* we need to make sure that if the currently viewing header changes height,
+            so does the position of the drawer */
+			var currentViewingHeight = $('.headerviewing-text').outerHeight();
+			var fullHeaderHeight = currentViewingHeight + 60;
+			var newDrawerHeight = "calc(100vh - " + fullHeaderHeight + "px)";
+
+			$('.interactive-drawer').css({"height" : newDrawerHeight, "top" : fullHeaderHeight + "px"});
+
+			//finally, close the drawer!
+			setTimeout(function(){
+                $('.interactive-drawer').removeClass('active');
+                $('.content-container').toggleClass('active');
+			}, 300);
+		}
 	});
 
-	//custom select style
-	class styledSelect {
-		constructor(select) {
-			this.select = $(select); //dont forget to grab the css
-			this.numberOfOptions = this.select.children('option').length;
-			this.selected = this.select.children('option:selected');
-			this.field = this.select.parents('.field');
+	// new systems select
+	$('.system-block').on('click', function(e){
+		var allBlocks = $('.system-block');
+		var thisBlock = $(e.target).closest('div[class^="system-block"]');
+        var selectedValue = $(thisBlock).data('value');
 
-			if(this.selected.text() == this.select.children('option').first().text()) {
-				this.selected = '';
-			}
+		//confirm e target is not currently selected
+		if(! $(thisBlock).hasClass('active')){
 
-			this.select.addClass('select-hidden');
-			this.select.wrap('<div class="select"></div>');
-			this.select.after('<div class="select-styled"></div>');
+            //highlight the right systems block
+            $(allBlocks).removeClass('active');
+            $(thisBlock).addClass('active');
 
-			this.styledSelect = this.select.next('div.select-styled');
+            //get the corresponding models for this system to show
+            $('.models-inner').removeClass('active');
+            $('.models-inner').each(function(){
+                var modelsSystem = $(this).data('system');
 
-			this.styledSelect.text(this.select.children('option').eq(0).text());
+                if(modelsSystem == selectedValue){
+                    $(this).addClass('active');
 
-			this.list = $('<ul />', {
-				'class': 'select-options'
-			}).insertAfter(this.styledSelect);
+                    //check to see if gated
+                    var modelBtns = $(this).find('.model-btn');
 
-			var currentOptionValue = this.select.children('option').eq(0).val();
+					if(! $(modelBtns[0]).hasClass('gated')){
 
-			for (var i = 0; i < this.numberOfOptions; i++) {
-				$('<li />', {
-					text: this.select.children('option').eq(i).text(),
-					rel: this.select.children('option').eq(i).val()
-				}).appendTo(this.list);
-			}
+                        //make first option active automatically
+                        $(modelBtns).removeClass('active');
+                        $(modelBtns[0]).addClass('active');
 
-			this.listItems = this.list.children('li');
+                        // preload source into iframe
+                        var iframeSrc = $(modelBtns[0]).data('src');
+                        $('iframe').attr('src', iframeSrc);
 
+                        //append correct system to header span
+                        $('.viewing-system').text(modelsSystem + ' System');
 
-			if(this.selected !== '') {
-				this.styledSelect.text(this.selected.text());
-				this.select.val(this.selected.text());
-			}
+                        // append correct model to header span
+                        var modelLabel = $(modelBtns[0]).find('.label');
+                        var modelText = $(modelLabel).text();
+                        $('.viewing-model').text(modelText);
 
-			this.styledSelect.click(function(e) {
-				this.open(e);
-			}.bind(this));
+                        /* we need to make sure that if the currently viewing header changes height,
+            			so does the position of the drawer */
+                        var currentViewingHeight = $('.headerviewing-text').outerHeight();
+                        var fullHeaderHeight = currentViewingHeight + 60;
+                        var newDrawerHeight = "calc(100vh - " + fullHeaderHeight + "px)";
 
-			this.styledSelect.parents('.select').focus(function(e){
-				this.open(e);
-			}.bind(this));
-
-			this.styledSelect.parents('.select').blur(function(e){
-				this.close(e);
-			}.bind(this));
-
-			this.listItems.click(function(e) {
-				this.selectOption(e);
-			}.bind(this));
-
-			$(document).click(function() {
-				this.close();
-			}.bind(this));
+                        $('.interactive-drawer').css({"height" : newDrawerHeight, "top" : fullHeaderHeight + "px"});
+					}
+                }
+            });
 		}
-
-		open(e) {
-			e.stopPropagation();
-			$('div.select-styled.active').not(this).each(function(){
-				$(this).removeClass('active').next('ul.select-options').hide();
-			});
-			this.styledSelect.toggleClass('active');
-			this.list.toggle();
-		}
-
-		close() {
-			this.styledSelect.removeClass('active');
-			this.list.hide();
-		}
-
-		selectOption(e, value = '') {
-			value = $(e.target).attr('rel');
-			var fieldID = this.select.attr('id');
-
-			e.stopPropagation();
-			this.styledSelect.text($(e.target).text()).removeClass('active');
-			this.select.val(value);
-			this.list.hide();
-
-			var selectedValue = this.select.val();
-
-			$('.models-inner').removeClass('active');
-			$('.models-inner').each(function(){
-				var modelsSystem = $(this).data('system');
-				console.log(modelsSystem, selectedValue);
-				if(modelsSystem == selectedValue){
-					$(this).addClass('active');
-
-					//make first option active automatically
-					var modelBtns = $(this).find('.model-btn');
-					$(modelBtns[0]).addClass('active');
-
-					// preload source into iframe
-					var iframeSrc = $(modelBtns[0]).data('src');
-					$('iframe').attr('src', iframeSrc);
-
-					//append correct system to header span
-					$('.viewing-system').text(modelsSystem + ' System');
-
-					// append correct model to header span
-					var modelText = $(modelBtns[0]).text();
-					$('.viewing-model').text(modelText);
-				}
-			});
-		}
-	}
-
-	var styledSelects = $('select'); // list parent div as well
-	if(styledSelects.length){
-		var styledSelectsArr = [];
-		for(var i = 0; i < styledSelects.length; i++) {
-			styledSelectsArr[i] = new styledSelect(styledSelects[i]);
-		}
-	}
+	});
 
 
     /**

@@ -11,7 +11,7 @@ get_header();
             <p class="eyebrow">Anatomic Biodigtal Libraries</p>
 
             <h1 class="banner_heading">
-                Explore the human body in interactive 3d
+                Explore the human body in interactive 3D
             </h1>
 
             <!-- TODO: Link this to to the biodigital library page -->
@@ -43,9 +43,8 @@ get_header();
     <!--3 icon cols-->
     <div class="bl-icon-cols">
         <h2>
-            Free 3d BioDigital models
-            <span class="light-green">for your practice</span>
-            .
+            Free 3D BioDigital models
+            <span class="light-green">for your practice.</span>
         </h2>
 
         <div class="col-container">
@@ -123,7 +122,7 @@ get_header();
                     </h3>
 
                     <p class="content">
-                        Enhance your understanding of how the body’s systems function and interact in a 3d environment.
+                        Enhance your understanding of how the body’s systems function and interact in a 3D environment.
                     </p>
                 </div>
             </div>
@@ -216,7 +215,7 @@ get_header();
                     </h3>
 
                     <p class="content">
-                        Explore the human body systems in 3d with your peers anytime and on any device.
+                        Explore the human body systems in 3D with your peers anytime and on any device.
                     </p>
                 </div>
             </div>
@@ -383,7 +382,7 @@ get_header();
                         </p>
 
                         <a class="link" href="#">
-                            Start Exploring
+                            Create Free Account
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                                 <defs>
                                     <style>.a{fill:#00E673;fill-rule:evenodd;}</style>
@@ -412,7 +411,7 @@ get_header();
                         </p>
 
                         <a class="link" href="#">
-                            Start Exploring
+                            Create Free Account
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                                 <defs>
                                     <style>.a{fill:#00E673;fill-rule:evenodd;}</style>
@@ -442,7 +441,7 @@ get_header();
                         </p>
 
                         <a class="link" href="#">
-                            Start Exploring
+                            Create Free Account
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                                 <defs>
                                     <style>.a{fill:#00E673;fill-rule:evenodd;}</style>
@@ -486,8 +485,8 @@ get_header();
     <div class="bl-system-scroller">
         <h2>
             4 Body Systems <br>
-            20 Biodigital Models <br>
-            <span class="light-green">All access with free account.</span>
+            29 Biodigital Models <br>
+            <span class="light-green">Get access with free account.</span>
         </h2>
 
         <div id="systems-scroller">
@@ -521,8 +520,8 @@ get_header();
 
     <div class="bl-included">
         <h2>
-            Also included in free
-            <span class="light-green">WholisticMatters Account:</span>
+            Also included in a free
+            <span class="light-green">WholisticMatters account:</span>
         </h2>
 
         <!-- TODO: connect to modal? -->
