@@ -375,6 +375,8 @@ jQuery(document).ready(function ($)
 	{
 		e.preventDefault();
 
+		console.log('signup popup!');
+
         wm_hide_main_nav();
 
 		$(".LoginScreenPopup").removeClass('opened');
