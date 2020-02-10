@@ -24,9 +24,7 @@ get_header();
                 </svg>
             </a>
 
-            <a class="link signup_popup" href="#">
-                Access the full library
-            </a>
+            <?php if( !is_user_logged_in()) echo '<a class="link signup_popup" href="#">Access the full library</a>'; ?>
         </div>
     </div>
 
