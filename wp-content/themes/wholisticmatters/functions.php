@@ -126,6 +126,14 @@ function theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
+//ASYNC JS ATTRIBUTE
+function add_async_attribute($tag, $handle) {
+    if ( 'main-js' !== $handle )
+        return $tag;
+    return str_replace( ' src', ' async="async" src', $tag );
+}
+add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+
 
 // remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
 function WM_filter_ptags_on_images($content){
@@ -379,3 +387,9 @@ function article_embed($atts, $content = null) {
     wp_reset_postdata();
 }
 add_shortcode('article-embed', 'article_embed');
+
+/** DEREGISTER SCRIPTS */
+function my_deregister_scripts(){
+    wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );

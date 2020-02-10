@@ -381,7 +381,7 @@ License: none (public domain)
                     <svg id="close-icon" viewBox="0 0 25 25">
                         <g id="Mobile_X" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <path d="M12.4778909,10.3982424 L22.8761333,5.77315973e-14 L24.9557817,2.07964848 L14.5575393,12.4778909 L24.9557817,22.8761333 L22.8761333,24.9557817 L12.4778909,14.5575393 L2.07964848,24.9557817 L-1.98507877e-13,22.8761333 L10.3982424,12.4778909 L-1.98507877e-13,2.07964848 L2.07964848,5.41788836e-14 L12.4778909,10.3982424 Z" id="Combined-Shape" fill="#fff" fill-rule="nonzero"></path>
-                        </g>
+                        </g> <!-- test -->
                     </svg>
                 </button>
             </div>
