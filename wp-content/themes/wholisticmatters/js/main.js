@@ -786,6 +786,7 @@ jQuery(document).ready(function ($)
 
 	// check for scroller
 	if(document.getElementById('systems-scroller')){
+
         var latestScrollY = 0,
             imagesY = document.getElementById('systems-scroller').offsetTop,
             imagesHeight = document.getElementById('systems-scroller').offsetHeight,
@@ -793,7 +794,14 @@ jQuery(document).ready(function ($)
             viewportWidth = window.innerWidth,
             imageOffset = viewportWidth * 0.1,
             imagesContainer = document.getElementById('scroller-inner'),
-            ticking = false;
+            ticking = false,
+        	ua = window.navigator.userAgent,
+        	msie = ua.indexOf("MSIE ");
+
+        // //check if IE and stop the function if so
+        // if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){
+        	// return;
+		// }
 
         function onScroll(e) {
             requestTick();
@@ -837,6 +845,14 @@ jQuery(document).ready(function ($)
 	var correctHeight = height - interactiveHeaderHeight;
 	$('.interactive-body iframe').css('height', correctHeight);
 
+	//keep an eye out for resizes so that the iframe adapts height
+	$(window).resize(function(){
+        var height = $(window).height();
+        var interactiveHeaderHeight = $('.interactive-header').outerHeight();
+        var correctHeight = height - interactiveHeaderHeight;
+        $('.interactive-body iframe').css('height', correctHeight);
+	});
+
 	// check to see if a user to logged in and gate the proper content if not
 	var contentBody = $('.biodigital-content-body');
 
@@ -846,6 +862,7 @@ jQuery(document).ready(function ($)
 		for(var i = 0; i <= modelBtns.length; i++){
 			if(i !== 0){
 				$(modelBtns[i]).addClass('gated');
+                $(modelBtns[i]).addClass('signup_popup');
 			}
 		}
 	}

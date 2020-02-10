@@ -38,8 +38,12 @@
         }
     }
 
+    .data-banner h1 {
+        font-family: $harriet;
+    }
+
     h2 {
-        font-family: 'Harriet', serif;
+        font-family: $harriet;
         color: #0E4C26;
         margin: 20px 0;
         font-size: 30px;
@@ -306,7 +310,9 @@
 
                 @media(min-width: 768px){
                     flex-wrap: nowrap;
+                }
 
+                @media(min-width: 992px){
                     &:hover {
                         transform: scale(1.05);
                     }
@@ -334,12 +340,13 @@
                         object-fit: contain;
 
                         @media(min-width: 768px){
+                            width: 300px;
                             height: auto;
                         }
                     }
 
                     @media(min-width: 768px){
-                        flex: auto;
+                        flex: 0 0 33.3%;
                         border-radius: 0;
                     }
                 }
@@ -358,6 +365,7 @@
                         height: 260px;
                         border-radius: 0px 9px 9px 0px;
                         padding: 20px;
+                        flex: 0 0 66.6%;
                     }
 
                     h3 {
@@ -484,7 +492,7 @@
         margin-top: 50px;
 
         #scroller-inner {
-            display: inline-flex;
+            display: flex;
             justify-content: center;
             pointer-events: none;
 

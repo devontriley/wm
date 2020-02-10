@@ -14,8 +14,7 @@ get_header();
                 Explore the human body in interactive 3D
             </h1>
 
-            <!-- TODO: Link this to to the biodigital library page -->
-            <a class="btn" href="">
+            <a class="btn" href="<?php bloginfo('url'); ?>/new-biodigital-library">
                 Start Exploring
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                     <defs>
@@ -25,8 +24,7 @@ get_header();
                 </svg>
             </a>
 
-            <!-- TODO: Should this connect to the modal or elsewhere? -->
-            <a class="link" href="#">
+            <a class="link signup_popup" href="#">
                 Access the full library
             </a>
         </div>
@@ -34,8 +32,9 @@ get_header();
 
     <div class="bl-ipad">
         <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Group-747@2x.png"/>
-        <video class="ipad-video" autoplay loop playsinline>
-            <source src="https://wholisticmatters.com/wp-content/uploads/2020/01/RPReplay_Final15795371971-1.mp4" type="video/mp4">
+        <video class="ipad-video" autoplay="autoplay" muted="muted" loop="loop" playsinline>
+            <source src="https://staging.wholisticmatters.com/wp-content/uploads/2020/02/biodigital-video.mp4" type="video/mp4">
+            <source src="https://staging.wholisticmatters.com/wp-content/uploads/2020/02/biodigital-video-1.webm" type="video/webm">
         </video>
     </div>
 
@@ -322,7 +321,7 @@ get_header();
             </div>
         </div>
 
-        <a class="btn">
+        <a class="btn" href="<?php bloginfo('url'); ?>/new-biodigital-library">
             Start Exploring
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                 <defs>
@@ -331,15 +330,15 @@ get_header();
                 <path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/>
             </svg>
         </a>
-    </div> <!-- nice -->
+    </div>
 
     <!--system blocks-->
     <div class="bl-system-blocks">
         <div class="system-block-container">
             <div class="system-block">
-                <a class="cover-link" href="#"></a>
+                <a class="cover-link" href="<?php bloginfo('url'); ?>/new-biodigital-library"></a>
                 <div class="img">
-                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Nervous-System-Anatomy@2x.png"/>
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/02/Neuromuscular-System.png"/>
                 </div>
 
                 <div class="text">
@@ -352,7 +351,7 @@ get_header();
                             The nervous system is responsible for generating and sending electrochemical signals throughout the body.
                         </p>
 
-                        <a class="link" href="#">
+                        <a class="link" href="<?php bloginfo('url'); ?>/new-biodigital-library">
                             Start Exploring
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                                 <defs>
@@ -366,9 +365,9 @@ get_header();
             </div>
 
             <div class="system-block">
-                <a class="cover-link" href="#"></a>
+                <a class="cover-link signup_popup" href=""></a>
                 <div class="img">
-                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Resolution-Pathway-Nutrition-Therapy-Omega-3-Fatty-Acids-on-the-Microglia-Part-2@2x.png"/>
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/02/immune-system.png"/>
                 </div>
 
                 <div class="text">
@@ -381,7 +380,7 @@ get_header();
                             The immune system protects the body from external threats with a variety of physiological mechanisms.
                         </p>
 
-                        <a class="link" href="#">
+                        <a class="link signup_popup" href="#">
                             Create Free Account
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                                 <defs>
@@ -395,9 +394,9 @@ get_header();
             </div>
 
             <div class="system-block">
-                <a class="cover-link" href="#"></a>
+                <a class="cover-link signup_popup" href=""></a>
                 <div class="img">
-                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Digestive-Health-and-Systems-Support@2x.png"/>
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/02/digestive-system.png"/>
                 </div>
 
                 <div class="text">
@@ -410,7 +409,7 @@ get_header();
                             The digestive system contains organs that extract nutrients from food and deliver them to the body.
                         </p>
 
-                        <a class="link" href="#">
+                        <a class="link signup_popup" href="#">
                             Create Free Account
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                                 <defs>
@@ -424,9 +423,9 @@ get_header();
             </div>
 
             <div class="system-block">
-                <a class="cover-link" href="#"></a>
+                <a class="cover-link signup_popup" href=""></a>
                 <div class="img">
-                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/bottom-3.png"/>
+                    <img src="https://wholisticmatters.com/wp-content/uploads/2020/02/endocrine-system.png"/>
                 </div>
 
                 <div class="text">
@@ -440,7 +439,7 @@ get_header();
                             and more.
                         </p>
 
-                        <a class="link" href="#">
+                        <a class="link signup_popup" href="#">
                             Create Free Account
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                                 <defs>
@@ -468,6 +467,7 @@ get_header();
                     Create a free account to use this one-of-a-kind library of three dimensional anatomical models to
                     enhance your understanding of how the body’s systems function and interact.
                 </p>
+
                 <a class="btn signup_popup" href="">
                     Create Your Free Account
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
@@ -524,8 +524,7 @@ get_header();
             <span class="light-green">WholisticMatters account:</span>
         </h2>
 
-        <!-- TODO: connect to modal? -->
-        <a class="btn" href="">
+        <a class="btn signup_popup" href="">
             Create Your Free Account
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                 <defs>
@@ -537,7 +536,6 @@ get_header();
 
         <div class="included-content-container">
             <div class="img">
-                <!-- TODO: fix spacing at desktop sizing -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409.161 678.756">
                     <defs>
                         <style>
