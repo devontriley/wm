@@ -184,7 +184,7 @@ $wm_settings = Wholistic_Matters::get_settings();
                                 <li><a href="<?php bloginfo('url'); ?>/interactive-tools/herbal-medicinals">Herbal Medicinals</a></li>
                                 <li class="forHCP">
                                     <p>— Free With HCP Account —</p>
-                                    <a href="<?php bloginfo('url'); ?>/biodigital-landing-page">Anatomic / BioDigital Library</a>
+                                    <a href="<?php bloginfo('url'); ?>/biodigital-landing-page">Anatomic BioDigital Library</a>
                                     <a href="<?php bloginfo('url'); ?>/interactive-tools/clinical-practice-support">Clinical Practice Support</a>
                                 </li>
                                 <?php if(!is_user_logged_in()){?>
