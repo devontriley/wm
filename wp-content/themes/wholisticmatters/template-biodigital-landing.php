@@ -14,7 +14,7 @@ get_header();
                 Explore the human body in interactive 3D
             </h1>
 
-            <a class="btn" href="<?php bloginfo('url'); ?>/new-biodigital-library">
+            <a class="btn" href="<?php bloginfo('url'); ?>/interactive-tools/anatomic-biodigital-library/">
                 Start Exploring
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                     <defs>
@@ -319,7 +319,7 @@ get_header();
             </div>
         </div>
 
-        <a class="btn" href="<?php bloginfo('url'); ?>/new-biodigital-library">
+        <a class="btn" href="<?php bloginfo('url'); ?>/interactive-tools/anatomic-biodigital-library/">
             Start Exploring
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                 <defs>
@@ -334,7 +334,7 @@ get_header();
     <div class="bl-system-blocks">
         <div class="system-block-container">
             <div class="system-block">
-                <a class="cover-link" href="<?php bloginfo('url'); ?>/new-biodigital-library"></a>
+                <a class="cover-link" href="<?php bloginfo('url'); ?>/interactive-tools/anatomic-biodigital-library/"></a>
                 <div class="img">
                     <img src="https://wholisticmatters.com/wp-content/uploads/2020/02/Neuromuscular-System.png"/>
                 </div>
@@ -349,7 +349,7 @@ get_header();
                             The nervous system is responsible for generating and sending electrochemical signals throughout the body.
                         </p>
 
-                        <a class="link" href="<?php bloginfo('url'); ?>/new-biodigital-library">
+                        <a class="link" href="<?php bloginfo('url'); ?>/interactive-tools/anatomic-biodigital-library/">
                             Start Exploring
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                                 <defs>
