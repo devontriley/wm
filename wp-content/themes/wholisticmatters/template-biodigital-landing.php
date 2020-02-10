@@ -363,7 +363,7 @@ get_header();
             </div>
 
             <div class="system-block">
-                <a class="cover-link signup_popup" href=""></a>
+                <?php if( !is_user_logged_in()) echo '<a class="cover-link signup_popup" href=""></a>'?>
                 <div class="img">
                     <img src="https://wholisticmatters.com/wp-content/uploads/2020/02/immune-system.png"/>
                 </div>
@@ -384,7 +384,7 @@ get_header();
             </div>
 
             <div class="system-block">
-                <a class="cover-link signup_popup" href=""></a>
+                <?php if( !is_user_logged_in()) echo '<a class="cover-link signup_popup" href=""></a>'?>
                 <div class="img">
                     <img src="https://wholisticmatters.com/wp-content/uploads/2020/02/digestive-system.png"/>
                 </div>
@@ -406,7 +406,7 @@ get_header();
             </div>
 
             <div class="system-block">
-                <a class="cover-link signup_popup" href=""></a>
+                <?php if( !is_user_logged_in()) echo '<a class="cover-link signup_popup" href=""></a>'?>
                 <div class="img">
                     <img src="https://wholisticmatters.com/wp-content/uploads/2020/02/endocrine-system.png"/>
                 </div>
