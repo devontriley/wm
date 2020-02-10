@@ -378,15 +378,7 @@ get_header();
                             The immune system protects the body from external threats with a variety of physiological mechanisms.
                         </p>
 
-                        <a class="link signup_popup" href="#">
-                            Create Free Account
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <defs>
-                                    <style>.a{fill:#00E673;fill-rule:evenodd;}</style>
-                                </defs>
-                                <path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/>
-                            </svg>
-                        </a>
+                        <?php if( !is_user_logged_in()) echo '<a class="link signup_popup" href="#">Create Free Account<svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><defs><style>.a{fill:#00E673;fill-rule:evenodd;}</style></defs><path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/></svg></a>'; ?>
                     </div>
                 </div>
             </div>
@@ -407,15 +399,8 @@ get_header();
                             The digestive system contains organs that extract nutrients from food and deliver them to the body.
                         </p>
 
-                        <a class="link signup_popup" href="#">
-                            Create Free Account
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <defs>
-                                    <style>.a{fill:#00E673;fill-rule:evenodd;}</style>
-                                </defs>
-                                <path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/>
-                            </svg>
-                        </a>
+
+                        <?php if( !is_user_logged_in()) echo '<a class="link signup_popup" href="#">Create Free Account<svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><defs><style>.a{fill:#00E673;fill-rule:evenodd;}</style></defs><path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/></svg></a>' ?>
                     </div>
                 </div>
             </div>
@@ -437,15 +422,7 @@ get_header();
                             and more.
                         </p>
 
-                        <a class="link signup_popup" href="#">
-                            Create Free Account
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <defs>
-                                    <style>.a{fill:#00E673;fill-rule:evenodd;}</style>
-                                </defs>
-                                <path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/>
-                            </svg>
-                        </a>
+                        <?php if( !is_user_logged_in()) echo '<a class="link signup_popup" href="#">Create Free Account<svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><defs><style>.a{fill:#00E673;fill-rule:evenodd;}</style></defs><path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/></svg></a>'?>
                     </div>
                 </div>
             </div>
@@ -466,15 +443,7 @@ get_header();
                     enhance your understanding of how the body’s systems function and interact.
                 </p>
 
-                <a class="btn signup_popup" href="">
-                    Create Your Free Account
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                        <defs>
-                            <style>.a{fill:#fff;fill-rule:evenodd;}</style>
-                        </defs>
-                        <path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/>
-                    </svg>
-                </a>
+                <?php if( !is_user_logged_in()) echo '<a class="btn signup_popup" href="">Create Your Free Account<svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><defs><style>.a{fill:#fff;fill-rule:evenodd;}</style></defs><path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/></svg></a>'?>
             </div>
         </div>
     </div>
@@ -522,15 +491,7 @@ get_header();
             <span class="light-green">WholisticMatters account:</span>
         </h2>
 
-        <a class="btn signup_popup" href="">
-            Create Your Free Account
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                <defs>
-                    <style>.a{fill:#fff;fill-rule:evenodd;}</style>
-                </defs>
-                <path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/>
-            </svg>
-        </a>
+        <?php if( !is_user_logged_in()) echo '<a class="btn signup_popup" href="">Create Your Free Account<svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><defs><style>.a{fill:#fff;fill-rule:evenodd;}</style></defs><path class="a" d="M14.589,9.333,9.571,13.49,10,14l6-5.014L10,4l-.43.509,5.019,4.157H0v.667H14.589Z" transform="translate(0 -4)"/></svg></a>' ?>
 
         <div class="included-content-container">
             <div class="img">
