@@ -841,154 +841,156 @@ jQuery(document).ready(function ($)
     /**
 	 * Biodigital Tools
      */
-	// once everything is loaded, adjust iframe to be full screen
-	var height = $(window).height();
-	var interactiveHeaderHeight = $('.interactive-header').outerHeight();
-	var correctHeight = height - interactiveHeaderHeight;
-	$('.interactive-body iframe').css('height', correctHeight);
-
-	console.log('correct height!');
-
-	//keep an eye out for resizes so that the iframe adapts height
-	$(window).resize(function(){
+    if($('.biodigital-content-body')){
+        // once everything is loaded, adjust iframe to be full screen
         var height = $(window).height();
         var interactiveHeaderHeight = $('.interactive-header').outerHeight();
         var correctHeight = height - interactiveHeaderHeight;
         $('.interactive-body iframe').css('height', correctHeight);
-	});
 
-	// check to see if a user to logged in and gate the proper content if not
-	var contentBody = $('.biodigital-content-body');
+        console.log('correct height!');
 
-	if(contentBody.hasClass('gated-content')){
-	    console.log('gated content!');
-		var modelBtns = $('.model-btn');
+        //keep an eye out for resizes so that the iframe adapts height
+        $(window).resize(function(){
+            var height = $(window).height();
+            var interactiveHeaderHeight = $('.interactive-header').outerHeight();
+            var correctHeight = height - interactiveHeaderHeight;
+            $('.interactive-body iframe').css('height', correctHeight);
+        });
 
-		for(var i = 0; i <= modelBtns.length; i++){
-			if(i !== 0){
-				$(modelBtns[i]).addClass('gated');
-                $(modelBtns[i]).addClass('signup_popup');
-			}
-		}
-	}
+        // check to see if a user to logged in and gate the proper content if not
+        var contentBody = $('.biodigital-content-body');
 
-	//if logged out, create account button will launch modal on click
-    $("body").on('click', '#create-new-account-btn', function(e)
-    {
-        e.preventDefault();
+        if(contentBody.hasClass('gated-content')){
+            console.log('gated content!');
+            var modelBtns = $('.model-btn');
 
-        wm_hide_main_nav();
-
-        $(".LoginScreenPopup").removeClass('opened');
-        $(".signUpScreenPopup").addClass('opened');
-        $('.premium-signup-modal').hide();
-        $("body").addClass("no-scroll");
-    });
-
-	// drawer in and out on click
-	$('.drawer-toggle').on('click', function(e)
-	{
-		if(!$('.interactive-drawer').hasClass('active')) {
-			$('.interactive-drawer').addClass('active');
-		} else {
-            $('.interactive-drawer').removeClass('active');
-		}
-		$('.content-container').toggleClass('active');
-	});
-
-
-	// on model button click
-	$('.model-btn').on('click', function(e){
-        var thisBtn = $(e.target).closest('div[class^="model-btn"]');
-
-        //check to see if the content is gated
-        if($(thisBtn).hasClass('gated')){
-			e.preventDefault();
-			// add modal
-        } else {
-            $('.model-btn').removeClass('active');
-
-            $(thisBtn).addClass('active');
-
-            var iframeSrc = $(thisBtn).data('src');
-            $('iframe').attr('src', iframeSrc);
-
-            // append correct model to header span
-            var modelLabel = $(thisBtn).find('.label');
-            var modelText = $(modelLabel).text();
-
-            $('.viewing-model').text(modelText);
-
-            /* we need to make sure that if the currently viewing header changes height,
-            so does the position of the drawer */
-			var currentViewingHeight = $('.headerviewing-text').outerHeight();
-			var fullHeaderHeight = currentViewingHeight + 60;
-			var newDrawerHeight = "calc(100vh - " + fullHeaderHeight + "px)";
-
-			$('.interactive-drawer').css({"height" : newDrawerHeight, "top" : fullHeaderHeight + "px"});
-
-			//finally, close the drawer!
-			setTimeout(function(){
-                $('.interactive-drawer').removeClass('active');
-                $('.content-container').toggleClass('active');
-			}, 300);
-		}
-	});
-
-	// new systems select
-	$('.system-block').on('click', function(e){
-		var allBlocks = $('.system-block');
-		var thisBlock = $(e.target).closest('div[class^="system-block"]');
-        var selectedValue = $(thisBlock).data('value');
-
-		//confirm e target is not currently selected
-		if(! $(thisBlock).hasClass('active')){
-
-            //highlight the right systems block
-            $(allBlocks).removeClass('active');
-            $(thisBlock).addClass('active');
-
-            //get the corresponding models for this system to show
-            $('.models-inner').removeClass('active');
-            $('.models-inner').each(function(){
-                var modelsSystem = $(this).data('system');
-
-                if(modelsSystem == selectedValue){
-                    $(this).addClass('active');
-
-                    //check to see if gated
-                    var modelBtns = $(this).find('.model-btn');
-
-					if(! $(modelBtns[0]).hasClass('gated')){
-
-                        //make first option active automatically
-                        $(modelBtns).removeClass('active');
-                        $(modelBtns[0]).addClass('active');
-
-                        // preload source into iframe
-                        var iframeSrc = $(modelBtns[0]).data('src');
-                        $('iframe').attr('src', iframeSrc);
-
-                        //append correct system to header span
-                        $('.viewing-system').text(modelsSystem + ' System');
-
-                        // append correct model to header span
-                        var modelLabel = $(modelBtns[0]).find('.label');
-                        var modelText = $(modelLabel).text();
-                        $('.viewing-model').text(modelText);
-
-                        /* we need to make sure that if the currently viewing header changes height,
-            			so does the position of the drawer */
-                        var currentViewingHeight = $('.headerviewing-text').outerHeight();
-                        var fullHeaderHeight = currentViewingHeight + 60;
-                        var newDrawerHeight = "calc(100vh - " + fullHeaderHeight + "px)";
-
-                        $('.interactive-drawer').css({"height" : newDrawerHeight, "top" : fullHeaderHeight + "px"});
-					}
+            for(var i = 0; i <= modelBtns.length; i++){
+                if(i !== 0){
+                    $(modelBtns[i]).addClass('gated');
+                    $(modelBtns[i]).addClass('signup_popup');
                 }
-            });
-		}
-	});
+            }
+        }
+
+        //if logged out, create account button will launch modal on click
+        $("body").on('click', '#create-new-account-btn', function(e)
+        {
+            e.preventDefault();
+
+            wm_hide_main_nav();
+
+            $(".LoginScreenPopup").removeClass('opened');
+            $(".signUpScreenPopup").addClass('opened');
+            $('.premium-signup-modal').hide();
+            $("body").addClass("no-scroll");
+        });
+
+        // drawer in and out on click
+        $('.drawer-toggle').on('click', function(e)
+        {
+            if(!$('.interactive-drawer').hasClass('active')) {
+                $('.interactive-drawer').addClass('active');
+            } else {
+                $('.interactive-drawer').removeClass('active');
+            }
+            $('.content-container').toggleClass('active');
+        });
+
+
+        // on model button click
+        $('.model-btn').on('click', function(e){
+            var thisBtn = $(e.target).closest('div[class^="model-btn"]');
+
+            //check to see if the content is gated
+            if($(thisBtn).hasClass('gated')){
+                e.preventDefault();
+                // add modal
+            } else {
+                $('.model-btn').removeClass('active');
+
+                $(thisBtn).addClass('active');
+
+                var iframeSrc = $(thisBtn).data('src');
+                $('iframe').attr('src', iframeSrc);
+
+                // append correct model to header span
+                var modelLabel = $(thisBtn).find('.label');
+                var modelText = $(modelLabel).text();
+
+                $('.viewing-model').text(modelText);
+
+                /* we need to make sure that if the currently viewing header changes height,
+                so does the position of the drawer */
+                var currentViewingHeight = $('.headerviewing-text').outerHeight();
+                var fullHeaderHeight = currentViewingHeight + 60;
+                var newDrawerHeight = "calc(100vh - " + fullHeaderHeight + "px)";
+
+                $('.interactive-drawer').css({"height" : newDrawerHeight, "top" : fullHeaderHeight + "px"});
+
+                //finally, close the drawer!
+                setTimeout(function(){
+                    $('.interactive-drawer').removeClass('active');
+                    $('.content-container').toggleClass('active');
+                }, 300);
+            }
+        });
+
+        // new systems select
+        $('.system-block').on('click', function(e){
+            var allBlocks = $('.system-block');
+            var thisBlock = $(e.target).closest('div[class^="system-block"]');
+            var selectedValue = $(thisBlock).data('value');
+
+            //confirm e target is not currently selected
+            if(! $(thisBlock).hasClass('active')){
+
+                //highlight the right systems block
+                $(allBlocks).removeClass('active');
+                $(thisBlock).addClass('active');
+
+                //get the corresponding models for this system to show
+                $('.models-inner').removeClass('active');
+                $('.models-inner').each(function(){
+                    var modelsSystem = $(this).data('system');
+
+                    if(modelsSystem == selectedValue){
+                        $(this).addClass('active');
+
+                        //check to see if gated
+                        var modelBtns = $(this).find('.model-btn');
+
+                        if(! $(modelBtns[0]).hasClass('gated')){
+
+                            //make first option active automatically
+                            $(modelBtns).removeClass('active');
+                            $(modelBtns[0]).addClass('active');
+
+                            // preload source into iframe
+                            var iframeSrc = $(modelBtns[0]).data('src');
+                            $('iframe').attr('src', iframeSrc);
+
+                            //append correct system to header span
+                            $('.viewing-system').text(modelsSystem + ' System');
+
+                            // append correct model to header span
+                            var modelLabel = $(modelBtns[0]).find('.label');
+                            var modelText = $(modelLabel).text();
+                            $('.viewing-model').text(modelText);
+
+                            /* we need to make sure that if the currently viewing header changes height,
+                            so does the position of the drawer */
+                            var currentViewingHeight = $('.headerviewing-text').outerHeight();
+                            var fullHeaderHeight = currentViewingHeight + 60;
+                            var newDrawerHeight = "calc(100vh - " + fullHeaderHeight + "px)";
+
+                            $('.interactive-drawer').css({"height" : newDrawerHeight, "top" : fullHeaderHeight + "px"});
+                        }
+                    }
+                });
+            }
+        });
+    };
 
 
     /**
