@@ -859,6 +859,7 @@ jQuery(document).ready(function ($)
 	var contentBody = $('.biodigital-content-body');
 
 	if(contentBody.hasClass('gated-content')){
+	    console.log('gated content!');
 		var modelBtns = $('.model-btn');
 
 		for(var i = 0; i <= modelBtns.length; i++){
