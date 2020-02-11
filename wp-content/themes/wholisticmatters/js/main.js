@@ -842,6 +842,7 @@ jQuery(document).ready(function ($)
 	 * Biodigital Tools
      */
     if($('.biodigital-content-body')){
+        console.log('we are on biodigital');
         // once everything is loaded, adjust iframe to be full screen
         var height = $(window).height();
         var interactiveHeaderHeight = $('.interactive-header').outerHeight();
