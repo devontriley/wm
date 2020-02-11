@@ -847,6 +847,8 @@ jQuery(document).ready(function ($)
 	var correctHeight = height - interactiveHeaderHeight;
 	$('.interactive-body iframe').css('height', correctHeight);
 
+	console.log('correct height!');
+
 	//keep an eye out for resizes so that the iframe adapts height
 	$(window).resize(function(){
         var height = $(window).height();
