@@ -146,6 +146,165 @@
         }
     }
 
+    .podcast-tabs {
+        max-width: 1040px;
+        margin: 40px auto;
+        padding: 0 20px;
+
+        @media (min-width: 992px){
+            padding: 0;
+        }
+
+        .tab-header {
+            display: flex;
+            width: 100%;
+            border-bottom: 1px solid #E7E7E7;
+
+            .tab-header-item {
+                cursor: pointer;
+                padding: 20px 0;
+                margin: 0 20px;
+                position: relative;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &.active {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 4px;
+                        background-color: #00b35f;
+                    }
+                }
+
+                span {
+                    font-size: 16px;
+                    font-family: 'Aktiv';
+                    color: #40473E;
+
+                    @media(min-width: 768px){
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        .tab-body {
+            .tab-body-item {
+                display: none;
+                transition: all ease 300ms;
+                margin: 50px 0;
+                opacity: 0;
+
+                &.active {
+                    display: block;
+                }
+
+                &.fadeIn {
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                    animation-name: fadeIn;
+                }
+
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translate3d(0, 50px, 0);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: none;
+                    }
+                }
+
+                &[data-tab="qa"] {
+                    border: 20px solid #F0FCF5;
+                    padding: 40px 20px;
+
+                    @media(min-width: 768px){
+                        padding: 40px 0;
+                    }
+
+                    .pencil-man {
+                        width: 100px;
+                        margin: 0 auto;
+                        display: block;
+
+                        .a{fill:#e9d6b8;}
+                        .b{fill:#e7f5fe;}
+                        .c{fill:#89b676;}
+                        .d{fill:#161711;}
+                        .e{fill:#003c16;}
+                        .f{fill:#88b773;}
+                        .g{fill:#f7fff4;}
+                        .h{fill:#e0f1d9;}
+                        .i{fill:#d1dbea;}
+                        .j{fill:#a2d48e;}
+                        .k{fill:#dec9a9;}
+                        .l{fill:#094c24;}
+                    }
+
+                    .eyebrow {
+                        text-align: center;
+                        margin: 20px 0;
+                    }
+
+                    h2 {
+                        text-align: center;
+                        margin: 0 auto;
+
+                        @media(min-width: 768px){
+                            max-width: 65%;
+                        }
+                    }
+
+                    .copy {
+                        margin: 20px auto;
+                        text-align: center;
+                        font-family: 'Aktiv';
+
+                        @media(min-width: 768px){
+                            max-width: 65%;
+                            margin: 40px auto;
+                        }
+                    }
+
+                    .form {
+                        margin: 0 auto;
+                        @media(min-width: 768px){
+                            max-width: 50%;
+                        }
+                        @media(min-width: 992px){
+                            max-width: 33%;
+                        }
+
+                        .row {
+                            margin: 0;
+
+                            .col-sm-12 {
+                                padding: 0;
+
+                                .btn {
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &[data-tab="press"] {
+
+                }
+            }
+        }
+    }
+
     .podcast-seasons {
         .season-container {
             max-width: 1040px;

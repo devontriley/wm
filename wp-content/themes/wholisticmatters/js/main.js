@@ -837,12 +837,83 @@ jQuery(document).ready(function ($)
         window.addEventListener('scroll', onScroll, false);
 	}
 
+    /**
+     * PODCASTS PAGE
+     */
+
+    $(window).bind('pageshow', function() {
+    	alert("back to page");
+    });
+
+
+	if($('.podcasts-page')){
+		//if someone hits the back button, we reload
+		$(window).on('pageshow', function(){
+			alert('e');
+		})
+
+		//set correct initial hash by checking url
+		if(window.location.hash) {
+			var currentHash = window.location.href.split('#')[1];
+			$('.tab-header-item').removeClass('active');
+			$('.tab-body-item').removeClass('active');
+			$('.tab-body-item').removeClass('fadeIn');
+
+			$('.tab-header-item').each(function(){
+				var dataValue = $(this).data('tab');
+				if(dataValue == currentHash){
+					$(this).addClass('active');
+				}
+			});
+
+			$('.tab-body-item').each(function(){
+				var dataValue = $(this).data('tab');
+				if(dataValue == currentHash){
+					$(this).addClass('active');
+					$(this).addClass('fadeIn');
+				}
+			});
+		} else {
+			location.hash = '#seasons';
+			$(".tab-header-item.seasons").addClass('active');
+			$(".tab-body-item.seasons").addClass('active');
+			$(".tab-body-item.seasons").addClass('fadeIn');
+		}
+
+		//tab motion
+		$('.tab-header-item').on('click', function(){
+			var tabValue = $(this).data('tab');
+
+			//remove active class from all current tabs and body items
+			$('.tab-header-item').removeClass('active');
+			$('.tab-body-item').removeClass('active');
+			$('.tab-body-item').removeClass('fadeIn');
+
+			//add active class to the correct tab and body item
+			$(this).addClass('active');
+			$('.tab-body-item').each(function(index){
+				var dataValue = $(this).data('tab');
+				if(dataValue == tabValue){
+					$(this).addClass('active');
+					$(this).addClass('fadeIn');
+				}
+			});
+
+			//append query component to URL
+			if(history.pushState) {
+				history.pushState(null, null, '#' + tabValue);
+			}
+			else {
+				location.hash = '#' + tabValue;
+			}
+		});
+	}
+
 
     /**
 	 * Biodigital Tools
      */
     if($('.biodigital-content-body')){
-        console.log('we are on biodigital');
         // once everything is loaded, adjust iframe to be full screen
         var height = $(window).height();
         var interactiveHeaderHeight = $('.interactive-header').outerHeight();
