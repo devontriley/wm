@@ -271,12 +271,133 @@ get_header(); ?>
             </div>
 
             <div class="tab-body-item fadeInDown" data-tab="press">
-                Press
-                <div class="main-content"></div>
+                <div class="main-content">
+                    <div class="primary">
+                        <?php
+                            $aboutContent = get_field('meet_your_host_image');
+                            $productionContent = get_field('meet_your_host_intro');
+                            $castCrew = get_field('host_job_title');
+                            $creator = get_field('host_workplace');
 
-                <div class="quotes"></div>
+                            if($aboutContent){?>
+                                <h3>About the WholisticMatters Podcast Series</h3>
+                                <p class="content">
+                                    <?php echo($aboutContent); ?>
+                                </p><?php
+                            }
 
-                <div class="images"></div>
+                            if($productionContent){?>
+                                <h3>The Production</h3>
+                                <p class="content">
+                                    <?php echo($productionContent); ?>
+                                </p><?php
+                            }
+
+                            if($castCrew){?>
+                                <h3>Cast & Crew</h3>
+                                <p class="content">
+                                    <?php echo($castCrew); ?>
+                                </p><?php
+                            }
+
+                            if($creator){?>
+                                <h3>The Creator</h3>
+                                <p class="content">
+                                    <?php echo($creator); ?>
+                                </p><?php
+                            }
+                        ?>
+                    </div>
+
+                    <div class="sidebar">
+                         <?php
+                            $seasons = WMHelper::getSeries();
+                            $seasons = $seasons['terms'];
+                            $totalSeasons = count($seasons);
+
+                            for ($i = 0; $i <= $totalSeasons; $i++) {
+                                $season = $seasons[$i];
+                                $seasonName = $season->name;
+                                $seasonNumber = ($totalSeasons - $i);
+                                $pressKit = get_field('press_kit_file', $season);
+
+                                if($pressKit){ ?>
+                                    <h3>Downloadable Press Kit</h3>
+                                    <a class="btn" href="<?php echo($pressKit);?>">
+                                        Download Full Press Kit
+                                    </a><?php
+                                }
+                            }
+
+                             $aboutContent = get_field('meet_your_host_image');
+                             $productionContent = get_field('meet_your_host_intro');
+                             $castCrew = get_field('host_job_title');
+                             $creator = get_field('host_workplace');
+                         ?>
+
+                        <h3>Podcast Details:</h3>
+                        <h4>Website:</h4>
+                        <a class="content" href="">
+                            www.wholisticmatters.com
+                        </a>
+
+                        <h4>Email:</h4>
+                        <a class="content" href="mailto:">???@wholisticmatters.com</a>
+
+                        <h4>Download/Subscribe:</h4>
+                        <p class="content">
+                            The show can be listened to directly from the website, as well as subscribed and listened to
+                            on most podcast platforms, such as Apple Music, Spotify, and Google Play.
+                        </p>
+
+                        <h4>Schedule:</h4>
+                        <p class="content">
+                            Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+                            Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un
+                            anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo
+                            campione.
+                        </p>
+
+                        <h4>Social Media</h4>
+                        <p class="content">
+                            Facebook: <br>
+                            Twitter: <br>
+                            Instagram: <br>
+                        </p>
+
+                        <!-- get trailer ep by getting first ep in this season -->
+                        <h3>Season 2 Trailer</h3>
+                        <p class="content"></p>
+                    </div>
+                </div>
+
+                <div class="quotes">
+                    <div class="cast-crew">
+                        <h3>Cast & Crew Quotes:</h3>
+
+                        <p class="quote">
+                            “Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+                            Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo.”
+                        </p>
+                        <p class="byline">— Meghan Hamrock, MS, MPH</p>
+
+                    </div>
+
+                    <div class="listener">
+                        <h3>Listener Quotes:</h3>
+
+                        <p class="quote">
+                            “Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.
+                            Lorem Ipsum è considerato il testo segnaposto Lorem Ipsum è considerato il testo
+                            segnapostoLorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo.”
+                        </p>
+                        <p class="byline">— Meghan Hamrock, MS, MPH</p>
+                    </div>
+                </div>
+
+                <div class="images">
+                    <h3>Image Downloads</h3>
+                </div>
             </div>
         </div>
     </div>
