@@ -658,7 +658,7 @@ License: none (public domain)
                                     </svg>
                                 </div>
                                 <div class="label">
-                                    <span class="name">Endorcine System</span>
+                                    <span class="name">Endocrine System</span>
                                     <span class="count">2 Models</span>
                                 </div>
                             </div>
