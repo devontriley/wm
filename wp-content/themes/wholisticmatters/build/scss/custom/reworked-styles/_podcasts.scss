@@ -405,6 +405,38 @@
                                 flex: 0 0 calc(40% - 60px);
                                 padding-left: 60px;
                             }
+
+                            a {
+                                display: block;
+                                margin-top: 5px;
+
+                                &.btn {
+                                    display: inline-block;
+                                }
+                            }
+
+                            .content {
+                                margin-bottom: 20px;
+                                &.sm {
+                                    p {
+                                        margin-bottom: 0;
+                                        color: #40473e;
+                                        font-family: 'Aktiv';
+                                        font-size: 16px;
+                                    }
+
+                                    a {
+                                        text-decoration: underline;
+                                        color: #00b162;
+                                        display: inline-block;
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+
+                            .audio-album {
+                                width: 300px;
+                            }
                         }
                     }
 
@@ -459,6 +491,43 @@
                             font-size: 11px;
                             font-weight: 700;
                             font-family: 'Aktiv';
+                            position: relative;
+                        }
+                    }
+
+                    .images {
+                        ul {
+                            list-style: none;
+                            margin: 0 0;
+
+                            @media(min-width: 768px){
+                                display: flex;
+                                flex-wrap: wrap;
+                            }
+
+                            li {
+                                @media(min-width: 768px){
+                                    flex: 0 0 calc(50% - 20px);
+                                    max-width: calc(50% - 20px);
+                                    margin: 0 10px 20px;
+                                }
+
+                                a {
+                                    text-decoration: none;
+                                    color: #40473e;
+                                    display: block;
+
+                                    img {
+                                        @media(min-width: 992px){
+                                            height: 450px;
+                                        }
+                                    }
+
+                                    p {
+                                        margin: 20px 0;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

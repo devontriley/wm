@@ -274,10 +274,10 @@ get_header(); ?>
                 <div class="main-content">
                     <div class="primary">
                         <?php
-                            $aboutContent = get_field('meet_your_host_image');
-                            $productionContent = get_field('meet_your_host_intro');
-                            $castCrew = get_field('host_job_title');
-                            $creator = get_field('host_workplace');
+                            $aboutContent = get_field('about');
+                            $productionContent = get_field('production');
+                            $castCrew = get_field('cast_and_crew');
+                            $creator = get_field('creator');
 
                             if($aboutContent){?>
                                 <h3>About the WholisticMatters Podcast Series</h3>
@@ -329,75 +329,139 @@ get_header(); ?>
                                 }
                             }
 
-                             $aboutContent = get_field('meet_your_host_image');
-                             $productionContent = get_field('meet_your_host_intro');
-                             $castCrew = get_field('host_job_title');
-                             $creator = get_field('host_workplace');
+                             $website = get_field('website');
+                             $email = get_field('email');
+                             $downloadSubscribe = get_field('download_subscribe_copy');
+                             $schedule = get_field('schedule');
+                             $socialMedia = get_field('social_media');
                          ?>
 
                         <h3>Podcast Details:</h3>
-                        <h4>Website:</h4>
-                        <a class="content" href="">
-                            www.wholisticmatters.com
-                        </a>
 
-                        <h4>Email:</h4>
-                        <a class="content" href="mailto:">???@wholisticmatters.com</a>
+                        <?php if($website){ ?>
+                            <h4>Website:</h4>
+                            <a class="content" href="<?php echo($website);?>">
+                                <?php echo($website);?>
+                            </a><?php
+                        } ?>
 
-                        <h4>Download/Subscribe:</h4>
-                        <p class="content">
-                            The show can be listened to directly from the website, as well as subscribed and listened to
-                            on most podcast platforms, such as Apple Music, Spotify, and Google Play.
-                        </p>
+                        <?php if($email){ ?>
+                            <h4>Email:</h4>
+                            <a class="content" href="mailto:<?php echo($email);?>">
+                                <?php echo($email);?>
+                            </a><?php
+                        } ?>
 
-                        <h4>Schedule:</h4>
-                        <p class="content">
-                            Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.
-                            Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un
-                            anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo
-                            campione.
-                        </p>
+                        <?php if($downloadSubscribe){ ?>
+                            <h4>Download/Subscribe:</h4>
+                            <p class="content">
+                                <?php echo($downloadSubscribe); ?>
+                            </p><?php
+                        } ?>
 
-                        <h4>Social Media</h4>
-                        <p class="content">
-                            Facebook: <br>
-                            Twitter: <br>
-                            Instagram: <br>
-                        </p>
+                        <?php if($schedule){ ?>
+                            <h4>Schedule:</h4>
+                            <p class="content">
+                                <?php echo($schedule); ?>
+                            </p><?php
+                        } ?>
 
-                        <!-- get trailer ep by getting first ep in this season -->
-                        <h3>Season 2 Trailer</h3>
-                        <p class="content"></p>
+                        <?php if($socialMedia){ ?>
+                            <h4>Social Media</h4>
+                            <div class="content sm">
+                                <?php echo($socialMedia); ?>
+                            </div><?php
+                        } ?>
+
+                        <?php
+                        $trailerAudio = get_field('trailer_audio');
+                        $transcript = get_field('trailer_transcript');
+                        ?>
+
+                        <?php if($trailerAudio): ?>
+                            <h3>Season <?php echo($totalSeasons) ?> Trailer</h3>
+                            <div class="audio-album">
+                                <?php echo do_shortcode('[audio mp3="'. $trailerAudio .'"][/audio]'); ?>
+                            </div>
+                            <a class="content" target="_BLANK" href="<?php echo($trailerAudio);?>">Download (mp3)</a>
+
+                            <?php if($transcript): ?>
+                                <a class="content" target="_BLANK" href="<?php echo($transcript)?>">Transcript (PDF)</a>
+                            <?php endif; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
 
-                <div class="quotes">
-                    <div class="cast-crew">
-                        <h3>Cast & Crew Quotes:</h3>
+                <?php
 
-                        <p class="quote">
-                            “Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.
-                            Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo.”
-                        </p>
-                        <p class="byline">— Meghan Hamrock, MS, MPH</p>
+                $quotes = get_field('quotes');
+                if($quotes): ?>
+                    <div class="quotes">
+                        <?php
+                        $typeArray = [];
+                        foreach($quotes as $quote):
+                            $type = $quote['quote_type'];
+                            array_push($typeArray, $type);
+                        endforeach;
 
+                        if(in_array('castcrew', $typeArray)): ?>
+                            <div class="cast-crew">
+                            <h3>Cast & Crew Quotes:</h3>
+                            <?php
+                                while(have_rows('quotes')):the_row();
+                                    $type = get_sub_field('quote_type');
+                                    $text = get_sub_field('quote_text');
+                                    $byline = get_sub_field('byline');
+
+                                    if($type == 'castcrew'): ?>
+                                        <p class="quote"><?php echo($text); ?></p>
+                                        <p class="byline"><?php echo($byline) ?></p>
+                                    <?php
+                                    endif;
+                                endwhile;
+                            ?>
+                            </div>
+                        <?php endif;
+
+                        if(in_array('listener', $typeArray)): ?>
+                            <div class="listener">
+                                <h3>Listener Quotes:</h3>
+                                <?php
+                                    while(have_rows('quotes')):the_row();
+                                        $type = get_sub_field('quote_type');
+                                        $text = get_sub_field('quote_text');
+                                        $byline = get_sub_field('byline');
+
+                                        if($type == 'listener'): ?>
+                                            <p class="quote"><?php echo($text); ?></p>
+                                            <p class="byline"><?php echo($byline) ?></p>
+                                        <?php
+                                        endif;
+                                    endwhile;
+                                ?>
+                            </div>
+                        <?php endif;?>
                     </div>
+                <?php endif;?>
 
-                    <div class="listener">
-                        <h3>Listener Quotes:</h3>
+                <?php
+                $gallery = get_field('image_gallery');
 
-                        <p class="quote">
-                            “Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.
-                            Lorem Ipsum è considerato il testo segnaposto Lorem Ipsum è considerato il testo
-                            segnapostoLorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo.”
-                        </p>
-                        <p class="byline">— Meghan Hamrock, MS, MPH</p>
+                if($gallery): ?>
+                    <div class="images">
+                        <h3>Image Downloads</h3>
+                            <ul>
+                                <?php foreach( $gallery as $image ): ?>
+                                    <li>
+                                        <a target="_BLANK" href="<?php echo esc_url($image['url']); ?>">
+                                            <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                            <p><?php echo esc_html($image['caption']); ?></p>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
                     </div>
-                </div>
-
-                <div class="images">
-                    <h3>Image Downloads</h3>
-                </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
