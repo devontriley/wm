@@ -192,13 +192,14 @@ get_header(); ?>
                     </g>
                 </svg>
 
+                <?php $qacopy = get_field('qa_intro_copy'); ?>
                 <p class="eyebrow">Q&A Segment</p>
                 <h2>Submit a question to be discussed on the podcast</h2>
-                <p class="copy">
-                    In cupiditate officiis est provident ex ipsa quia non. Facere eligendi assumenda ipsam ullam quos
-                    magni dolor. Enim voluptatem illum rerum architecto ut. Repellat ullam velit magnam quidem nam.
-                    Dignissimos asperiores beatae et cupiditate.
-                </p>
+                <?php if($qacopy):?>
+                    <p class="copy">
+                        <?php echo($qacopy); ?>
+                    </p>
+                <?php endif; ?>
 
                 <div class="form">
                     <form class="qaForm" action="" method="post">
