@@ -311,6 +311,85 @@ jQuery(document).ready(function ($)
 	});
 
 
+	$('.qaForm').on('submit', function(e)
+	{
+		e.preventDefault();
+
+		var formData = {
+			name: $('input[name=name]').val(),
+			email: $('input[name=email]').val(),
+			subject: $('input[name=subject]').val(),
+			question: $('input[name-question]').val()
+		}
+
+		var url = 'https://app-3QNF1WFNS0.marketingautomation.services/webforms/receivePostback/MzawMDGzMDczAwA/1121ec0d-95b1-4d21-aefd-2c7327d8db73/jsonp/';
+		var formValues = $(this).serialize();
+		// var data = {};
+		// $(formValues).each(function(index, obj)
+		// {
+		// 	data[obj.name] = obj.value;
+		// });
+
+		console.log(url + '?' + $.param(formData));
+
+		$.ajax({
+			method: 'GET',
+			url: encodeURI(url + '?' + $.param(formData)),
+			success: function(response)
+			{
+				console.log(response);
+			}
+		})
+	});
+
+// <script type="text/javascript">
+// 	var __ss_noform = __ss_noform || [];
+// 	__ss_noform.push(['baseURI', 'https://app-3QNF1WFNS0.marketingautomation.services/webforms/receivePostback/MzawMDGzMDczAwA/']);
+// 	__ss_noform.push(['endpoint', '1121ec0d-95b1-4d21-aefd-2c7327d8db73']);
+// </script>
+// <script type="text/javascript" src="https://koi-3QNF1WFNS0.marketingautomation.services/client/noform.js?ver=1.24" ></script>
+
+	// $('.qaForm').each(function()
+	// {
+	// 	// $(this).validate({
+	// 	// 	rules: {
+	// 	//
+	// 	// 	},
+	// 	// 	messages: {
+	// 	//
+	// 	// 	},
+	// 	// 	errorPlacement: function(error, element)
+	// 	// 	{
+	// 	//
+	// 	// 	},
+	// 	// 	submitHandler: function(form)
+	// 	// 	{
+	// 	// 		console.log(form);
+	// 	// 		console.log('qa submission');
+	// 	//
+	// 	// 		var formValues = $(this).serialize();
+	// 	//
+	// 	// 		console.log(formValues);
+	// 	//
+	// 	// 		form.preventDefault();
+	// 	//
+	// 	// 		// $.ajax({
+	// 	// 		// 	method: 'GET',
+	// 	// 		// 	data: {
+	// 	// 		//
+	// 	// 		// 	},
+	// 	// 		// 	success: function(response)
+	// 	// 		// 	{
+	// 	// 		// 		console.log(response);
+	// 	// 		// 	}
+	// 	// 		// })
+	// 	//
+	// 	// 		//form.submit();
+	// 	// 	}
+	// 	// });
+	// });
+
+
     /***
 	 * Click handler to show password
      */

@@ -203,7 +203,7 @@ get_header(); ?>
 
                 <!-- TODO: Dev set up with sharpspring and test -->
                 <div class="form">
-                    <form class="qaForm" action="" method="post">
+                    <form class="qaForm" action="" method="GET">
 
                         <input id="hunniepot" type="hidden" name="hunniepot" value="" />
 
@@ -247,7 +247,8 @@ get_header(); ?>
                                 <div class="col-sm-12">
                                     <fieldset class="form-group margin-fix">
                                         <div class="checkbox-btn">
-                                            <input id="_wm_newsletter" type="checkbox" name="_wm_newsletter" value="yes" checked=""><label for="_wm_newsletter">Receive the latest WholisticMatters News</label>
+                                            <input id="_wm_newsletter" type="checkbox" name="_wm_newsletter" value="yes" checked="">
+                                            <label for="_wm_newsletter">Receive the latest WholisticMatters</label>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -269,6 +270,14 @@ get_header(); ?>
                         <!-- Honeypot -->
                         <input type="text" style="border:none;height:0;font-size:0;position:absolute;left:-9999px;" id="foobar" name="foobar" placeholder="Foobar" autocomplete="off">
                     </form>
+
+<!--                    <script type="text/javascript">-->
+<!--                        var __ss_noform = __ss_noform || [];-->
+<!--                        __ss_noform.push(['baseURI', 'https://app-3QNF1WFNS0.marketingautomation.services/webforms/receivePostback/MzawMDGzMDczAwA/']);-->
+<!--                        __ss_noform.push(['endpoint', '1121ec0d-95b1-4d21-aefd-2c7327d8db73']);-->
+<!--                    </script>-->
+<!--                    <script type="text/javascript" src="https://koi-3QNF1WFNS0.marketingautomation.services/client/noform.js?ver=1.24" ></script>-->
+
                 </div>
             </div>
 
