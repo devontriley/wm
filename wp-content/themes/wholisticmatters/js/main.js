@@ -311,35 +311,50 @@ jQuery(document).ready(function ($)
 	});
 
 
+
 	$('.qaForm').on('submit', function(e)
 	{
 		e.preventDefault();
 
 		var formData = {
+			action: 'podcast_question_submission',
 			name: $('input[name=name]').val(),
 			email: $('input[name=email]').val(),
 			subject: $('input[name=subject]').val(),
-			question: $('input[name-question]').val()
+			question: $('textarea[name=question]').val()
 		}
 
-		var url = 'https://app-3QNF1WFNS0.marketingautomation.services/webforms/receivePostback/MzawMDGzMDczAwA/1121ec0d-95b1-4d21-aefd-2c7327d8db73/jsonp/';
-		var formValues = $(this).serialize();
-		// var data = {};
-		// $(formValues).each(function(index, obj)
-		// {
-		// 	data[obj.name] = obj.value;
-		// });
-
-		console.log(url + '?' + $.param(formData));
+		console.log(formData);
 
 		$.ajax({
-			method: 'GET',
-			url: encodeURI(url + '?' + $.param(formData)),
+			url: ajaxurl,
+			type: 'post',
+			data: formData,
+			dataType: 'json',
+			error: function(error)
+			{
+				console.log('error', error);
+				if(error.status == 200)
+				{
+					// success stuff
+
+				}
+
+				else
+				{
+					// error stuff
+					console.log(error.responseText);
+				}
+			},
 			success: function(response)
 			{
-				console.log(response);
+				console.log('success', response);
+			},
+			done: function(response)
+			{
+				console.log('done', response);
 			}
-		})
+		});
 	});
 
 // <script type="text/javascript">

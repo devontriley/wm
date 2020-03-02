@@ -393,3 +393,46 @@ function my_deregister_scripts(){
     wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );
+
+
+
+add_action('wp_ajax_podcast_question_submission', 'podcast_question_submission');
+add_action('wp_ajax_nopriv_podcast_question_submission', 'podcast_question_submission');
+
+function podcast_question_submission()
+{
+//    if ( !wp_verify_nonce( $_REQUEST['nonce'], "podcast_question_submission_nonce")) {
+//        exit("Woof Woof Woof");
+//    }
+
+    $url = 'http://app-3QNF1WFNS0.marketingautomation.services/webforms/receivePostback/MzawMDGzMDczAwA/1121ec0d-95b1-4d21-aefd-2c7327d8db73/jsonp/?';
+
+    // Prepare parameters
+    $params = "";
+    if (!empty($name)) {
+        $params = $params . "Name=" . urlencode($name) . "&";
+    }
+
+    if (!empty($email)) {
+        $params = $params . "email=" . urlencode($email) . "&";
+    }
+
+    if (isset($_COOKIE['__ss_tk'])) {
+        $trackingid__sb = $_COOKIE['__ss_tk'];
+        $params = $params . "trackingid__sb=" . urlencode($trackingid__sb);
+    }
+
+    // Prepare URL
+    $ssRequest = $url . $params;
+
+    // Send request
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $ssRequest);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    echo $result;
+
+    exit();
+}
