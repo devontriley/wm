@@ -337,13 +337,15 @@ jQuery(document).ready(function ($)
 				if(error.status == 200)
 				{
 					// success stuff
-
+                    var html = '<h2>Your question has been submitted. Thank you!</h2>';
+                    $('.formText').html(html);
 				}
 
 				else
 				{
 					// error stuff
-					console.log(error.responseText);
+                    var html = error.responseText;
+                    $('.errors-list').html(html);
 				}
 			},
 			success: function(response)

@@ -192,92 +192,97 @@ get_header(); ?>
                     </g>
                 </svg>
 
-                <?php $qacopy = get_field('qa_intro_copy'); ?>
-                <p class="eyebrow">Q&A Segment</p>
-                <h2>Submit a question to be discussed on the podcast</h2>
-                <?php if($qacopy):?>
-                    <p class="copy">
-                        <?php echo($qacopy); ?>
-                    </p>
-                <?php endif; ?>
+                <div class="formText">
 
-                <!-- TODO: Dev set up with sharpspring and test -->
-                <div class="form">
-                    <form class="qaForm" action="" method="GET">
+                    <?php $qacopy = get_field('qa_intro_copy'); ?>
+                    <p class="eyebrow">Q&A Segment</p>
+                    <h2>Submit a question to be discussed on the podcast</h2>
+                    <?php if($qacopy):?>
+                        <p class="copy">
+                            <?php echo($qacopy); ?>
+                        </p>
+                    <?php endif; ?>
 
-                        <input id="hunniepot" type="hidden" name="hunniepot" value="" />
+                    <!-- TODO: Dev set up validation -->
+                    <div class="form">
+                        <form class="qaForm" action="" method="GET">
 
-                        <div class="Data-one">
-                            <div class="row">
+                            <input id="hunniepot" type="hidden" name="hunniepot" value="" />
+
+                            <div class="Data-one">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <fieldset class="form-group">
+                                            <label for="name" class="bmd-label-floating"><?php _e( 'Name', 'wholistic-matters' ); ?></label>
+                                            <input type="text" name="name" class="form-control" id="name">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <fieldset class="form-group">
+                                            <label for="email" class="bmd-label-floating"><?php _e( 'Email Address', 'wholistic-matters' ); ?></label>
+                                            <input type="email" name="email" class="form-control" id="email">
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <fieldset class="form-group">
+                                            <label for="subject" class="bmd-label-floating"><?php _e( 'Subject', 'wholistic-matters' ); ?></label>
+                                            <input type="subject" name="subject" class="form-control" id="subject">
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <fieldset class="form-group">
+                                            <label for="message" class="bmd-label-floating"><?php _e( 'What is your question?', 'wholistic-matters' ); ?></label>
+                                            <textarea class="form-control" name="question" id="question"></textarea>
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <fieldset class="form-group margin-fix">
+                                            <div class="checkbox-btn">
+                                                <input id="_wm_newsletter" type="checkbox" name="_wm_newsletter" value="yes" checked="">
+                                                <label for="_wm_newsletter">Receive the latest WholisticMatters</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="g-recaptcha" data-sitekey="6LdYwcsUAAAAAEDkzWNY55E8cBKAhRb-MVQliGqa"></div>
+
+                            <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+
+                            <div class="row" id="finish">
                                 <div class="col-sm-12">
-                                    <fieldset class="form-group">
-                                        <label for="name" class="bmd-label-floating"><?php _e( 'Name', 'wholistic-matters' ); ?></label>
-                                        <input type="text" name="name" class="form-control" id="name">
+                                    <fieldset class="form-group register_legal_info">
+                                        <input type="submit" class="btn btn-theme-fix" value="<?php _e( 'Submit!', 'wholistic-matters' ); ?>">
                                     </fieldset>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <fieldset class="form-group">
-                                        <label for="email" class="bmd-label-floating"><?php _e( 'Email Address', 'wholistic-matters' ); ?></label>
-                                        <input type="email" name="email" class="form-control" id="email">
-                                    </fieldset>
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <fieldset class="form-group">
-                                        <label for="subject" class="bmd-label-floating"><?php _e( 'Subject', 'wholistic-matters' ); ?></label>
-                                        <input type="subject" name="subject" class="form-control" id="subject">
-                                    </fieldset>
-                                </div>
-                            </div>
+                            <div class="errors-list"></div>
 
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <fieldset class="form-group">
-                                        <label for="message" class="bmd-label-floating"><?php _e( 'What is your question?', 'wholistic-matters' ); ?></label>
-                                        <textarea class="form-control" name="question" id="question"></textarea>
-                                    </fieldset>
-                                </div>
-                            </div>
+                            <!-- Honeypot -->
+                            <input type="text" style="border:none;height:0;font-size:0;position:absolute;left:-9999px;" id="foobar" name="foobar" placeholder="Foobar" autocomplete="off">
+                        </form>
 
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <fieldset class="form-group margin-fix">
-                                        <div class="checkbox-btn">
-                                            <input id="_wm_newsletter" type="checkbox" name="_wm_newsletter" value="yes" checked="">
-                                            <label for="_wm_newsletter">Receive the latest WholisticMatters</label>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
+    <!--                    <script type="text/javascript">-->
+    <!--                        var __ss_noform = __ss_noform || [];-->
+    <!--                        __ss_noform.push(['baseURI', 'https://app-3QNF1WFNS0.marketingautomation.services/webforms/receivePostback/MzawMDGzMDczAwA/']);-->
+    <!--                        __ss_noform.push(['endpoint', '1121ec0d-95b1-4d21-aefd-2c7327d8db73']);-->
+    <!--                    </script>-->
+    <!--                    <script type="text/javascript" src="https://koi-3QNF1WFNS0.marketingautomation.services/client/noform.js?ver=1.24" ></script>-->
 
-                        <div class="g-recaptcha" data-sitekey="6LdYwcsUAAAAAEDkzWNY55E8cBKAhRb-MVQliGqa"></div>
-
-                        <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
-
-                        <div class="row" id="finish">
-                            <div class="col-sm-12">
-                                <fieldset class="form-group register_legal_info">
-                                    <input type="submit" class="btn btn-theme-fix" value="<?php _e( 'Submit!', 'wholistic-matters' ); ?>">
-                                </fieldset>
-                            </div>
-                        </div>
-
-                        <!-- Honeypot -->
-                        <input type="text" style="border:none;height:0;font-size:0;position:absolute;left:-9999px;" id="foobar" name="foobar" placeholder="Foobar" autocomplete="off">
-                    </form>
-
-<!--                    <script type="text/javascript">-->
-<!--                        var __ss_noform = __ss_noform || [];-->
-<!--                        __ss_noform.push(['baseURI', 'https://app-3QNF1WFNS0.marketingautomation.services/webforms/receivePostback/MzawMDGzMDczAwA/']);-->
-<!--                        __ss_noform.push(['endpoint', '1121ec0d-95b1-4d21-aefd-2c7327d8db73']);-->
-<!--                    </script>-->
-<!--                    <script type="text/javascript" src="https://koi-3QNF1WFNS0.marketingautomation.services/client/noform.js?ver=1.24" ></script>-->
-
+                    </div>
                 </div>
             </div>
 
