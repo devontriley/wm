@@ -8,7 +8,7 @@ get_header();
 <!--hero-->
     <div class="banner-inner">
         <div class="data-banner">
-            <p class="eyebrow">Anatomic Biodigtal Libraries</p>
+            <p class="eyebrow">Anatomic Biodigital Libraries</p>
 
             <h1 class="banner_heading">
                 Explore the human body in interactive 3D
@@ -31,8 +31,8 @@ get_header();
     <div class="bl-ipad">
         <img src="https://wholisticmatters.com/wp-content/uploads/2020/01/Group-747@2x.png"/>
         <video class="ipad-video" autoplay="autoplay" muted="muted" loop="loop" playsinline>
-            <source src="https://staging.wholisticmatters.com/wp-content/uploads/2020/02/biodigital-video.mp4" type="video/mp4">
-            <source src="https://staging.wholisticmatters.com/wp-content/uploads/2020/02/biodigital-video-1.webm" type="video/webm">
+            <source src="https://staging.wholisticmatters.com/wp-content/uploads/2020/03/wm-video-update.mp4" type="video/mp4">
+<!--            <source src="https://staging.wholisticmatters.com/wp-content/uploads/2020/02/biodigital-video-1.webm" type="video/webm">-->
         </video>
     </div>
 
